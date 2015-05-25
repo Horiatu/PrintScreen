@@ -9,7 +9,7 @@ Small utility for copying and editing small plarts of scrren for documentaion an
 
 ![Alt text](/PrintScreen/HelpFiles/clip0017.bmp?raw=true "File Menu")
 
-![Alt text](/PrintScreen/HelpFiles/clip0661.bmp?raw=true "Edit Menu")
+![Alt text](/PrintScreen/HelpFiles/clip0066.bmp?raw=true "Edit Menu")
 
 ![Alt text](/PrintScreen/HelpFiles/clip0021.bmp?raw=true "Tool Menu")
 
