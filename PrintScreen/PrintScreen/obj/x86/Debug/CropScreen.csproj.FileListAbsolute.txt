@@ -1,0 +1,42 @@
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+I:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+I:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.CaptureForm.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.ExitDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.OptionsDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.CropScreen.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.Properties.Resources.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TextDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TransparentColorDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.CaptureForm.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.ExitDialog.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.OptionsDialog.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.CropScreen.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.Properties.Resources.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TextDialog.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TransparentColorDialog.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+G:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+G:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.CaptureForm.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.ExitDialog.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.OptionsDialog.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.CropScreen.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.Properties.Resources.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TextDialog.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TransparentColorDialog.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.write.1.tlog

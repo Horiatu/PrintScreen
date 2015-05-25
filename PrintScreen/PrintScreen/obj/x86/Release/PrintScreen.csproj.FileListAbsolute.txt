@@ -1,0 +1,12 @@
+G:\Projects\PrintScreen\PrintScreen\bin\Release\PrintScreen.exe
+G:\Projects\PrintScreen\PrintScreen\bin\Release\PrintScreen.pdb
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Release\ResolveAssemblyReference.cache
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Release\PrintScreen.CaptureForm.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Release\PrintScreen.ExitDialog.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Release\PrintScreen.PrintScreen.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Release\PrintScreen.Properties.Resources.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Release\PrintScreen.TransparentColorDialog.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Release\GenerateResource.read.1.tlog
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Release\GenerateResource.write.1.tlog
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Release\PrintScreen.exe
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Release\PrintScreen.pdb
