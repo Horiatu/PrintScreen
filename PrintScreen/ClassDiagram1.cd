@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FlexScreen.ArrowTool" Collapsed="true">
+    <Position X="0.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ArrowTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.ApplicationSettings" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cREwL4CwDIKABEAgAKFCADjggBJBACAQBEgDCU4AIBI=</HashCode>
+      <FileName>ApplicationSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.BordlessForm" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAgAAACAAAAAIAACAAAACAAAAAAAgAAAAAAAAAAE=</HashCode>
+      <FileName>BordlessForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.BordlessResizableForm" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAQAAAACAAAAAAAACAAAACABAAAAAAIAAIAAAABAA=</HashCode>
+      <FileName>BordlessResizableForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.CaptureForm" Collapsed="true">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>R5LMF+Amsaz5YmM7Qjus7rZb/U9g2IINUSTDjlHEozg=</HashCode>
+      <FileName>CaptureForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ActiveTool" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FlexScreen.CustomButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>8zHAAQQIgACIACBEIABEAQAegBIAABwDKEAAhAQCRIE=</HashCode>
+      <FileName>CustomButton.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RoundCorners" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FlexScreen.RoundCornersEditor" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CustomButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.CustomCursors" Collapsed="true">
+    <Position X="11.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAABAAAAIAEAAAAAAAAAAAAAAUAAAAAQA=</HashCode>
+      <FileName>CustomCursors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.DefaultTool" Collapsed="true">
+    <Position X="6" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAABgQAAAAAAAQBAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>DefaultTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.DrawingTool" Collapsed="true">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgBAQACABDoQQACAAAAwRAAgEAAAAIQCAAAAAAAA=</HashCode>
+      <FileName>DrawingTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.EllipseTool" Collapsed="true">
+    <Position X="4.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAgQAAAAAAAQAAAAAAAAAEAAAACAAAAA=</HashCode>
+      <FileName>EllipseTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.ExitDialog" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAgACAAABEAAACAAAgSAEAAAAQAAAAAAQAAAAA=</HashCode>
+      <FileName>ExitDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.FillShapeTool" Collapsed="true">
+    <Position X="2.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAACAAAAwAAAAAAAAAIAAAAgAAAAA=</HashCode>
+      <FileName>FillShapeTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.HighlighterTool" Collapsed="true">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQACAAggQAAEAAAAQAAAAAAABAIAAAAIAAAAA=</HashCode>
+      <FileName>HighliterTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.IndexTool" Collapsed="true">
+    <Position X="6" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAQACEAAgUAACCAAAwAAAAAAAAAIAEAACAAAAA=</HashCode>
+      <FileName>IndexTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.LineTool" Collapsed="true">
+    <Position X="0.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAggQAACAAAARAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LineTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.MarkerTool" Collapsed="true">
+    <Position X="11.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAQAKAACgQAACAAAAwAAAAAAAAAYAAABAAAAAA=</HashCode>
+      <FileName>MarkerTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.MultiCropDialog" Collapsed="true">
+    <Position X="4.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>9wFCABACQDAAAJ0JQAKACZECIBAYAGIIAAAgCAACIAY=</HashCode>
+      <FileName>MultiCropDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.MyApplicationContext" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAQAAAAAAAABAAAAAAAAAAAAAACAAAAQAAgAAAAIA=</HashCode>
+      <FileName>MyApplicationContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.OptionsDialog" Collapsed="true">
+    <Position X="7.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAJQgACQCAAAd0IJACAQeESFGCEQNjAACAQGBkHhQA=</HashCode>
+      <FileName>OptionsDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.Program" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CJABAgAQAAACAAAAEAAADAgKAAIACAAAAAAABAEgAAI=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.RectangleTool" Collapsed="true">
+    <Position X="2.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAgQAAAAAAAQAAAAAAAAAAAAAACAAAQA=</HashCode>
+      <FileName>RectangleTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.ScreenCapture" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAA=</HashCode>
+      <FileName>ScreenCapture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.SplashScreen" Collapsed="true">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCSDDwEQBiAJIBoKCACDSAASABAgSAAIh+AEIAQAAEg=</HashCode>
+      <FileName>SplashScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.TextDialog" Collapsed="true">
+    <Position X="0.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAICIAiAEEAACAAAGCAAACAEAAAACAwAAHAAA=</HashCode>
+      <FileName>TextDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.TextTool" Collapsed="true">
+    <Position X="4.25" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQQCAgAgQAAKAAAAwAAAAAAAAAIAAACAAAABA=</HashCode>
+      <FileName>TextTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.TransparentColorDialog" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TransparentColorDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.Undo" Collapsed="true">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAABAAAAAAAAAAABAAAAACAAAAAIAAAAAABCAA=</HashCode>
+      <FileName>Undo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.Utils" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEBQCAgAAgAgAAACgmAkAAAAI0AABQAABAABAAAQACA=</HashCode>
+      <FileName>Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.XMLColor" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAgABAAAA=</HashCode>
+      <FileName>XMLColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.ZoneHandlerArgs" Collapsed="true">
+    <Position X="6" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAgAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>ZoneHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.ZoomLentsTool" Collapsed="true">
+    <Position X="7.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAUCCABAgQCQCAAAAwAAYAAAAAAIAEAAAAAAAA=</HashCode>
+      <FileName>ZoomLentsTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlexScreen.UnZipEventArgs" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAQAAAAAAEQAAAEAAAAAAAA=</HashCode>
+      <FileName>UnZipEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="FlexScreen.CustomButtonState" Collapsed="true">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAACAAAAAAIAIAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>CustomButton.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FlexScreen.Tools" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAQAAAAAgAAAAAAhACAEBAAA=</HashCode>
+      <FileName>Tools.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FlexScreen.Corners" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAIAAAAABAAAAAQAAAAAAAIAAAACICAAAEAAEA=</HashCode>
+      <FileName>Utils.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FlexScreen.ColorFormat" Collapsed="true">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAA=</HashCode>
+      <FileName>XMLColor.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
