@@ -165,7 +165,6 @@ F:\GitHub\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.manifest
 F:\GitHub\PrintScreen\PrintScreen\bin\Debug\PrintScreen.application
 F:\GitHub\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
 F:\GitHub\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
-F:\GitHub\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csprojResolveAssemblyReference.cache
 F:\GitHub\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.BordlessForm.resources
 F:\GitHub\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.BordlessResizableForm.resources
 F:\GitHub\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.CaptureForm.resources
