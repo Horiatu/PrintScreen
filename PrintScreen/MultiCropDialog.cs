@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Ionic.Zip;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
-using System.Drawing.Imaging;
-using Ionic.Zip;
+using System.Windows.Forms;
 
 namespace FlexScreen
 {

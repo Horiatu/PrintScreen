@@ -1,0 +1,158 @@
+G:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+G:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.CaptureForm.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.ExitDialog.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.OptionsDialog.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.Properties.Resources.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TextDialog.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TransparentColorDialog.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.CaptureForm.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.ExitDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.OptionsDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.CropScreen.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.Properties.Resources.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TextDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TransparentColorDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.write.1.tlog
+I:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+I:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+G:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.config
+E:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.config
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+E:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.manifest
+E:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.application
+E:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+E:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.CaptureForm.resources
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.ExitDialog.resources
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.OptionsDialog.resources
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.Properties.Resources.resources
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TextDialog.resources
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TransparentColorDialog.resources
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TrustInfo.xml
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe.manifest
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.application
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.MagnifyForm.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.MagnifyForm.resources
+G:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.manifest
+G:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.application
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TrustInfo.xml
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe.manifest
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.application
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.SplashScreen.resources
+E:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.SplashScreen.resources
+E:\Projects\PrintScreen\PrintScreen\bin\Debug\ActiveButtons.dll
+E:\Projects\PrintScreen\PrintScreen\bin\Debug\ActiveButtons.pdb
+G:\Projects\PrintScreen\PrintScreen\bin\Debug\ActiveButtons.dll
+G:\Projects\PrintScreen\PrintScreen\bin\Debug\ActiveButtons.pdb
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.config
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.manifest
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.application
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.CaptureForm.resources
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.ExitDialog.resources
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.OptionsDialog.resources
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.SplashScreen.resources
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.Properties.Resources.resources
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TextDialog.resources
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TransparentColorDialog.resources
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TrustInfo.xml
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe.manifest
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.application
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.config
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.manifest
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.application
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.CaptureForm.resources
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.ExitDialog.resources
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.OptionsDialog.resources
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.SplashScreen.resources
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.Properties.Resources.resources
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TextDialog.resources
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TransparentColorDialog.resources
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TrustInfo.xml
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe.manifest
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.application
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.config
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.manifest
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.application
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.CaptureForm.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.ExitDialog.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.OptionsDialog.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.SplashScreen.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.Properties.Resources.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TextDialog.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TransparentColorDialog.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TrustInfo.xml
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe.manifest
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.application
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\Interop.SHDocVw.dll
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csproj.ResolveComReference.cache
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\Interop.SHDocVw.dll
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csproj.ResolveComReference.cache
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.BordlessForm.resources
+C:\Users\Horia\Desktop\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.BordlessResizableForm.resources
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.BordlessForm.resources
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.BordlessResizableForm.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\Interop.SHDocVw.dll
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csproj.ResolveComReference.cache
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.BordlessForm.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.BordlessResizableForm.resources
+C:\Users\Horia\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.MultiCropDialog.resources
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.MultiCropDialog.resources
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.config
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\Interop.SHDocVw.dll
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csproj.ResolveComReference.cache
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.manifest
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.application
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.BordlessForm.resources
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.BordlessResizableForm.resources
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.CaptureForm.resources
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.ExitDialog.resources
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.MultiCropDialog.resources
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.OptionsDialog.resources
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.Properties.Resources.resources
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.SplashScreen.resources
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TextDialog.resources
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.TransparentColorDialog.resources
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csproj.GenerateResource.Cache
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TrustInfo.xml
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe.manifest
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.application
+C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.PasswordDialog.resources

@@ -10,7 +10,7 @@
   <Class Name="FlexScreen.ApplicationSettings" Collapsed="true">
     <Position X="7.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>cREwL4CwDIKABEAgAKFCADjggBJBACAQBEgDCU4AIBI=</HashCode>
+      <HashCode>cRFwJ4CwDIKEBEAgACFCADjgpBJBACCQBFgDCU4AIBI=</HashCode>
       <FileName>ApplicationSettings.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -34,7 +34,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>R5LMF+Amsaz5YmM7Qjus7rZb/U9g2IINUSTDjlHEozg=</HashCode>
+      <HashCode>J5bkR7I+MbhhZgMjVjvvqrdOtT1jncFhUCDLthHAgDw=</HashCode>
       <FileName>CaptureForm.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -65,21 +65,21 @@
   <Class Name="FlexScreen.CustomCursors" Collapsed="true">
     <Position X="11.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAAABAAAAIAEAAAAAAAAAAAAAAUAAAAAQA=</HashCode>
+      <HashCode>AAAAAAAIAAAAABAAAAIAEAAAAAAAAAAAAAAUAAEAAQA=</HashCode>
       <FileName>CustomCursors.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FlexScreen.DefaultTool" Collapsed="true">
     <Position X="6" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAABgQAAAAAAAQBAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAABgAAAAAAAAQBAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>DefaultTool.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FlexScreen.DrawingTool" Collapsed="true">
     <Position X="2.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgBAQACABDoQQACAAAAwRAAgEAAAAIQCAAAAAAAA=</HashCode>
+      <HashCode>AAIAgBAQACAABoQAACAAAgQBAIAAAABAIQCAAAAQgAA=</HashCode>
       <FileName>DrawingTool.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -93,7 +93,7 @@
   <Class Name="FlexScreen.ExitDialog" Collapsed="true">
     <Position X="2.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAAAgACAAABEAAACAAAgSAEAAAAQAAAAAAQAAAAA=</HashCode>
+      <HashCode>BAAAAAAAACAAABEAAACAAAgCBEAAAAAEAAAAAQgAAAA=</HashCode>
       <FileName>ExitDialog.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -107,14 +107,14 @@
   <Class Name="FlexScreen.HighlighterTool" Collapsed="true">
     <Position X="9.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAQACAAggQAAEAAAAQAAAAAAABAIAAAAIAAAAA=</HashCode>
+      <HashCode>AAQAAAAQACAAwgQAAAAEAAQAAAAAAAEAIAAAAIAAAAA=</HashCode>
       <FileName>HighliterTool.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FlexScreen.IndexTool" Collapsed="true">
     <Position X="6" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAQACEAAgUAACCAAAwAAAAAAAAAIAEAACAAAAA=</HashCode>
+      <HashCode>AAgASAAQACAAAgQAQGCBACwAAAAAAAAAIAEAACAAACA=</HashCode>
       <FileName>IndexTool.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -128,7 +128,7 @@
   <Class Name="FlexScreen.MarkerTool" Collapsed="true">
     <Position X="11.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAQAKAACgQAACAAAAwAAAAAAAAAYAAABAAAAAA=</HashCode>
+      <HashCode>AAAACAAQAKAACgQAQGAAAAwAAAAAAAAAYIAABAAAAAA=</HashCode>
       <FileName>MarkerTool.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -149,14 +149,14 @@
   <Class Name="FlexScreen.OptionsDialog" Collapsed="true">
     <Position X="7.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CEAJQgACQCAAAd0IJACAQeESFGCEQNjAACAQGBkHhQA=</HashCode>
+      <HashCode>GUAIiAgBQCAQA11CBIKAAaECFGoAANiBACACGQghBCA=</HashCode>
       <FileName>OptionsDialog.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FlexScreen.Program" Collapsed="true">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CJABAgAQAAACAAAAEAAADAgKAAIACAAAAAAABAEgAAI=</HashCode>
+      <HashCode>CJABAgAAAAACAIAAEAAADEwCAAIECAAAACAAJBEgAAI=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -170,14 +170,14 @@
   <Class Name="FlexScreen.ScreenCapture" Collapsed="true">
     <Position X="9.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAACAAgAAAABAA=</HashCode>
       <FileName>ScreenCapture.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FlexScreen.SplashScreen" Collapsed="true">
     <Position X="6" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BCSDDwEQBiAJIBoKCACDSAASABAgSAAIh+AEIAQAAEg=</HashCode>
+      <HashCode>DKSECwESJuCJADqCEAiDSBASAbEgIAANg8SEIhSAAEg=</HashCode>
       <FileName>SplashScreen.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -194,7 +194,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAQQCAgAgQAAKAAAAwAAAAAAAAAIAAACAAAABA=</HashCode>
+      <HashCode>AAAAAAAwACAgAgQAACAAAAwAAAAAAAAAIAAACAIAABA=</HashCode>
       <FileName>TextTool.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -215,7 +215,7 @@
   <Class Name="FlexScreen.Utils" Collapsed="true">
     <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BEBQCAgAAgAgAAACgmAkAAAAI0AABQAABAABAAAQACA=</HashCode>
+      <HashCode>BEBQCAgAAgAgAAACgmAkBAAII0AgBQAABAABAAAQACA=</HashCode>
       <FileName>Utils.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -236,7 +236,7 @@
   <Class Name="FlexScreen.ZoomLentsTool" Collapsed="true">
     <Position X="7.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAUCCABAgQCQCAAAAwAAYAAAAAAIAEAAAAAAAA=</HashCode>
+      <HashCode>IAAACAAUCCABAgQCQGAAAAwAAYAAAAAAIAEAAAAAAAA=</HashCode>
       <FileName>ZoomLentsTool.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -252,13 +252,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAACAAAAAAIAIAAAAAAAAAAAEAAA=</HashCode>
       <FileName>CustomButton.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="FlexScreen.Tools" Collapsed="true">
-    <Position X="9.5" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAACAAAAAAAAAAAAAQAAAAAgAAAAAAhACAEBAAA=</HashCode>
-      <FileName>Tools.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="FlexScreen.Corners" Collapsed="true">

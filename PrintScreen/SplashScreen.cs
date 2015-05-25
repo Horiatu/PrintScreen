@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FlexScreen.Properties;
+using Ionic.Zip;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -8,8 +10,6 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
-using FlexScreen.Properties;
-using Ionic.Zip;
 
 namespace FlexScreen
 {

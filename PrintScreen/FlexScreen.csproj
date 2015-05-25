@@ -115,8 +115,6 @@
     <Compile Include="DefaultTool.cs" />
     <Compile Include="DrawingTool.cs" />
     <Compile Include="EllipseTool.cs" />
-    <Compile Include="EnumMonitorsDelegate.cs" />
-    <Compile Include="EnumMonitorsDelegate_2.cs" />
     <Compile Include="ExitDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,7 +178,6 @@
       <DependentUpon>TextDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="TextTool.cs" />
-    <Compile Include="Tools.cs" />
     <Compile Include="TransparentColorDialog.cs">
       <SubType>Component</SubType>
     </Compile>

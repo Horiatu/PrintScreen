@@ -1,0 +1,37 @@
+c:\users\htudosie\documents\visual studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+c:\users\htudosie\documents\visual studio 2010\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+c:\users\htudosie\documents\visual studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\htudosie\documents\visual studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.Properties.Resources.resources
+c:\users\htudosie\documents\visual studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\htudosie\documents\visual studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\htudosie\documents\visual studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+c:\users\htudosie\documents\visual studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+c:\users\htudosie\documents\visual studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.PrintScreen.resources
+C:\Users\htudosie\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.CaptureForm.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+G:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+G:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.CaptureForm.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.PrintScreen.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.Properties.Resources.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.ExitDialog.resources
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TransparentColorDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+I:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
+I:\Projects\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.CaptureForm.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.ExitDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.PrintScreen.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.Properties.Resources.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TransparentColorDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TextDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.OptionsDialog.resources
+I:\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TextDialog.resources
