@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace FlexScreen.GenericUndoRedo
 {
@@ -96,26 +94,17 @@ redoStack = new RoundStack<IMemento<T>>(capacity);
         /// }
         /// </code>
         /// </remarks>
-        public bool InUndoRedo
-        {
-            get { return inUndoRedo; }
-        }
+        public bool InUndoRedo => inUndoRedo;
 
         /// <summary>
         /// Gets number of undo actions available
         /// </summary>
-        public int UndoCount
-        {
-            get { return undoStack.Count; }
-        }
+        public int UndoCount => undoStack.Count;
 
         /// <summary>
         /// Gets number of redo actions available
         /// </summary>
-        public int RedoCount
-        {
-            get { return redoStack.Count; }
-        }
+        public int RedoCount => redoStack.Count;
 
         /// <summary>
         /// Gets or sets whether the history supports redo.
@@ -240,7 +229,7 @@ redoStack = new RoundStack<IMemento<T>>(capacity);
                 throw new InvalidOperationException("The complex memento wasn't commited.");
 
             inUndoRedo = true;
-            IMemento<T> top = undoStack.Pop();
+            var top = undoStack.Pop();
             redoStack.Push(top.Restore(subject));
             inUndoRedo = false;
         }
@@ -256,7 +245,7 @@ redoStack = new RoundStack<IMemento<T>>(capacity);
                 throw new InvalidOperationException("The complex memento wasn't commited.");
 
             inUndoRedo = true;
-            IMemento<T> top = redoStack.Pop();
+            var top = redoStack.Pop();
             undoStack.Push(top.Restore(subject));
             inUndoRedo = false;
         }
@@ -264,18 +253,12 @@ redoStack = new RoundStack<IMemento<T>>(capacity);
         /// <summary>
         /// Checks if there are any stored state available on the undo stack.
         /// </summary>
-        public bool CanUndo
-        {
-            get { return (undoStack.Count != 0); }
-        }
+        public bool CanUndo => (undoStack.Count != 0);
 
         /// <summary>
         /// Checks if there are any stored state available on the redo stack.
         /// </summary>
-        public bool CanRedo
-        {
-            get { return (redoStack.Count != 0); }
-        }
+        public bool CanRedo => (redoStack.Count != 0);
 
         /// <summary>
         /// Clear the entire undo and redo stacks.

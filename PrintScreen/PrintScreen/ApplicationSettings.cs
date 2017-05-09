@@ -280,17 +280,17 @@ namespace FlexScreen
             }
         }
 
-        //private decimal m_cursorOpacity;
-        //public decimal CursorOpacity
-        //{
-        //    get { return m_cursorOpacity; }
-        //    set
-        //    {
-        //        if (value == m_cursorOpacity) return;
-        //        m_cursorOpacity = value;
-        //        appSettingsChanged = true;
-        //    }
-        //}
+        private decimal m_cursorOpacity;
+        public decimal CursorOpacity
+        {
+            get { return m_cursorOpacity; }
+            set
+            {
+                if (value == m_cursorOpacity) return;
+                m_cursorOpacity = value;
+                m_appSettingsChanged = true;
+            }
+        }
 
         private decimal m_selectionOpacity;
         public decimal SelectionOpacity
@@ -520,7 +520,7 @@ namespace FlexScreen
                     m_autoSave = Settings.Default.AutoSave;
                     m_autoSaveAsk = Settings.Default.AutoSaveAsk;
                     m_fillTransparency = Settings.Default.FillTransparency;
-                    //m_cursorOpacity = Settings.Default.CursorOpacity;
+                    m_cursorOpacity = Settings.Default.CursorOpacity;
                     m_selectionOpacity = Settings.Default.SelectionOpacity;
                 }
             }

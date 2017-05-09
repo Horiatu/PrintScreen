@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Drawing;
 using System.Xml.Serialization;
 
@@ -44,7 +41,7 @@ namespace FlexScreen
             }
             set
             {
-                if (this.Color != value)
+                if (Color != value)
                 {
                     XmlColor = SerializeColor(value);
                     if (ColorChanged != null)
@@ -72,9 +69,9 @@ namespace FlexScreen
 
             if (!string.IsNullOrEmpty(color))
             {
-                string[] pieces = color.Split(new char[] { ':' });
+                var pieces = color.Split(new char[] { ':' });
 
-                ColorFormat colorType = (ColorFormat)
+                var colorType = (ColorFormat)
                     Enum.Parse(typeof(ColorFormat), pieces[0], true);
 
                 switch (colorType)

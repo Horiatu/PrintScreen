@@ -6,10 +6,7 @@ namespace FlexScreen
     {
         public DefaultTool(CaptureForm form) : base(form, 0) { }
 
-        public override string Name
-        {
-            get { return "Default"; }
-        }
+        public override string Name => "Default";
 
         public override void Undo()
         {

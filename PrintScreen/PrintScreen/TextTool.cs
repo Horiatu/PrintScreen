@@ -12,19 +12,10 @@ namespace FlexScreen
         public Brush TextBrush { get; set; }
         public Point TextStartPoint { get; set; }
 
-        public override string Name
-        {
-            get { return "Insert Text"; }
-        }
+        public override string Name => "Insert Text";
 
-        public override string Tip
-        {
-            get
-            {
-                return base.Tip +
-@"- Press [Space] key to flip outline.";
-            }
-        }
+        public override string Tip => base.Tip +
+                                      @"- Press [Space] key to flip outline.";
 
         public TextTool(CaptureForm form, string text, Font font, Brush textBrush)
             : base(form, 12)
@@ -91,8 +82,8 @@ namespace FlexScreen
             base.Execute(g);
             if (m_textWithBorder)
             {
-                int x = TextStartPoint.X;
-                int y = TextStartPoint.Y;
+                var x = TextStartPoint.X;
+                var y = TextStartPoint.Y;
                 g.DrawString(Text, TextFont, Brushes.White, new Point(x - 1, y - 1));
                 g.DrawString(Text, TextFont, Brushes.White, new Point(x - 0, y - 1));
                 g.DrawString(Text, TextFont, Brushes.White, new Point(x + 1, y - 1));

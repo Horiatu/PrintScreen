@@ -33,7 +33,7 @@ namespace FlexScreen
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.NotifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);

@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
-using System.Drawing.Imaging;
 using FlexScreen.Properties;
 
 namespace FlexScreen
@@ -14,17 +13,10 @@ namespace FlexScreen
         public int HelpContextIndex { get; set; }
 
         public abstract string Name { get; }
-        public virtual string Tip
-        {
-            get
-            {
-                return
-@"Click and hold to start drawing,
+        public virtual string Tip => @"Click and hold to start drawing,
 whille holding the mouse left-button:
 - Hold [Alt] key down to see coordinates.
 ";
-            }
-        }
 
         public virtual void Execute(Graphics g)
         {

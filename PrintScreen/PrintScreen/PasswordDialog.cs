@@ -10,7 +10,7 @@ namespace FlexScreen
             ZipName = zipName;
             FileName = fileName;
             cbFile.Checked = showFile;
-            CbFileCheckedChanged(this.cbFile, null);
+            CbFileCheckedChanged(cbFile, null);
         }
 
         public string ZipName { get; private set; }

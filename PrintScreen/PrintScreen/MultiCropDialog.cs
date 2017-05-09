@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
-using System.Drawing.Imaging;
 using Ionic.Zip;
 
 namespace FlexScreen
@@ -32,7 +26,7 @@ namespace FlexScreen
         CaptureForm captureForm = null;
         private void MultiCropDialog_Activated(object sender, EventArgs e)
         {
-            captureForm = (CaptureForm)(((System.Windows.Forms.Form)(sender)).Owner);
+            captureForm = (CaptureForm)(((Form)(sender)).Owner);
             captureForm.Invalidate();
         }
 
@@ -96,8 +90,8 @@ namespace FlexScreen
         {
             try
             {
-                Image zone = captureForm.CropImage(captureForm.BackgroundImage, zoneArgs.Rectangle, cbTransparent.Checked ? btnTransparentColor.BackColor : (Color?)null);
-                string fileName = tbFileRoot.Text + (numSeed.Value + zoneArgs.Index).ToString() + dumExtension.Text;
+                var zone = captureForm.CropImage(captureForm.BackgroundImage, zoneArgs.Rectangle, cbTransparent.Checked ? btnTransparentColor.BackColor : (Color?)null);
+                var fileName = tbFileRoot.Text + (numSeed.Value + zoneArgs.Index).ToString() + dumExtension.Text;
                 if (cbArchive.Checked)
                 {
                     if (zip == null)
@@ -107,12 +101,12 @@ namespace FlexScreen
                     }
                     fileName = Path.GetFileName(fileName);
 
-                    using (MemoryStream fs = new MemoryStream())
+                    using (var fs = new MemoryStream())
                     {
                         zone.Save(fs, Utils.ToImageFormat(dumExtension.Text));
                         fs.Seek(0, SeekOrigin.Begin);
 
-                        ZipEntry ze = zip.AddEntry(fileName, fs);
+                        var ze = zip.AddEntry(fileName, fs);
                         zip.Save(zipFileName);
                     }
                 }
@@ -175,19 +169,19 @@ namespace FlexScreen
 
         private void customButton4_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog1.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+            if (saveFileDialog1.ShowDialog(this) == DialogResult.OK)
             {
-                string path = saveFileDialog1.FileName;
-                string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(path);
-                Regex regex = new Regex(@"^(.*?)(?:(\d*)??(\.\w{3,4})??)$", RegexOptions.CultureInvariant | RegexOptions.Compiled);
+                var path = saveFileDialog1.FileName;
+                var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(path);
+                var regex = new Regex(@"^(.*?)(?:(\d*)??(\.\w{3,4})??)$", RegexOptions.CultureInvariant | RegexOptions.Compiled);
                 if (regex.IsMatch(path))
                 {
-                    string[] matches = regex.Split(path);
+                    var matches = regex.Split(path);
                     if (matches.Length >= 1)
                     {
                         tbFileRoot.Text = matches[1];
 
-                        int seed = 0;
+                        var seed = 0;
                         if (matches.Length >= 2)
                         {
                             int.TryParse(matches[2], out seed);
@@ -218,7 +212,7 @@ namespace FlexScreen
         private void btnTransparentColor_Click(object sender, EventArgs e)
         {
             colorDialog1.Color = btnTransparentColor.BackColor;
-            if (colorDialog1.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+            if (colorDialog1.ShowDialog(this) == DialogResult.OK)
             {
                 btnTransparentColor.BackColor = colorDialog1.Color;
             }

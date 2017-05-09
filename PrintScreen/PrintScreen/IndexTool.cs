@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Threading;
 using FlexScreen.Properties;
 
 namespace FlexScreen
@@ -19,20 +15,11 @@ namespace FlexScreen
         //public Rectangle IndexRectangle { get; set; }
         //public Rectangle BoxRectangle { get; set; }
 
-        public override string Name
-        {
-            get { return "Insert Index"; }
-        }
+        public override string Name => "Insert Index";
 
-        public override string Tip
-        {
-            get
-            {
-                return base.Tip + @"
+        public override string Tip => base.Tip + @"
 - Use [Up]/[Down]/[Backspace] and 
   digits to change index.";
-            }
-        }
 
         public IndexTool(CaptureForm form, int index, Pen borderPen, Brush fillBrush, Font indexFont)
             : base(form, 10)
@@ -103,7 +90,7 @@ namespace FlexScreen
                         case 55: // 7
                         case 56: // 8
                         case 57: // 9
-                            int digit = e.KeyValue - 48;
+                            var digit = e.KeyValue - 48;
                             if (Index > 9)
                             {
                                 Index = (Index / 10) * 10 + digit;
@@ -120,23 +107,23 @@ namespace FlexScreen
             }
         }
 
-        int width { get { return ParentForm.SelectedRectangle.Width; } }
-        int height { get { return ParentForm.SelectedRectangle.Height; } }
-        Point startPoint
+        int Width => ParentForm.SelectedRectangle.Width;
+        int Height => ParentForm.SelectedRectangle.Height;
+
+        Point StartPoint
         {
             get { return ParentForm.StartPoint; }
             set { ParentForm.StartPoint = value; }
         }
-        Point endPoint
+        Point EndPoint
         {
             get { return ParentForm.EndPoint; }
             set { ParentForm.EndPoint = value; }
         }
 
-        float textWidth;
-        float textHeight;
-        int ascentPixel;
-        int descentPixel;
+        float m_textWidth;
+        float m_textHeight;
+        int m_descentPixel;
         public override void DrawRectangle(Graphics g)
         {
             var current = ParentForm.CrossPoint; //PointToClient(Cursor.Position);
@@ -146,19 +133,17 @@ namespace FlexScreen
             var fontFamily = IndexFont.FontFamily;
             var emHeight = fontFamily.GetEmHeight(IndexFont.Style);
 
-            var ascent = fontFamily.GetCellAscent(IndexFont.Style);
             var descent = fontFamily.GetCellDescent(IndexFont.Style);
 
-            ascentPixel = (int)Math.Round(IndexFont.Size * ascent / emHeight);
-            descentPixel = (int)Math.Round(IndexFont.Size * descent / emHeight);
+            m_descentPixel = (int)Math.Round(IndexFont.Size * descent / emHeight);
 
-            textWidth = textSize.Width;
-            textHeight = textSize.Height - 2 * descentPixel;// - ascentPixel;
+            m_textWidth = textSize.Width;
+            m_textHeight = textSize.Height - 2 * m_descentPixel;// - ascentPixel;
 
-            var d = Math.Round(Math.Sqrt(textWidth * textWidth + textHeight * textHeight)) + 2 * BorderPen.Width;
+            var d = Math.Round(Math.Sqrt(m_textWidth * m_textWidth + m_textHeight * m_textHeight)) + 2 * BorderPen.Width;
             
-            startPoint = new Point((int)Math.Round(current.X - d / 2), (int)Math.Round(current.Y - d / 2));
-            endPoint = new Point((int)Math.Round(startPoint.X + d), (int)Math.Round(startPoint.Y + d));
+            StartPoint = new Point((int)Math.Round(current.X - d / 2), (int)Math.Round(current.Y - d / 2));
+            EndPoint = new Point((int)Math.Round(StartPoint.X + d), (int)Math.Round(StartPoint.Y + d));
 
             if (!HideRectangle)
             {
@@ -177,16 +162,16 @@ namespace FlexScreen
         {
             base.Execute(g);
             g.DrawEllipse(new Pen(Color.FromArgb(128, Color.Black)) { Width = BorderPen.Width },
-                startPoint.X + 2, startPoint.Y + 2, width - 3, height - 3);
+                StartPoint.X + 2, StartPoint.Y + 2, Width - 3, Height - 3);
             if (FillShape)
             {
-                g.FillEllipse(FillBrush, startPoint.X + 1, startPoint.Y + 1, width - 4, height - 4);
+                g.FillEllipse(FillBrush, StartPoint.X + 1, StartPoint.Y + 1, Width - 4, Height - 4);
             }
-            g.DrawEllipse(BorderPen, startPoint.X + 1, startPoint.Y + 1, width - 4, height - 4);
+            g.DrawEllipse(BorderPen, StartPoint.X + 1, StartPoint.Y + 1, Width - 4, Height - 4);
             
             g.DrawString(Index.ToString(CultureInfo.InvariantCulture), IndexFont, Brushes.Black,
-                startPoint.X + (width - textWidth) / 2f - 1,
-                startPoint.Y + (height - textHeight) / 2f - descentPixel);
+                StartPoint.X + (Width - m_textWidth) / 2f - 1,
+                StartPoint.Y + (Height - m_textHeight) / 2f - m_descentPixel);
             //g.DrawRectangle(new Pen(Color.Black), new Rectangle(
             //    (int)(startPoint.X + (width - textWidth) / 2f),
             //    (int)(startPoint.Y + (height - textHeight) / 2f),

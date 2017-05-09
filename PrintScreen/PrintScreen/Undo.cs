@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Drawing;
 
 namespace FlexScreen
 {
@@ -8,7 +7,7 @@ namespace FlexScreen
         List<DrawingTool> UndoStack = new List<DrawingTool>(64);
         int index = 0;
 
-        public bool CanUndo { get { return index > 0; } }
+        public bool CanUndo => index > 0;
 
         public void Push(DrawingTool undoItem)
         {
@@ -37,7 +36,7 @@ namespace FlexScreen
             if (index > 0)
             {
                 --index;
-                DrawingTool result = UndoStack[index];
+                var result = UndoStack[index];
                 UndoStack.RemoveAt(index);
                 return result;
             }

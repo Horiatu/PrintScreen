@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
@@ -10,8 +9,8 @@ namespace FlexScreen
 {
     static class Program
     {
-        public static SplashScreen MainForm { get { return MyContext.SplashScreenForm; } }
-        public static OptionsDialog OptionsDialog { get { return MyContext.OptionsDialogForm; } }
+        public static SplashScreen MainForm => MyContext.SplashScreenForm;
+        public static OptionsDialog OptionsDialog => MyContext.OptionsDialogForm;
 
         static readonly object syncObj = new Object();
         static MyApplicationContext _myContext;

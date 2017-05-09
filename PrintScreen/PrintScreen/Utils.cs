@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Runtime.InteropServices;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -12,7 +11,7 @@ using System.Windows.Forms;
 
 namespace FlexScreen
 {
-    [System.Flags]
+    [Flags]
     public enum Corners
     {
         None = 0,
@@ -64,7 +63,7 @@ namespace FlexScreen
             //Scale the radius if it's too large to fit.
             radius = Math.Min(radius, Math.Min(r.Width, r.Height));
 
-            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
+            var path = new System.Drawing.Drawing2D.GraphicsPath();
 
             if (radius <= 0)
                 path.AddRectangle(r);
@@ -158,11 +157,11 @@ namespace FlexScreen
                 foreach (var captureForm in Program.CaptureForms)
                 {
                     ++fileIndex;
-                    string entryFileName = ((!string.IsNullOrEmpty(captureForm.FileName))
+                    var entryFileName = ((!string.IsNullOrEmpty(captureForm.FileName))
                         ? Path.GetFileName(captureForm.FileName)
                         : fileIndex + ".PNG");
 
-                    using (MemoryStream ms = new MemoryStream())
+                    using (var ms = new MemoryStream())
                     {
                         var minimized = captureForm.WindowState == FormWindowState.Minimized;
                         if (minimized)

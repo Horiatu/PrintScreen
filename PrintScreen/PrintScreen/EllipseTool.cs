@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using System.Windows.Forms;
 
 namespace FlexScreen
 {
@@ -9,10 +8,7 @@ namespace FlexScreen
         Brush FillBrush { get; set; }
         Rectangle EllipseRectangle { get; set; }
 
-        public override string Name
-        {
-            get { return "Ellipse"; }
-        }
+        public override string Name => "Ellipse";
 
         public EllipseTool(CaptureForm form, Pen borderPen, Brush fillBrush)
             : base(form, 9)
@@ -32,7 +28,7 @@ namespace FlexScreen
             base.Execute(g);
             if (BorderPen != null)
             {
-                Pen shadow = new Pen(Color.FromArgb(64, Color.Gray));
+                var shadow = new Pen(Color.FromArgb(64, Color.Gray));
                 g.DrawEllipse(shadow, new Rectangle(EllipseRectangle.X + 1, EllipseRectangle.Y + 1, EllipseRectangle.Width, EllipseRectangle.Height));
                 g.DrawEllipse(shadow, new Rectangle(EllipseRectangle.X + 2, EllipseRectangle.Y + 2, EllipseRectangle.Width, EllipseRectangle.Height));
             }
@@ -40,7 +36,7 @@ namespace FlexScreen
             {
                 g.FillEllipse(FillBrush, EllipseRectangle);
             }
-            g.DrawEllipse(BorderPen, EllipseRectangle);
+            if (BorderPen != null) g.DrawEllipse(BorderPen, EllipseRectangle);
         }
     }
 

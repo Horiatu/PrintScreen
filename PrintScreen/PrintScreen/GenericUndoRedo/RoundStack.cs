@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace FlexScreen.GenericUndoRedo
 {
@@ -21,13 +18,7 @@ namespace FlexScreen.GenericUndoRedo
         /// <summary>
         /// Gets if the <see cref="RoundStack&lt;T&gt;"/> is full.
         /// </summary>
-        public bool IsFull
-        {
-            get
-            {
-                return top == bottom;
-            }
-        }
+        public bool IsFull => top == bottom;
 
         /// <summary>
         /// Gets the number of elements contained in the <see cref="RoundStack&lt;T&gt;"/>.
@@ -36,7 +27,7 @@ namespace FlexScreen.GenericUndoRedo
         {
             get
             {
-                int count = top - bottom - 1;
+                var count = top - bottom - 1;
                 if (count < 0)
                 {
                     count += items.Length;
@@ -48,13 +39,7 @@ namespace FlexScreen.GenericUndoRedo
         /// <summary>
         /// Gets the capacity of the <see cref="RoundStack&lt;T&gt;"/>.
         /// </summary>
-        public int Capacity
-        {
-            get
-            {
-                return items.Length - 1;
-            }
-        }
+        public int Capacity => items.Length - 1;
 
         /// <summary>
         /// Creates <see cref="RoundStack&lt;T&gt;"/> with given capacity
@@ -77,7 +62,7 @@ namespace FlexScreen.GenericUndoRedo
         {
             if (Count > 0)
             {
-                T removed = items[top];
+                var removed = items[top];
                 items[top--] = default(T);
                 if (top < 0)
                 {
@@ -127,7 +112,7 @@ namespace FlexScreen.GenericUndoRedo
         {
             if (Count > 0)
             {
-                for (int i = 0; i < items.Length; i++)
+                for (var i = 0; i < items.Length; i++)
                 {
                     items[i] = default(T);
                 }

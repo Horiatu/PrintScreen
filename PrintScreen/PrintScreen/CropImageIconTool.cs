@@ -4,10 +4,7 @@ namespace FlexScreen
 {
     public class CropImageIconTool : DrawingTool
     {
-        public override string Name
-        {
-            get { return string.Format("Crop Icon ({0}x{1})", imageSize.Width, imageSize.Height); }
-        }
+        public override string Name => string.Format("Crop Icon ({0}x{1})", imageSize.Width, imageSize.Height);
 
         Size imageSize = new Size(32, 32);
         public CropImageIconTool(CaptureForm form, Size? size = null)
@@ -19,13 +16,7 @@ namespace FlexScreen
             }
         }
 
-        public override string Tip
-        {
-            get
-            {
-                return base.Tip + @"Place frame, then crop or copy.";
-            }
-        }
+        public override string Tip => base.Tip + @"Place frame, then crop or copy.";
 
         /// <summary>
         /// Draws the rectangle.

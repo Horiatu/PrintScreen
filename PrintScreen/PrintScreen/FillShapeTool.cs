@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace FlexScreen
 {
@@ -12,20 +8,11 @@ namespace FlexScreen
 
         public static bool FillShape = true;
 
-        public override string Name
-        {
-            get { return "Fill"; }
-        }
+        public override string Name => "Fill";
 
-        public override string Tip
-        {
-            get
-            {
-                return base.Tip +
-@"- Hold [Ctrl] key down to move around.
+        public override string Tip => $@"{base.Tip}
+- Hold [Ctrl] key down to move around.
 - Press [Space] to flip the filling.";
-            }
-        }
 
         public override void Start()
         {

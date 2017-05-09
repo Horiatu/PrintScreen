@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 
@@ -23,15 +18,15 @@ namespace FlexScreen
             DrawFrame(e);
         }
 
-        protected System.Drawing.Drawing2D.GraphicsPath Frame;
+        protected GraphicsPath Frame;
         public void DrawFrame(PaintEventArgs e)
         {
-            Rectangle rect = new Rectangle(1, 1, Width - 2, Height - 2);
+            var rect = new Rectangle(1, 1, Width - 2, Height - 2);
             Frame = Utils.RoundRectangle(rect, 12, Corners.All);
-            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             e.Graphics.DrawPath(new Pen(Color.FromArgb(128, Color.Black)) { Width = 3 }, Frame);
 
-            using (GraphicsPath gp = new GraphicsPath())
+            using (var gp = new GraphicsPath())
             {
                 rect.Inflate(2, 2);
                 gp.AddPath(Utils.RoundRectangle(rect, 19, Corners.All), true);
@@ -39,7 +34,7 @@ namespace FlexScreen
             }
         }
 
-        #region moue events
+        #region mouse events
         public void form_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -55,7 +50,5 @@ namespace FlexScreen
             ((Control)sender).Cursor = Cursors.Default;
         }
         #endregion
-
-
     }
 }

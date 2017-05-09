@@ -5,10 +5,7 @@ namespace FlexScreen
 {
     public class ArrowTool : LineTool
     {
-        public override string Name
-        {
-            get { return "Arrow"; }
-        }
+        public override string Name => "Arrow";
 
         public ArrowTool(CaptureForm form, Pen arrowPen)
             : base(form, arrowPen)

@@ -39,7 +39,7 @@ namespace FlexScreen.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FlexScreen.Properties.Resources", typeof(Resources).Assembly);
+                    var temp = new global::System.Resources.ResourceManager("FlexScreen.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -65,7 +65,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _2345 {
             get {
-                object obj = ResourceManager.GetObject("2345", resourceCulture);
+                var obj = ResourceManager.GetObject("2345", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap accept {
             get {
-                object obj = ResourceManager.GetObject("accept", resourceCulture);
+                var obj = ResourceManager.GetObject("accept", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,7 +103,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap application_put {
             get {
-                object obj = ResourceManager.GetObject("application_put", resourceCulture);
+                var obj = ResourceManager.GetObject("application_put", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,7 +113,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Apply {
             get {
-                object obj = ResourceManager.GetObject("Apply", resourceCulture);
+                var obj = ResourceManager.GetObject("Apply", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,7 +123,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Apply1 {
             get {
-                object obj = ResourceManager.GetObject("Apply1", resourceCulture);
+                var obj = ResourceManager.GetObject("Apply1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,7 +133,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Apply2 {
             get {
-                object obj = ResourceManager.GetObject("Apply2", resourceCulture);
+                var obj = ResourceManager.GetObject("Apply2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,7 +143,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap arrow_delete_last {
             get {
-                object obj = ResourceManager.GetObject("arrow_delete_last", resourceCulture);
+                var obj = ResourceManager.GetObject("arrow_delete_last", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,7 +153,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap arrow_redo {
             get {
-                object obj = ResourceManager.GetObject("arrow_redo", resourceCulture);
+                var obj = ResourceManager.GetObject("arrow_redo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,7 +163,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap arrow_refresh {
             get {
-                object obj = ResourceManager.GetObject("arrow_refresh", resourceCulture);
+                var obj = ResourceManager.GetObject("arrow_refresh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,7 +173,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap arrow_undo {
             get {
-                object obj = ResourceManager.GetObject("arrow_undo", resourceCulture);
+                var obj = ResourceManager.GetObject("arrow_undo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,7 +183,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap ArrowCursor_22x22 {
             get {
-                object obj = ResourceManager.GetObject("ArrowCursor_22x22", resourceCulture);
+                var obj = ResourceManager.GetObject("ArrowCursor_22x22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -202,7 +202,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap BackgroundGray {
             get {
-                object obj = ResourceManager.GetObject("BackgroundGray", resourceCulture);
+                var obj = ResourceManager.GetObject("BackgroundGray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -212,7 +212,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap BackgroundGray1 {
             get {
-                object obj = ResourceManager.GetObject("BackgroundGray1", resourceCulture);
+                var obj = ResourceManager.GetObject("BackgroundGray1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,7 +233,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Browse {
             get {
-                object obj = ResourceManager.GetObject("Browse", resourceCulture);
+                var obj = ResourceManager.GetObject("Browse", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,7 +243,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap bullet_disk {
             get {
-                object obj = ResourceManager.GetObject("bullet_disk", resourceCulture);
+                var obj = ResourceManager.GetObject("bullet_disk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,7 +253,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap cancel {
             get {
-                object obj = ResourceManager.GetObject("cancel", resourceCulture);
+                var obj = ResourceManager.GetObject("cancel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -290,7 +290,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap CD {
             get {
-                object obj = ResourceManager.GetObject("CD", resourceCulture);
+                var obj = ResourceManager.GetObject("CD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -300,7 +300,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap CD_32x32 {
             get {
-                object obj = ResourceManager.GetObject("CD 32x32", resourceCulture);
+                var obj = ResourceManager.GetObject("CD 32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -310,7 +310,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static byte[] CherrySwash {
             get {
-                object obj = ResourceManager.GetObject("CherrySwash", resourceCulture);
+                var obj = ResourceManager.GetObject("CherrySwash", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -320,7 +320,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static byte[] CherrySwash_bold {
             get {
-                object obj = ResourceManager.GetObject("CherrySwash_bold", resourceCulture);
+                var obj = ResourceManager.GetObject("CherrySwash_bold", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -339,7 +339,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap color_swatch {
             get {
-                object obj = ResourceManager.GetObject("color_swatch", resourceCulture);
+                var obj = ResourceManager.GetObject("color_swatch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -349,7 +349,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap color_wheel {
             get {
-                object obj = ResourceManager.GetObject("color_wheel", resourceCulture);
+                var obj = ResourceManager.GetObject("color_wheel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -359,7 +359,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap ColorfulBG {
             get {
-                object obj = ResourceManager.GetObject("ColorfulBG", resourceCulture);
+                var obj = ResourceManager.GetObject("ColorfulBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -369,7 +369,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap ColorfulBG1 {
             get {
-                object obj = ResourceManager.GetObject("ColorfulBG1", resourceCulture);
+                var obj = ResourceManager.GetObject("ColorfulBG1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -379,7 +379,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Copy {
             get {
-                object obj = ResourceManager.GetObject("Copy", resourceCulture);
+                var obj = ResourceManager.GetObject("Copy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -389,7 +389,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Copy_4_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Copy 4 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Copy 4 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -408,7 +408,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Icon Crop_Icon {
             get {
-                object obj = ResourceManager.GetObject("Crop_Icon", resourceCulture);
+                var obj = ResourceManager.GetObject("Crop_Icon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -418,7 +418,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Icon Crop_Icon_NotSaved {
             get {
-                object obj = ResourceManager.GetObject("Crop_Icon_NotSaved", resourceCulture);
+                var obj = ResourceManager.GetObject("Crop_Icon_NotSaved", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -428,7 +428,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Crop_Icon1 {
             get {
-                object obj = ResourceManager.GetObject("Crop_Icon1", resourceCulture);
+                var obj = ResourceManager.GetObject("Crop_Icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -438,7 +438,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Crop_Icon2 {
             get {
-                object obj = ResourceManager.GetObject("Crop_Icon2", resourceCulture);
+                var obj = ResourceManager.GetObject("Crop_Icon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -448,7 +448,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap cross {
             get {
-                object obj = ResourceManager.GetObject("cross", resourceCulture);
+                var obj = ResourceManager.GetObject("cross", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -458,7 +458,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap CrossCursorIcon {
             get {
-                object obj = ResourceManager.GetObject("CrossCursorIcon", resourceCulture);
+                var obj = ResourceManager.GetObject("CrossCursorIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -477,7 +477,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Cursor_Arrow {
             get {
-                object obj = ResourceManager.GetObject("Cursor_Arrow", resourceCulture);
+                var obj = ResourceManager.GetObject("Cursor_Arrow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -487,7 +487,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Cursor_HandPointing {
             get {
-                object obj = ResourceManager.GetObject("Cursor_HandPointing", resourceCulture);
+                var obj = ResourceManager.GetObject("Cursor_HandPointing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -506,7 +506,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap CursorIcon {
             get {
-                object obj = ResourceManager.GetObject("CursorIcon", resourceCulture);
+                var obj = ResourceManager.GetObject("CursorIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -516,7 +516,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap cut {
             get {
-                object obj = ResourceManager.GetObject("cut", resourceCulture);
+                var obj = ResourceManager.GetObject("cut", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -526,7 +526,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Cut_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Cut 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Cut 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -536,7 +536,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Cut_32x32 {
             get {
-                object obj = ResourceManager.GetObject("Cut 32x32", resourceCulture);
+                var obj = ResourceManager.GetObject("Cut 32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -555,7 +555,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap delete {
             get {
-                object obj = ResourceManager.GetObject("delete", resourceCulture);
+                var obj = ResourceManager.GetObject("delete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -565,7 +565,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Directions_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Directions 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Directions 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -575,7 +575,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Directions_32x32 {
             get {
-                object obj = ResourceManager.GetObject("Directions 32x32", resourceCulture);
+                var obj = ResourceManager.GetObject("Directions 32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -585,7 +585,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap disk {
             get {
-                object obj = ResourceManager.GetObject("disk", resourceCulture);
+                var obj = ResourceManager.GetObject("disk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -595,7 +595,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap disk_multiple {
             get {
-                object obj = ResourceManager.GetObject("disk_multiple", resourceCulture);
+                var obj = ResourceManager.GetObject("disk_multiple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -605,7 +605,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Eraser_16x116 {
             get {
-                object obj = ResourceManager.GetObject("Eraser 16x116", resourceCulture);
+                var obj = ResourceManager.GetObject("Eraser 16x116", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -615,7 +615,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Eraser3_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Eraser3 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Eraser3 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -625,7 +625,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Erraser {
             get {
-                object obj = ResourceManager.GetObject("Erraser", resourceCulture);
+                var obj = ResourceManager.GetObject("Erraser", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -635,7 +635,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap exclamation {
             get {
-                object obj = ResourceManager.GetObject("exclamation", resourceCulture);
+                var obj = ResourceManager.GetObject("exclamation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -645,7 +645,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap exclamation_16x16 {
             get {
-                object obj = ResourceManager.GetObject("exclamation 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("exclamation 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -655,7 +655,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap exclamation1 {
             get {
-                object obj = ResourceManager.GetObject("exclamation1", resourceCulture);
+                var obj = ResourceManager.GetObject("exclamation1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -665,7 +665,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap exclamation2 {
             get {
-                object obj = ResourceManager.GetObject("exclamation2", resourceCulture);
+                var obj = ResourceManager.GetObject("exclamation2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -675,7 +675,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap eye {
             get {
-                object obj = ResourceManager.GetObject("eye", resourceCulture);
+                var obj = ResourceManager.GetObject("eye", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -685,7 +685,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fancy_Pin_Black {
             get {
-                object obj = ResourceManager.GetObject("Fancy_Pin_Black", resourceCulture);
+                var obj = ResourceManager.GetObject("Fancy_Pin_Black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -695,7 +695,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fancy_Pin_Blue {
             get {
-                object obj = ResourceManager.GetObject("Fancy_Pin_Blue", resourceCulture);
+                var obj = ResourceManager.GetObject("Fancy_Pin_Blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -705,7 +705,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fancy_Pin_Brown {
             get {
-                object obj = ResourceManager.GetObject("Fancy_Pin_Brown", resourceCulture);
+                var obj = ResourceManager.GetObject("Fancy_Pin_Brown", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -715,7 +715,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fancy_Pin_Cyan {
             get {
-                object obj = ResourceManager.GetObject("Fancy_Pin_Cyan", resourceCulture);
+                var obj = ResourceManager.GetObject("Fancy_Pin_Cyan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -725,7 +725,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fancy_Pin_Gray {
             get {
-                object obj = ResourceManager.GetObject("Fancy_Pin_Gray", resourceCulture);
+                var obj = ResourceManager.GetObject("Fancy_Pin_Gray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -735,7 +735,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fancy_Pin_Green {
             get {
-                object obj = ResourceManager.GetObject("Fancy_Pin_Green", resourceCulture);
+                var obj = ResourceManager.GetObject("Fancy_Pin_Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -745,7 +745,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fancy_Pin_Lime {
             get {
-                object obj = ResourceManager.GetObject("Fancy_Pin_Lime", resourceCulture);
+                var obj = ResourceManager.GetObject("Fancy_Pin_Lime", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -755,7 +755,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fancy_Pin_Orange {
             get {
-                object obj = ResourceManager.GetObject("Fancy_Pin_Orange", resourceCulture);
+                var obj = ResourceManager.GetObject("Fancy_Pin_Orange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -765,7 +765,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fancy_Pin_Pink {
             get {
-                object obj = ResourceManager.GetObject("Fancy_Pin_Pink", resourceCulture);
+                var obj = ResourceManager.GetObject("Fancy_Pin_Pink", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -775,7 +775,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fancy_Pin_Purple {
             get {
-                object obj = ResourceManager.GetObject("Fancy_Pin_Purple", resourceCulture);
+                var obj = ResourceManager.GetObject("Fancy_Pin_Purple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -785,7 +785,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fancy_Pin_Red {
             get {
-                object obj = ResourceManager.GetObject("Fancy_Pin_Red", resourceCulture);
+                var obj = ResourceManager.GetObject("Fancy_Pin_Red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -795,7 +795,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fancy_Pin_Yellow {
             get {
-                object obj = ResourceManager.GetObject("Fancy_Pin_Yellow", resourceCulture);
+                var obj = ResourceManager.GetObject("Fancy_Pin_Yellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -814,7 +814,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap flag_blue {
             get {
-                object obj = ResourceManager.GetObject("flag_blue", resourceCulture);
+                var obj = ResourceManager.GetObject("flag_blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -824,7 +824,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap flag_green {
             get {
-                object obj = ResourceManager.GetObject("flag_green", resourceCulture);
+                var obj = ResourceManager.GetObject("flag_green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -834,7 +834,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap flag_orange {
             get {
-                object obj = ResourceManager.GetObject("flag_orange", resourceCulture);
+                var obj = ResourceManager.GetObject("flag_orange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -844,7 +844,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap flag_pink {
             get {
-                object obj = ResourceManager.GetObject("flag_pink", resourceCulture);
+                var obj = ResourceManager.GetObject("flag_pink", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -854,7 +854,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap flag_purple {
             get {
-                object obj = ResourceManager.GetObject("flag_purple", resourceCulture);
+                var obj = ResourceManager.GetObject("flag_purple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -864,7 +864,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap flag_red {
             get {
-                object obj = ResourceManager.GetObject("flag_red", resourceCulture);
+                var obj = ResourceManager.GetObject("flag_red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -874,7 +874,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap flag_yellow {
             get {
-                object obj = ResourceManager.GetObject("flag_yellow", resourceCulture);
+                var obj = ResourceManager.GetObject("flag_yellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -884,7 +884,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Font1 {
             get {
-                object obj = ResourceManager.GetObject("Font1", resourceCulture);
+                var obj = ResourceManager.GetObject("Font1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -894,7 +894,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Gears_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Gears 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Gears 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -904,7 +904,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Gears_2_32x32 {
             get {
-                object obj = ResourceManager.GetObject("Gears 2 32x32", resourceCulture);
+                var obj = ResourceManager.GetObject("Gears 2 32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -914,7 +914,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Gears_2_32x321 {
             get {
-                object obj = ResourceManager.GetObject("Gears 2 32x321", resourceCulture);
+                var obj = ResourceManager.GetObject("Gears 2 32x321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -924,7 +924,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Gears_32x32 {
             get {
-                object obj = ResourceManager.GetObject("Gears 32x32", resourceCulture);
+                var obj = ResourceManager.GetObject("Gears 32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -934,7 +934,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Hand_Print_Red_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Hand Print Red 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Hand Print Red 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -944,7 +944,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap HandCursor_22x22 {
             get {
-                object obj = ResourceManager.GetObject("HandCursor_22x22", resourceCulture);
+                var obj = ResourceManager.GetObject("HandCursor_22x22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -954,7 +954,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap help {
             get {
-                object obj = ResourceManager.GetObject("help", resourceCulture);
+                var obj = ResourceManager.GetObject("help", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -964,7 +964,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Help1 {
             get {
-                object obj = ResourceManager.GetObject("Help1", resourceCulture);
+                var obj = ResourceManager.GetObject("Help1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -974,7 +974,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Highlighter {
             get {
-                object obj = ResourceManager.GetObject("Highlighter", resourceCulture);
+                var obj = ResourceManager.GetObject("Highlighter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -984,7 +984,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img_0 {
             get {
-                object obj = ResourceManager.GetObject("Img_0", resourceCulture);
+                var obj = ResourceManager.GetObject("Img_0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -994,7 +994,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img_1 {
             get {
-                object obj = ResourceManager.GetObject("Img_1", resourceCulture);
+                var obj = ResourceManager.GetObject("Img_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1004,7 +1004,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img_2 {
             get {
-                object obj = ResourceManager.GetObject("Img_2", resourceCulture);
+                var obj = ResourceManager.GetObject("Img_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1014,7 +1014,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img_3 {
             get {
-                object obj = ResourceManager.GetObject("Img_3", resourceCulture);
+                var obj = ResourceManager.GetObject("Img_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1024,7 +1024,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img_4 {
             get {
-                object obj = ResourceManager.GetObject("Img_4", resourceCulture);
+                var obj = ResourceManager.GetObject("Img_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1034,7 +1034,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img_5 {
             get {
-                object obj = ResourceManager.GetObject("Img_5", resourceCulture);
+                var obj = ResourceManager.GetObject("Img_5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1044,7 +1044,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img1_0 {
             get {
-                object obj = ResourceManager.GetObject("Img1_0", resourceCulture);
+                var obj = ResourceManager.GetObject("Img1_0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1054,7 +1054,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img1_1 {
             get {
-                object obj = ResourceManager.GetObject("Img1_1", resourceCulture);
+                var obj = ResourceManager.GetObject("Img1_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1064,7 +1064,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img1_2 {
             get {
-                object obj = ResourceManager.GetObject("Img1_2", resourceCulture);
+                var obj = ResourceManager.GetObject("Img1_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1074,7 +1074,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img1_4 {
             get {
-                object obj = ResourceManager.GetObject("Img1_4", resourceCulture);
+                var obj = ResourceManager.GetObject("Img1_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1084,7 +1084,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img1_5 {
             get {
-                object obj = ResourceManager.GetObject("Img1_5", resourceCulture);
+                var obj = ResourceManager.GetObject("Img1_5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1094,7 +1094,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img1_6 {
             get {
-                object obj = ResourceManager.GetObject("Img1_6", resourceCulture);
+                var obj = ResourceManager.GetObject("Img1_6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1104,7 +1104,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img1_7 {
             get {
-                object obj = ResourceManager.GetObject("Img1_7", resourceCulture);
+                var obj = ResourceManager.GetObject("Img1_7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1114,7 +1114,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img2_0 {
             get {
-                object obj = ResourceManager.GetObject("Img2_0", resourceCulture);
+                var obj = ResourceManager.GetObject("Img2_0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1124,7 +1124,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img2_1 {
             get {
-                object obj = ResourceManager.GetObject("Img2_1", resourceCulture);
+                var obj = ResourceManager.GetObject("Img2_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1134,7 +1134,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img2_2 {
             get {
-                object obj = ResourceManager.GetObject("Img2_2", resourceCulture);
+                var obj = ResourceManager.GetObject("Img2_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1144,7 +1144,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Img2_3 {
             get {
-                object obj = ResourceManager.GetObject("Img2_3", resourceCulture);
+                var obj = ResourceManager.GetObject("Img2_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1172,7 +1172,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap lightbulb {
             get {
-                object obj = ResourceManager.GetObject("lightbulb", resourceCulture);
+                var obj = ResourceManager.GetObject("lightbulb", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1182,7 +1182,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap lightbulb_off {
             get {
-                object obj = ResourceManager.GetObject("lightbulb_off", resourceCulture);
+                var obj = ResourceManager.GetObject("lightbulb_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1192,7 +1192,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap lightbulb1 {
             get {
-                object obj = ResourceManager.GetObject("lightbulb1", resourceCulture);
+                var obj = ResourceManager.GetObject("lightbulb1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1229,7 +1229,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Lock {
             get {
-                object obj = ResourceManager.GetObject("Lock", resourceCulture);
+                var obj = ResourceManager.GetObject("Lock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1239,7 +1239,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap magnifier {
             get {
-                object obj = ResourceManager.GetObject("magnifier", resourceCulture);
+                var obj = ResourceManager.GetObject("magnifier", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1249,7 +1249,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap magnifierGlass {
             get {
-                object obj = ResourceManager.GetObject("magnifierGlass", resourceCulture);
+                var obj = ResourceManager.GetObject("magnifierGlass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1259,7 +1259,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap magnifierGlass_Small {
             get {
-                object obj = ResourceManager.GetObject("magnifierGlass_Small", resourceCulture);
+                var obj = ResourceManager.GetObject("magnifierGlass_Small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1269,7 +1269,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap MenuBackground {
             get {
-                object obj = ResourceManager.GetObject("MenuBackground", resourceCulture);
+                var obj = ResourceManager.GetObject("MenuBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1279,7 +1279,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap MenuBackground1 {
             get {
-                object obj = ResourceManager.GetObject("MenuBackground1", resourceCulture);
+                var obj = ResourceManager.GetObject("MenuBackground1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1289,7 +1289,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Minimize {
             get {
-                object obj = ResourceManager.GetObject("Minimize", resourceCulture);
+                var obj = ResourceManager.GetObject("Minimize", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1299,7 +1299,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Minimize1 {
             get {
-                object obj = ResourceManager.GetObject("Minimize1", resourceCulture);
+                var obj = ResourceManager.GetObject("Minimize1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1309,7 +1309,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap MoveCursor {
             get {
-                object obj = ResourceManager.GetObject("MoveCursor", resourceCulture);
+                var obj = ResourceManager.GetObject("MoveCursor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1337,7 +1337,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Obfuscator {
             get {
-                object obj = ResourceManager.GetObject("Obfuscator", resourceCulture);
+                var obj = ResourceManager.GetObject("Obfuscator", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1356,7 +1356,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Opaque {
             get {
-                object obj = ResourceManager.GetObject("Opaque", resourceCulture);
+                var obj = ResourceManager.GetObject("Opaque", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1375,7 +1375,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Option1 {
             get {
-                object obj = ResourceManager.GetObject("Option1", resourceCulture);
+                var obj = ResourceManager.GetObject("Option1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1385,7 +1385,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Option1_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Option1 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Option1 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1395,7 +1395,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Options {
             get {
-                object obj = ResourceManager.GetObject("Options", resourceCulture);
+                var obj = ResourceManager.GetObject("Options", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1405,7 +1405,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap options_16x16 {
             get {
-                object obj = ResourceManager.GetObject("options 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("options 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1415,7 +1415,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap options_32x32 {
             get {
-                object obj = ResourceManager.GetObject("options 32x32", resourceCulture);
+                var obj = ResourceManager.GetObject("options 32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1425,7 +1425,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap options_32x321 {
             get {
-                object obj = ResourceManager.GetObject("options 32x321", resourceCulture);
+                var obj = ResourceManager.GetObject("options 32x321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1435,7 +1435,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Options1 {
             get {
-                object obj = ResourceManager.GetObject("Options1", resourceCulture);
+                var obj = ResourceManager.GetObject("Options1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1445,7 +1445,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Options1_32x32 {
             get {
-                object obj = ResourceManager.GetObject("Options1 32x32", resourceCulture);
+                var obj = ResourceManager.GetObject("Options1 32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1455,7 +1455,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap options2_32_x32 {
             get {
-                object obj = ResourceManager.GetObject("options2 32 x32", resourceCulture);
+                var obj = ResourceManager.GetObject("options2 32 x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1474,7 +1474,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static byte[] Pacifico {
             get {
-                object obj = ResourceManager.GetObject("Pacifico", resourceCulture);
+                var obj = ResourceManager.GetObject("Pacifico", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1484,7 +1484,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap page_save {
             get {
-                object obj = ResourceManager.GetObject("page_save", resourceCulture);
+                var obj = ResourceManager.GetObject("page_save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1494,7 +1494,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Paint_Colors_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Paint Colors 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Paint Colors 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1504,7 +1504,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap paintbrush {
             get {
-                object obj = ResourceManager.GetObject("paintbrush", resourceCulture);
+                var obj = ResourceManager.GetObject("paintbrush", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1514,7 +1514,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap palette {
             get {
-                object obj = ResourceManager.GetObject("palette", resourceCulture);
+                var obj = ResourceManager.GetObject("palette", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1524,7 +1524,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Paste {
             get {
-                object obj = ResourceManager.GetObject("Paste", resourceCulture);
+                var obj = ResourceManager.GetObject("Paste", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1534,7 +1534,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Paste_4_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Paste 4 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Paste 4 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1544,7 +1544,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Pen_Color_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Pen Color 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Pen Color 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1554,7 +1554,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap pencil {
             get {
-                object obj = ResourceManager.GetObject("pencil", resourceCulture);
+                var obj = ResourceManager.GetObject("pencil", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1564,7 +1564,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Pin_Brown {
             get {
-                object obj = ResourceManager.GetObject("Pin_Brown", resourceCulture);
+                var obj = ResourceManager.GetObject("Pin_Brown", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1574,7 +1574,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Pin_Down {
             get {
-                object obj = ResourceManager.GetObject("Pin_Down", resourceCulture);
+                var obj = ResourceManager.GetObject("Pin_Down", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1584,7 +1584,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Pin_Form {
             get {
-                object obj = ResourceManager.GetObject("Pin_Form", resourceCulture);
+                var obj = ResourceManager.GetObject("Pin_Form", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1594,7 +1594,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Pin_Form_NoPin {
             get {
-                object obj = ResourceManager.GetObject("Pin_Form_NoPin", resourceCulture);
+                var obj = ResourceManager.GetObject("Pin_Form_NoPin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1604,7 +1604,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Pin_Gray {
             get {
-                object obj = ResourceManager.GetObject("Pin_Gray", resourceCulture);
+                var obj = ResourceManager.GetObject("Pin_Gray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1614,7 +1614,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Pin_Red {
             get {
-                object obj = ResourceManager.GetObject("Pin_Red", resourceCulture);
+                var obj = ResourceManager.GetObject("Pin_Red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1633,7 +1633,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap PinDown {
             get {
-                object obj = ResourceManager.GetObject("PinDown", resourceCulture);
+                var obj = ResourceManager.GetObject("PinDown", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1643,7 +1643,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Pinned_Note {
             get {
-                object obj = ResourceManager.GetObject("Pinned_Note", resourceCulture);
+                var obj = ResourceManager.GetObject("Pinned_Note", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1653,7 +1653,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap PinRight {
             get {
-                object obj = ResourceManager.GetObject("PinRight", resourceCulture);
+                var obj = ResourceManager.GetObject("PinRight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1663,7 +1663,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Play {
             get {
-                object obj = ResourceManager.GetObject("Play", resourceCulture);
+                var obj = ResourceManager.GetObject("Play", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1673,7 +1673,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Ponter_Big {
             get {
-                object obj = ResourceManager.GetObject("Ponter_Big", resourceCulture);
+                var obj = ResourceManager.GetObject("Ponter_Big", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1683,7 +1683,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap PrintScreen {
             get {
-                object obj = ResourceManager.GetObject("PrintScreen", resourceCulture);
+                var obj = ResourceManager.GetObject("PrintScreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1693,7 +1693,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Project1_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Project1 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Project1 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1703,7 +1703,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static byte[] RaviPrakash {
             get {
-                object obj = ResourceManager.GetObject("RaviPrakash", resourceCulture);
+                var obj = ResourceManager.GetObject("RaviPrakash", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1713,7 +1713,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Redo1 {
             get {
-                object obj = ResourceManager.GetObject("Redo1", resourceCulture);
+                var obj = ResourceManager.GetObject("Redo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1723,7 +1723,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Restore_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Restore 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Restore 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1733,7 +1733,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap SaveAs {
             get {
-                object obj = ResourceManager.GetObject("SaveAs", resourceCulture);
+                var obj = ResourceManager.GetObject("SaveAs", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1752,7 +1752,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap shading {
             get {
-                object obj = ResourceManager.GetObject("shading", resourceCulture);
+                var obj = ResourceManager.GetObject("shading", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1762,7 +1762,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap shading1 {
             get {
-                object obj = ResourceManager.GetObject("shading1", resourceCulture);
+                var obj = ResourceManager.GetObject("shading1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1781,7 +1781,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static byte[] Sniglet {
             get {
-                object obj = ResourceManager.GetObject("Sniglet", resourceCulture);
+                var obj = ResourceManager.GetObject("Sniglet", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1791,7 +1791,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Square_Tilled {
             get {
-                object obj = ResourceManager.GetObject("Square Tilled", resourceCulture);
+                var obj = ResourceManager.GetObject("Square Tilled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1801,7 +1801,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Star_Burst_Blue {
             get {
-                object obj = ResourceManager.GetObject("Star_Burst_Blue", resourceCulture);
+                var obj = ResourceManager.GetObject("Star_Burst_Blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1811,7 +1811,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Star_Burst_Cyan {
             get {
-                object obj = ResourceManager.GetObject("Star_Burst_Cyan", resourceCulture);
+                var obj = ResourceManager.GetObject("Star_Burst_Cyan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1821,7 +1821,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Star_Burst_Cyan1 {
             get {
-                object obj = ResourceManager.GetObject("Star_Burst_Cyan1", resourceCulture);
+                var obj = ResourceManager.GetObject("Star_Burst_Cyan1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1831,7 +1831,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Star_Burst_Green {
             get {
-                object obj = ResourceManager.GetObject("Star_Burst_Green", resourceCulture);
+                var obj = ResourceManager.GetObject("Star_Burst_Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1841,7 +1841,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Star_Burst_Orange {
             get {
-                object obj = ResourceManager.GetObject("Star_Burst_Orange", resourceCulture);
+                var obj = ResourceManager.GetObject("Star_Burst_Orange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1851,7 +1851,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Star_Burst_Pink {
             get {
-                object obj = ResourceManager.GetObject("Star_Burst_Pink", resourceCulture);
+                var obj = ResourceManager.GetObject("Star_Burst_Pink", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1861,7 +1861,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Star_Burst_Purple {
             get {
-                object obj = ResourceManager.GetObject("Star_Burst_Purple", resourceCulture);
+                var obj = ResourceManager.GetObject("Star_Burst_Purple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1871,7 +1871,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Star_Burst_Red {
             get {
-                object obj = ResourceManager.GetObject("Star_Burst_Red", resourceCulture);
+                var obj = ResourceManager.GetObject("Star_Burst_Red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1881,7 +1881,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Star_Burst_Yellow {
             get {
-                object obj = ResourceManager.GetObject("Star_Burst_Yellow", resourceCulture);
+                var obj = ResourceManager.GetObject("Star_Burst_Yellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1891,7 +1891,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap style {
             get {
-                object obj = ResourceManager.GetObject("style", resourceCulture);
+                var obj = ResourceManager.GetObject("style", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1901,7 +1901,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Style_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Style 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Style 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1911,7 +1911,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Style_16x161 {
             get {
-                object obj = ResourceManager.GetObject("Style 16x161", resourceCulture);
+                var obj = ResourceManager.GetObject("Style 16x161", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1930,7 +1930,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Tools_16x16 {
             get {
-                object obj = ResourceManager.GetObject("Tools 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("Tools 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1940,7 +1940,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Tools_16x161 {
             get {
-                object obj = ResourceManager.GetObject("Tools 16x161", resourceCulture);
+                var obj = ResourceManager.GetObject("Tools 16x161", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1968,7 +1968,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Transparent {
             get {
-                object obj = ResourceManager.GetObject("Transparent", resourceCulture);
+                var obj = ResourceManager.GetObject("Transparent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1978,7 +1978,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Transparent1 {
             get {
-                object obj = ResourceManager.GetObject("Transparent1", resourceCulture);
+                var obj = ResourceManager.GetObject("Transparent1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2006,7 +2006,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap turn_down_16x16 {
             get {
-                object obj = ResourceManager.GetObject("turn down 16x16", resourceCulture);
+                var obj = ResourceManager.GetObject("turn down 16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2016,7 +2016,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Undo {
             get {
-                object obj = ResourceManager.GetObject("Undo", resourceCulture);
+                var obj = ResourceManager.GetObject("Undo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2062,7 +2062,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap wrench {
             get {
-                object obj = ResourceManager.GetObject("wrench", resourceCulture);
+                var obj = ResourceManager.GetObject("wrench", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2072,7 +2072,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap wrench_orange {
             get {
-                object obj = ResourceManager.GetObject("wrench_orange", resourceCulture);
+                var obj = ResourceManager.GetObject("wrench_orange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2082,7 +2082,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Write {
             get {
-                object obj = ResourceManager.GetObject("Write", resourceCulture);
+                var obj = ResourceManager.GetObject("Write", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2092,7 +2092,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap zoom {
             get {
-                object obj = ResourceManager.GetObject("zoom", resourceCulture);
+                var obj = ResourceManager.GetObject("zoom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2102,7 +2102,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap zoom_in {
             get {
-                object obj = ResourceManager.GetObject("zoom_in", resourceCulture);
+                var obj = ResourceManager.GetObject("zoom_in", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2112,7 +2112,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap zoom_in1 {
             get {
-                object obj = ResourceManager.GetObject("zoom_in1", resourceCulture);
+                var obj = ResourceManager.GetObject("zoom_in1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2122,7 +2122,7 @@ namespace FlexScreen.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap zoom_out {
             get {
-                object obj = ResourceManager.GetObject("zoom_out", resourceCulture);
+                var obj = ResourceManager.GetObject("zoom_out", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

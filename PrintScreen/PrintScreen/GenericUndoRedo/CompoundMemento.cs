@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace FlexScreen.GenericUndoRedo
 {
@@ -29,10 +27,7 @@ namespace FlexScreen.GenericUndoRedo
         /// <summary>
         /// Gets number of sub-memento contained in this complex memento.
         /// </summary>
-        public int Size
-        {
-            get { return mementos.Count; }
-        }
+        public int Size => mementos.Count;
 
         #region IMemento Members
 
@@ -43,9 +38,9 @@ namespace FlexScreen.GenericUndoRedo
         /// <returns></returns>
         public CompoundMemento<T> Restore(T target)
         {
-            CompoundMemento<T> inverse = new CompoundMemento<T>();
+            var inverse = new CompoundMemento<T>();
             //starts from the last action
-            for (int i = mementos.Count - 1; i >= 0; i--)
+            for (var i = mementos.Count - 1; i >= 0; i--)
             {
                 inverse.Add(mementos[i].Restore(target));
             }

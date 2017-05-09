@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Drawing;
 
 namespace FlexScreen
@@ -15,7 +12,7 @@ namespace FlexScreen
         public ZoneHandlerArgs(Graphics graphics, Rectangle rectangle, int index)
             : base()
         {
-            this.Graphics = graphics;
+            Graphics = graphics;
             Rectangle = rectangle;
             Index = index;
         }

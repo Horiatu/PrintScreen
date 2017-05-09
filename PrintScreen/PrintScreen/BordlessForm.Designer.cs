@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BordlessForm));
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(BordlessForm));
             this.SuspendLayout();
             // 
             // BordlessForm

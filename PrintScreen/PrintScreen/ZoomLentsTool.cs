@@ -56,7 +56,7 @@ namespace FlexScreen
         public ZoomLentsTool(CaptureForm form, int magnifyFactor)
             : base(form, 11)
         {
-            OriginalMagnifierGlassImage = Properties.Resources.magnifierGlass;
+            OriginalMagnifierGlassImage = Resources.magnifierGlass;
             MagnifyFactor = magnifyFactor;
             MagnifierGlassImage = OriginalMagnifierGlassImage;
             HideRectangle = true;

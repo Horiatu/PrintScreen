@@ -40,23 +40,23 @@ namespace FlexScreen
 
         internal Point CrossPoint;
 
-        Rectangle selectedRectangle;
+        Rectangle m_selectedRectangle;
         public Rectangle SelectedRectangle
         {
             get
             {
                 GetSelectedRectangle();
 
-                return selectedRectangle;
+                return m_selectedRectangle;
             }
         }
 
         private void GetSelectedRectangle()
         {
-            selectedRectangle.X = Math.Min(m_startPoint.X, m_endPoint.X);
-            selectedRectangle.Y = Math.Min(m_startPoint.Y, m_endPoint.Y);
-            selectedRectangle.Width = Math.Abs(m_endPoint.X - m_startPoint.X);
-            selectedRectangle.Height = Math.Abs(m_endPoint.Y - m_startPoint.Y);
+            m_selectedRectangle.X = Math.Min(m_startPoint.X, m_endPoint.X);
+            m_selectedRectangle.Y = Math.Min(m_startPoint.Y, m_endPoint.Y);
+            m_selectedRectangle.Width = Math.Abs(m_endPoint.X - m_startPoint.X);
+            m_selectedRectangle.Height = Math.Abs(m_endPoint.Y - m_startPoint.Y);
         }
 
         #region Caption
@@ -242,19 +242,16 @@ namespace FlexScreen
                 m_activeTool = value;
                 if (ActiveTool is DefaultTool) return;
                 if (Settings.Default.NoToolTips || string.IsNullOrEmpty(ActiveTool.Name)) return;
-                var tip = (ActiveTool.Tip ?? "") + @"
-Press [F1] for more help.";
+                var tip = $@"{ActiveTool.Tip ?? ""}
+Press [F1] for more help.".Trim();
                 Program.MyContext.SplashScreenForm.NotifyIcon1.ShowBalloonTip(tip.Length * 100, ActiveTool.Name, tip, ToolTipIcon.None);
             }
         }
 
         TextDialog m_textDialog;
-        TextDialog TextDialog
-        {
-            get { return m_textDialog ?? (m_textDialog = new TextDialog()); }
-        }
+        TextDialog TextDialog => m_textDialog ?? (m_textDialog = new TextDialog());
 
-        double TransparencyToOpacity(int transparency) { return (100 - transparency) / 100.0; }
+        double TransparencyToOpacity(int transparency) => (100 - transparency) / 100.0;
 
         #region key events
         public bool AltKeyPressed;
@@ -319,11 +316,11 @@ Press [F1] for more help.";
             }
         }
 
-        Point lastMenuClicked = new Point(0, 0);
-        Point rightClickedPos = new Point(0, 0);
+        Point m_lastMenuClicked = new Point(0, 0);
+        Point m_rightClickedPos = new Point(0, 0);
         private void ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lastMenuClicked = Cursor.Position;
+            m_lastMenuClicked = Cursor.Position;
             RestoreInFormCursorPossition();
         }
 
@@ -331,7 +328,7 @@ Press [F1] for more help.";
         private void FilesToolStripMenuItemDropDownOpened(object sender, EventArgs e)
         {
             m_lastMenuItemOpened = sender as ToolStripMenuItem;
-            if (lastMenuClicked.X == 0 && lastMenuClicked.Y == 0)
+            if (m_lastMenuClicked.X == 0 && m_lastMenuClicked.Y == 0)
             {
                 ToolStripMenuItem_Click(sender, e);
             }
@@ -374,11 +371,11 @@ Press [F1] for more help.";
                 MenuStrip1MouseEnter(sender, e);
                 if (m_lastMenuItemOpened != null)
                 {
-                    rightClickedPos = Cursor.Position;
+                    m_rightClickedPos = Cursor.Position;
                     m_lastMenuItemOpened.ShowDropDown();
-                    if (lastMenuClicked.X > 0 && lastMenuClicked.Y > 0)
+                    if (m_lastMenuClicked.X > 0 && m_lastMenuClicked.Y > 0)
                     {
-                        Cursor.Position = lastMenuClicked;
+                        Cursor.Position = m_lastMenuClicked;
                     }
                 }
             }
@@ -417,10 +414,7 @@ Press [F1] for more help.";
 
         void OnTemporaryPaint(Graphics g)
         {
-            if (TemporaryPaint != null)
-            {
-                TemporaryPaint(this, g);
-            }
+            TemporaryPaint?.Invoke(this, g);
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -460,9 +454,9 @@ Press [F1] for more help.";
             {
                 if (SelectedRectangle.Width > 0 || SelectedRectangle.Height > 0)
                 {
-                    e.Graphics.DrawString(string.Format("{0}, {1}", SelectedRectangle.Left, SelectedRectangle.Top),
+                    e.Graphics.DrawString($"{SelectedRectangle.Left}, {SelectedRectangle.Top}",
                         new Font("Arial", 7), new SolidBrush(Settings.Default.SelectionColor), new Point(Math.Min(m_startPoint.X, m_endPoint.X) + 1, Math.Min(m_startPoint.Y, m_endPoint.Y) - 11));
-                    e.Graphics.DrawString(string.Format("{0}, {1}", SelectedRectangle.Width, SelectedRectangle.Height),
+                    e.Graphics.DrawString($"{SelectedRectangle.Width}, {SelectedRectangle.Height}",
                         new Font("Arial", 7), new SolidBrush(Settings.Default.SelectionColor), new Point(m_endPoint.X + 1, m_endPoint.Y + 1));
                 }
             }
@@ -486,12 +480,9 @@ Press [F1] for more help.";
 
         public void IterateMultiZone(PaintEventArgs e, EventHandler<EventArgs> startHandler, EventHandler<ZoneHandlerArgs> zoneHandler, EventHandler<EventArgs> endHandler)
         {
-            if (startHandler != null)
-            {
-                startHandler(this, null);
-            }
+            startHandler?.Invoke(this, null);
             var n = 0;
-            for (int j = 0; j <= ((m_multiCrop.ImgOffsetY != 0) ? m_multiCrop.ImgRepeatY : 0); j++)
+            for (var j = 0; j <= ((m_multiCrop.ImgOffsetY != 0) ? m_multiCrop.ImgRepeatY : 0); j++)
             {
                 var y = m_multiCrop.ImgStartY + j * m_multiCrop.ImgOffsetY;
                 if (y + m_multiCrop.ImgHeight > Height) continue;
@@ -499,17 +490,11 @@ Press [F1] for more help.";
                 {
                     var x = m_multiCrop.ImgStartX + i * m_multiCrop.ImgOffsetX;
                     if (x + m_multiCrop.ImgWidth > Width) break;
-                    if (zoneHandler != null)
-                    {
-                        zoneHandler(this, new ZoneHandlerArgs(e.Graphics, new Rectangle(x, y, m_multiCrop.ImgWidth, m_multiCrop.ImgHeight), n++));
-                    }
+                    zoneHandler?.Invoke(this, new ZoneHandlerArgs(e.Graphics, new Rectangle(x, y, m_multiCrop.ImgWidth, m_multiCrop.ImgHeight), n++));
                 }
             }
             m_multiCrop.IsSaving = false;
-            if (endHandler != null)
-            {
-                endHandler(this, null);
-            }
+            endHandler?.Invoke(this, null);
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -614,9 +599,9 @@ Press [F1] for more help.";
             catch (Exception ex)
             {
                 Debug.Print(ex.Message);
-                Program.MyContext.SplashScreenForm.NotifyIcon1.ShowBalloonTip(2000, "PrintScreen", string.Format(
-@"Save Error:
-{0}", ex.Message), ToolTipIcon.Error);
+                Program.MyContext.SplashScreenForm.NotifyIcon1.ShowBalloonTip(2000, "PrintScreen",
+                    $@"Save Error:
+{ex.Message}", ToolTipIcon.Error);
             }
         }
 
@@ -775,7 +760,7 @@ Press [F1] for more help.";
             if (Program.MyContext.OpenImageDialog.ShowDialog() == DialogResult.OK)
             {
                 Settings.Default.ImagesDirectory = Program.MyContext.OpenImageDialog.InitialDirectory;
-                Image markerImage = Image.FromFile(Program.MyContext.OpenImageDialog.FileName);
+                var markerImage = Image.FromFile(Program.MyContext.OpenImageDialog.FileName);
                 //ToolStripMenuItem_Click(sender, e);
                 ActiveTool = new MarkerTool(this, markerImage, true);
             }
@@ -784,9 +769,9 @@ Press [F1] for more help.";
 
         private void RestoreInFormCursorPossition()
         {
-            if (rightClickedPos.X > 0 || rightClickedPos.Y > 0)
+            if (m_rightClickedPos.X > 0 || m_rightClickedPos.Y > 0)
             {
-                Cursor.Position = rightClickedPos;
+                Cursor.Position = m_rightClickedPos;
             }
         }
 
@@ -863,7 +848,7 @@ Press [F1] for more help.";
                 {
                     if (Settings.Default.PasteImagesWithBorder)
                     {
-                        using (Graphics g = Graphics.FromImage(markerImage))
+                        using (var g = Graphics.FromImage(markerImage))
                         {
                             g.DrawRectangle(new Pen(Color.FromArgb(127, Color.DarkGray)), 0, 0, markerImage.Width - 1,
                                             markerImage.Height - 1);
@@ -879,10 +864,10 @@ Press [F1] for more help.";
                 {
                     try
                     {
-                        Image markerImage = Image.FromFile(fileList[0]);
+                        var markerImage = Image.FromFile(fileList[0]);
                         if (Settings.Default.PasteImagesWithBorder)
                         {
-                            using (Graphics g = Graphics.FromImage(markerImage))
+                            using (var g = Graphics.FromImage(markerImage))
                             {
                                 g.DrawRectangle(new Pen(Color.FromArgb(127, Color.DarkGray)), 0, 0, markerImage.Width - 1, markerImage.Height - 1);
                             }
@@ -905,7 +890,7 @@ Press [F1] for more help.";
             else if (Clipboard.ContainsText())
             {
                 TextDialog.Annotate = Clipboard.GetText();
-                if (TextDialog.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+                if (TextDialog.ShowDialog(this) == DialogResult.OK)
                 {
                     ActiveTool = new TextTool(this, TextDialog.Annotate, TextDialog.Font, new SolidBrush(TextDialog.Color));
                 }
@@ -918,30 +903,21 @@ Press [F1] for more help.";
         {
             ToolStripMenuItem_Click(sender, e);
             var undoItem = Undo.Pop();
-            if (undoItem != null)
-            {
-                undoItem.Undo();
-            }
+            undoItem?.Undo();
         }
 
         private void deleteLastToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            DrawingTool undoItem = Undo.Remove();
-            if (undoItem != null)
-            {
-                undoItem.Undo();
-            }
+            var undoItem = Undo.Remove();
+            undoItem?.Undo();
         }
 
         private void RedoToolStripMenuItem1Click(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            DrawingTool redoItem = Undo.Next();
-            if (redoItem != null)
-            {
-                redoItem.Redo();
-            }
+            var redoItem = Undo.Next();
+            redoItem?.Redo();
         }
         #endregion
 
@@ -1027,15 +1003,9 @@ Press [F1] for more help.";
             transparentToolStripMenuItem1.Text = IsTransparent ? "Transparent" : "Opaque";
         }
 
-        Image OnTopIcon
-        {
-            get
-            {
-                return TopMost
-                    ? Resources.PinDown
-                    : Resources.PinRight;
-            }
-        }
+        Image OnTopIcon => TopMost
+            ? Resources.PinDown
+            : Resources.PinRight;
 
         private void OnTop_Click(object sender, EventArgs e)
         {
@@ -1044,15 +1014,9 @@ Press [F1] for more help.";
             RestoreInFormCursorPossition();
         }
 
-        Image TrasparentIcon
-        {
-            get
-            {
-                return IsTransparent
-                    ? Resources.Transparent
-                    : Resources.Opaque;
-            }
-        }
+        Image TrasparentIcon => IsTransparent
+            ? Resources.Transparent
+            : Resources.Opaque;
 
         bool m_isTransparent = Settings.Default.TransparentWhenNotFocused;
 
@@ -1068,24 +1032,11 @@ Press [F1] for more help.";
 
         private double m_zoomFactor;
 
-        public double ZoomFactor
-        {
-            get { return m_zoomFactor; }
-        }
+        public double ZoomFactor => m_zoomFactor;
 
-        private bool m_formIn = true;
-        public bool FormIn
-        {
-            get { return m_formIn; }
-            set { m_formIn = value; }
-        }
+        public bool FormIn { get; set; } = true;
 
-        private bool m_menuIn;
-        public bool MenuIn
-        {
-            get { return m_menuIn; }
-            set { m_menuIn = value; }
-        }
+        public bool MenuIn { get; set; }
 
         private void MakeTransparent()
         {
@@ -1169,18 +1120,16 @@ Press [F1] for more help.";
             ToolStripMenuItem_Click(sender, e);
             if (Undo.CanUndo)
             {
-                DrawingTool undoItem1 = Undo.Pop();
-                if (Undo.CanUndo)
-                {
-                    DrawingTool undoItem2 = Undo.Pop();
-                    undoItem1.Undo();
-                    undoItem2.Undo();
+                var undoItem1 = Undo.Pop();
+                if (!Undo.CanUndo) return;
+                var undoItem2 = Undo.Pop();
+                undoItem1.Undo();
+                undoItem2.Undo();
 
-                    undoItem1.Redo();
-                    Undo.Push(undoItem1);
-                    undoItem2.Redo();
-                    Undo.Push(undoItem2);
-                }
+                undoItem1.Redo();
+                Undo.Push(undoItem1);
+                undoItem2.Redo();
+                Undo.Push(undoItem2);
             }
         }
 
@@ -1265,13 +1214,13 @@ Press [F1] for more help.";
         private void CaptureSmallIconImageToolStripMenuItemClick(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            ToolStripComboBox cb = cbSmallIconImageSize;
-            int width = 16;
-            int height = 16;
+            var cb = cbSmallIconImageSize;
+            var width = 16;
+            var height = 16;
             if (cb != null)
             {
-                Regex r = new Regex(@"^\s*(\d{1,3})(?:\s*x\s*(?:(\d{1,3}))?)?\s*$", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant);
-                string text = r.IsMatch(cb.Text) ? r.Matches(cb.Text)[0].ToString() : cb.Items[0].ToString();
+                var r = new Regex(@"^\s*(\d{1,3})(?:\s*x\s*(?:(\d{1,3}))?)?\s*$", RegexOptions.IgnoreCase | RegexOptions.Compiled | RegexOptions.CultureInvariant);
+                var text = r.IsMatch(cb.Text) ? r.Matches(cb.Text)[0].ToString() : cb.Items[0].ToString();
                 if (r.IsMatch(text))
                 {
                     var groups = r.Matches(text)[0].Groups;
@@ -1296,7 +1245,7 @@ Press [F1] for more help.";
                         }
                     }
 
-                    text = string.Format("{0}x{1}", width, height);
+                    text = $"{width}x{height}";
                     if (!cb.Items.Contains(text))
                     {
                         cb.Items.Add(text);
@@ -1324,7 +1273,7 @@ Press [F1] for more help.";
         {
             FormIn = true;
             Invalidate();
-            this.Cursor = CustomCursors.None();
+            Cursor = CustomCursors.None();
         }
 
         private void CaptureForm_MouseLeave(object sender, EventArgs e)

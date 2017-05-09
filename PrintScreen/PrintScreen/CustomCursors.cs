@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -51,28 +48,28 @@ namespace FlexScreen
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         extern static bool DestroyIcon(IntPtr handle);
 
-        public static IntPtr pointeurCurseur;
+        public static IntPtr PointeurCurseur;
 
         public static Cursor CreateCursor(Bitmap bmp, int xHotSpot, int yHotSpot)
         {
-            IntPtr ptr = bmp.GetHicon();
-            Iconinfo tmp = new Iconinfo();
+            var ptr = bmp.GetHicon();
+            var tmp = new Iconinfo();
             GetIconInfo(ptr, ref tmp);
             tmp.xHotspot = xHotSpot;
             tmp.yHotspot = yHotSpot;
             tmp.fIcon = false;
-            pointeurCurseur = CreateIconIndirect(ref tmp);
+            PointeurCurseur = CreateIconIndirect(ref tmp);
 
             if (tmp.hbmColor != IntPtr.Zero) DeleteObject(tmp.hbmColor);
             if (tmp.hbmMask != IntPtr.Zero) DeleteObject(tmp.hbmMask);
             if (ptr != IntPtr.Zero) DestroyIcon(ptr);
 
-            return new Cursor(pointeurCurseur);
+            return new Cursor(PointeurCurseur);
         }
 
         public static Cursor None()
         {
-            using (Bitmap cursorBmp = new Bitmap(1,1))
+            using (var cursorBmp = new Bitmap(1,1))
             {
                 return CreateCursor(cursorBmp, 1, 1);
             }
@@ -83,7 +80,7 @@ namespace FlexScreen
             var bitmap = new Bitmap(size * 2, size * 2);
 
             var cursorPen = new Pen(Color.Black);//Settings.Default.CursorColor);
-            Graphics g = Graphics.FromImage(bitmap);
+            var g = Graphics.FromImage(bitmap);
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
             g.FillEllipse(new SolidBrush(Color.FromArgb(10, Color.White)), new Rectangle(3 * size / 4, 3 * size / 4, size / 2, size / 2));

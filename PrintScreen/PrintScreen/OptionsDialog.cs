@@ -256,13 +256,6 @@ namespace FlexScreen
             }
         }
 
-        private void FolderImage_DoubleClick(object sender, EventArgs e)
-        {
-            var arguments = @"/explore " + Application.LocalUserAppDataPath;
-            Clipboard.SetText(Application.LocalUserAppDataPath);
-            System.Diagnostics.Process.Start("explorer.exe", arguments);
-        }
-
         private void nudCursorOpacity_ValueChanged(object sender, EventArgs e)
         {
 

@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using FlexScreen.Properties;
 
@@ -77,36 +72,36 @@ namespace FlexScreen
 
         private void label1_MouseDown(object sender, MouseEventArgs e)
         {
-            base.form_MouseDown(sender, e);
+            form_MouseDown(sender, e);
         }
 
         private void label1_MouseLeave(object sender, EventArgs e)
         {
-            base.form_MouseLeave(sender, e);
+            form_MouseLeave(sender, e);
         }
 
         public new DialogResult ShowDialog()
         {
-            this.Font = Settings.Default.TextFont;
-            this.Color = Settings.Default.FontColor;
-            System.Windows.Forms.DialogResult result;
-            if ((result = base.ShowDialog()) == System.Windows.Forms.DialogResult.OK)
+            Font = Settings.Default.TextFont;
+            Color = Settings.Default.FontColor;
+            DialogResult result;
+            if ((result = base.ShowDialog()) == DialogResult.OK)
             {
-                Settings.Default.TextFont = this.Font;
-                Settings.Default.FontColor = this.Color;
+                Settings.Default.TextFont = Font;
+                Settings.Default.FontColor = Color;
             }
             return result;
         }
 
         public new DialogResult ShowDialog(IWin32Window owner)
         {
-            this.Font = Settings.Default.TextFont;
-            this.Color = Settings.Default.FontColor;
-            System.Windows.Forms.DialogResult result;
-            if ((result = base.ShowDialog(owner)) == System.Windows.Forms.DialogResult.OK)
+            Font = Settings.Default.TextFont;
+            Color = Settings.Default.FontColor;
+            DialogResult result;
+            if ((result = base.ShowDialog(owner)) == DialogResult.OK)
             {
-                Settings.Default.TextFont = this.Font;
-                Settings.Default.FontColor = this.Color;
+                Settings.Default.TextFont = Font;
+                Settings.Default.FontColor = Color;
             }
             return result;
         }

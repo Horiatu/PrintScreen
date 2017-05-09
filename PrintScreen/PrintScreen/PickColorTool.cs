@@ -11,21 +11,12 @@ namespace FlexScreen
         public Point Point1 { get; set; }
         public Point Point2 { get; set; }
 
-        public override string Name
-        {
-            get { return "Pick Color"; }
-        }
+        public override string Name => "Pick Color";
 
-        public override string Tip
-        {
-            get
-            {
-                return base.Tip +
-@"- [Space] - change format,
+        public override string Tip => base.Tip +
+                                      @"- [Space] - change format,
 - [C] - copy color code to clipboard,
 ";
-            }
-        }
 
         public PickColorTool(CaptureForm form)
             : base(form, 0)
@@ -120,7 +111,7 @@ namespace FlexScreen
             if (y1 == y2) y2++;
             if (x1 < x2 && y1 < y2)
             {
-                Bitmap bmp =
+                var bmp =
                     ParentForm.CropImage(ParentForm.BackgroundImage, new Rectangle(x1, y1, x2 - x1, y2 - y1)) as Bitmap;
 
                 var rect = new Rectangle(0, 0, bmp.Width, bmp.Height);

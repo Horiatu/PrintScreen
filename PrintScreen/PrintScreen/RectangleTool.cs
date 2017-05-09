@@ -8,10 +8,7 @@ namespace FlexScreen
         Brush FillBrush { get; set; }
         Rectangle RectRectangle { get; set; }
 
-        public override string Name
-        {
-            get { return "Rectangle"; }
-        }
+        public override string Name => "Rectangle";
 
         public RectangleTool(CaptureForm form, Pen borderPen, Brush fillBrush)
             : base(form, 8)
@@ -32,7 +29,7 @@ namespace FlexScreen
             base.Execute(g);
             if (BorderPen != null)
             {
-                Pen shadow = new Pen(Color.FromArgb(64, Color.Gray));
+                var shadow = new Pen(Color.FromArgb(64, Color.Gray));
                 g.DrawRectangle(shadow, new Rectangle(RectRectangle.X + 1, RectRectangle.Y + 1, RectRectangle.Width, RectRectangle.Height));
                 g.DrawRectangle(shadow, new Rectangle(RectRectangle.X + 2, RectRectangle.Y + 2, RectRectangle.Width, RectRectangle.Height));
             }

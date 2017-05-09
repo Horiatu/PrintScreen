@@ -38,7 +38,7 @@ namespace FlexScreen
 
             if (!Settings.Default.SuppressStartUpHelp)
             {
-                Help.ShowHelp(this, SplashScreen.HelpFile, 0);
+                Help.ShowHelp(this, HelpFile, 0);
             }
         }
 
@@ -450,7 +450,7 @@ namespace FlexScreen
 
         private void TransparentAllToolStripMenuItemCheckedChanged(object sender, EventArgs e)
         {
-            bool isTransparent = ((ToolStripMenuItem)sender).Checked;
+            var isTransparent = ((ToolStripMenuItem)sender).Checked;
             foreach (var captureForm in Program.CaptureForms)
             {
                 captureForm.IsTransparent = isTransparent;

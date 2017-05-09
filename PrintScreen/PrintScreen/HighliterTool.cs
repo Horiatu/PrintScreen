@@ -8,15 +8,12 @@ namespace FlexScreen
 {
     public class HighlighterTool : DrawingTool
     {
-        public override string Name
-        {
-            get { return "Highlighter Pen"; }
-        }
+        public override string Name => "Highlighter Pen";
 
         public Pen MarkerPen { get; set; }
         public List<Point> Points { get; set; }
 
-        Timer timer;
+        Timer m_timer;
 
         public HighlighterTool(CaptureForm form, Pen pen)
             : base(form, 15)
@@ -36,15 +33,15 @@ namespace FlexScreen
             Points.Clear();
             Points.Add(current);
 
-            timer = new Timer { Interval = 5, };
-            timer.Tick += TimerTick;
-            timer.Start();
+            m_timer = new Timer { Interval = 5, };
+            m_timer.Tick += TimerTick;
+            m_timer.Start();
         }
 
         public override void Stop()
         {
-            timer.Stop();
-            timer.Tick -= TimerTick;
+            m_timer.Stop();
+            m_timer.Tick -= TimerTick;
 
             var delta = (int)MarkerPen.Width / 2 + 1;
             var startPoint = ParentForm.StartPoint; 
@@ -69,7 +66,7 @@ namespace FlexScreen
 
         void TimerTick(object sender, EventArgs e)
         {
-            timer.Stop();
+            m_timer.Stop();
             var current = ParentForm.PointToClient(Cursor.Position);
             var last = Points[Points.Count - 1];
 
@@ -82,7 +79,7 @@ namespace FlexScreen
                 m_endPoint = new Point(Math.Max(Math.Max(startPoint.X, EndPoint.X), current.X), Math.Max(Math.Max(startPoint.Y, EndPoint.Y), current.Y));
                 ParentForm.StartPoint = new Point(Math.Min(Math.Min(startPoint.X, EndPoint.X), current.X), Math.Min(Math.Min(startPoint.Y, EndPoint.Y), current.Y));
             }
-            timer.Start();
+            m_timer.Start();
         }
 
         public override void DrawRectangle(Graphics g)

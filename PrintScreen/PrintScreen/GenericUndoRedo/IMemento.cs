@@ -1,10 +1,5 @@
 ﻿// http://www.codeproject.com/KB/cs/generic_undo_redo.aspx
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 namespace FlexScreen.GenericUndoRedo
 {
     /// <summary>

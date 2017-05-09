@@ -9,19 +9,10 @@ namespace FlexScreen
         public Point Point1 { get; set; }
         public Point Point2 { get; set; }
 
-        public override string Name
-        {
-            get { return (LinePen.Brush is HatchBrush) ? "Grayout Strip" : "Line"; }
-        }
+        public override string Name => (LinePen.Brush is HatchBrush) ? "Grayout Strip" : "Line";
 
-        public override string Tip
-        {
-            get
-            {
-                return base.Tip +
-@"- Hold [Ctrl] key down to move around.";
-            }
-        }
+        public override string Tip => $@"{base.Tip}
+- Hold [Ctrl] key down to move around.";
 
         public LineTool(CaptureForm form, Pen borderPen)
             : base(form, 5)

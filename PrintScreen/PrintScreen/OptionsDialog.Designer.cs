@@ -32,7 +32,7 @@ namespace FlexScreen
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsDialog));
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsDialog));
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -75,7 +75,6 @@ namespace FlexScreen
             this.btnCancel = new FlexScreen.CustomButton();
             this.btnOK = new FlexScreen.CustomButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnOpenFolder = new FlexScreen.CustomButton();
             this.CursorArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSelectionOpacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCursorOpacity)).BeginInit();
@@ -109,12 +108,11 @@ namespace FlexScreen
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(27, 23);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(48, 39);
             this.panel1.TabIndex = 14;
             this.toolTip1.SetToolTip(this.panel1, "Double-Click to open Explorer,\r\nthen Paste folder path");
-            this.panel1.DoubleClick += new System.EventHandler(this.FolderImage_DoubleClick);
             // 
             // CursorArea
             // 
@@ -129,9 +127,9 @@ namespace FlexScreen
             this.CursorArea.Controls.Add(this.label1);
             this.CursorArea.ForeColor = System.Drawing.Color.RoyalBlue;
             this.CursorArea.Location = new System.Drawing.Point(27, 63);
-            this.CursorArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CursorArea.Margin = new System.Windows.Forms.Padding(4);
             this.CursorArea.Name = "CursorArea";
-            this.CursorArea.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CursorArea.Padding = new System.Windows.Forms.Padding(4);
             this.CursorArea.Size = new System.Drawing.Size(356, 85);
             this.CursorArea.TabIndex = 2;
             this.CursorArea.TabStop = false;
@@ -145,7 +143,7 @@ namespace FlexScreen
             this.nudSelectionOpacity.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nudSelectionOpacity.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudSelectionOpacity.Location = new System.Drawing.Point(268, 53);
-            this.nudSelectionOpacity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudSelectionOpacity.Margin = new System.Windows.Forms.Padding(4);
             this.nudSelectionOpacity.Minimum = new decimal(new int[] {
             90,
             0,
@@ -178,7 +176,7 @@ namespace FlexScreen
             this.nudCursorOpacity.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nudCursorOpacity.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudCursorOpacity.Location = new System.Drawing.Point(268, 21);
-            this.nudCursorOpacity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudCursorOpacity.Margin = new System.Windows.Forms.Padding(4);
             this.nudCursorOpacity.Minimum = new decimal(new int[] {
             90,
             0,
@@ -214,7 +212,7 @@ namespace FlexScreen
             this.btnSelectionColor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectionColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSelectionColor.Location = new System.Drawing.Point(104, 55);
-            this.btnSelectionColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelectionColor.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectionColor.Name = "btnSelectionColor";
             this.btnSelectionColor.Size = new System.Drawing.Size(47, 16);
             this.btnSelectionColor.TabIndex = 8;
@@ -229,7 +227,7 @@ namespace FlexScreen
             this.btnCursorColor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCursorColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCursorColor.Location = new System.Drawing.Point(105, 23);
-            this.btnCursorColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCursorColor.Margin = new System.Windows.Forms.Padding(4);
             this.btnCursorColor.Name = "btnCursorColor";
             this.btnCursorColor.Size = new System.Drawing.Size(47, 16);
             this.btnCursorColor.TabIndex = 7;
@@ -276,9 +274,9 @@ namespace FlexScreen
             this.groupBox1.Controls.Add(this.cbOnTop);
             this.groupBox1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox1.Location = new System.Drawing.Point(391, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(347, 185);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
@@ -294,7 +292,7 @@ namespace FlexScreen
             this.cbAutomaticallyCrop.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbAutomaticallyCrop.ForeColor = System.Drawing.Color.Black;
             this.cbAutomaticallyCrop.Location = new System.Drawing.Point(12, 27);
-            this.cbAutomaticallyCrop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbAutomaticallyCrop.Margin = new System.Windows.Forms.Padding(4);
             this.cbAutomaticallyCrop.Name = "cbAutomaticallyCrop";
             this.cbAutomaticallyCrop.Size = new System.Drawing.Size(298, 21);
             this.cbAutomaticallyCrop.TabIndex = 19;
@@ -307,7 +305,7 @@ namespace FlexScreen
             this.cbImageBorder.BackColor = System.Drawing.Color.Transparent;
             this.cbImageBorder.ForeColor = System.Drawing.Color.Black;
             this.cbImageBorder.Location = new System.Drawing.Point(12, 140);
-            this.cbImageBorder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbImageBorder.Margin = new System.Windows.Forms.Padding(4);
             this.cbImageBorder.Name = "cbImageBorder";
             this.cbImageBorder.Size = new System.Drawing.Size(220, 21);
             this.cbImageBorder.TabIndex = 18;
@@ -321,7 +319,7 @@ namespace FlexScreen
             this.cbKeepMenuOn.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbKeepMenuOn.ForeColor = System.Drawing.Color.Black;
             this.cbKeepMenuOn.Location = new System.Drawing.Point(12, 112);
-            this.cbKeepMenuOn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbKeepMenuOn.Margin = new System.Windows.Forms.Padding(4);
             this.cbKeepMenuOn.Name = "cbKeepMenuOn";
             this.cbKeepMenuOn.Size = new System.Drawing.Size(125, 21);
             this.cbKeepMenuOn.TabIndex = 17;
@@ -333,7 +331,7 @@ namespace FlexScreen
             this.nudTransparency.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nudTransparency.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudTransparency.Location = new System.Drawing.Point(264, 84);
-            this.nudTransparency.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudTransparency.Margin = new System.Windows.Forms.Padding(4);
             this.nudTransparency.Minimum = new decimal(new int[] {
             20,
             0,
@@ -356,7 +354,7 @@ namespace FlexScreen
             this.cbTransparent.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbTransparent.ForeColor = System.Drawing.Color.Black;
             this.cbTransparent.Location = new System.Drawing.Point(12, 84);
-            this.cbTransparent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTransparent.Margin = new System.Windows.Forms.Padding(4);
             this.cbTransparent.Name = "cbTransparent";
             this.cbTransparent.Size = new System.Drawing.Size(233, 21);
             this.cbTransparent.TabIndex = 1;
@@ -369,7 +367,7 @@ namespace FlexScreen
             this.cbOnTop.BackColor = System.Drawing.Color.Transparent;
             this.cbOnTop.ForeColor = System.Drawing.Color.Black;
             this.cbOnTop.Location = new System.Drawing.Point(12, 55);
-            this.cbOnTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbOnTop.Margin = new System.Windows.Forms.Padding(4);
             this.cbOnTop.Name = "cbOnTop";
             this.cbOnTop.Size = new System.Drawing.Size(202, 21);
             this.cbOnTop.TabIndex = 0;
@@ -390,9 +388,9 @@ namespace FlexScreen
             this.groupBox3.Controls.Add(this.cbSuppresStartUpHelp);
             this.groupBox3.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox3.Location = new System.Drawing.Point(391, 207);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(347, 197);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
@@ -407,7 +405,7 @@ namespace FlexScreen
             this.cbAutoSaveAsk.BackColor = System.Drawing.Color.Transparent;
             this.cbAutoSaveAsk.ForeColor = System.Drawing.Color.Black;
             this.cbAutoSaveAsk.Location = new System.Drawing.Point(282, 165);
-            this.cbAutoSaveAsk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbAutoSaveAsk.Margin = new System.Windows.Forms.Padding(4);
             this.cbAutoSaveAsk.Name = "cbAutoSaveAsk";
             this.cbAutoSaveAsk.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cbAutoSaveAsk.Size = new System.Drawing.Size(53, 21);
@@ -422,7 +420,7 @@ namespace FlexScreen
             this.cbAutoSave.BackColor = System.Drawing.Color.Transparent;
             this.cbAutoSave.ForeColor = System.Drawing.Color.Black;
             this.cbAutoSave.Location = new System.Drawing.Point(12, 165);
-            this.cbAutoSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbAutoSave.Margin = new System.Windows.Forms.Padding(4);
             this.cbAutoSave.Name = "cbAutoSave";
             this.cbAutoSave.Size = new System.Drawing.Size(196, 21);
             this.cbAutoSave.TabIndex = 19;
@@ -436,7 +434,7 @@ namespace FlexScreen
             this.cbApplyToAll.BackColor = System.Drawing.Color.Transparent;
             this.cbApplyToAll.ForeColor = System.Drawing.Color.Black;
             this.cbApplyToAll.Location = new System.Drawing.Point(12, 137);
-            this.cbApplyToAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbApplyToAll.Margin = new System.Windows.Forms.Padding(4);
             this.cbApplyToAll.Name = "cbApplyToAll";
             this.cbApplyToAll.Size = new System.Drawing.Size(100, 21);
             this.cbApplyToAll.TabIndex = 18;
@@ -451,7 +449,7 @@ namespace FlexScreen
             this.cbTurnOnTips.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbTurnOnTips.ForeColor = System.Drawing.Color.Black;
             this.cbTurnOnTips.Location = new System.Drawing.Point(12, 21);
-            this.cbTurnOnTips.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTurnOnTips.Margin = new System.Windows.Forms.Padding(4);
             this.cbTurnOnTips.Name = "cbTurnOnTips";
             this.cbTurnOnTips.Size = new System.Drawing.Size(201, 21);
             this.cbTurnOnTips.TabIndex = 17;
@@ -466,7 +464,7 @@ namespace FlexScreen
             this.cbCaptureFromTryIcon.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbCaptureFromTryIcon.ForeColor = System.Drawing.Color.Black;
             this.cbCaptureFromTryIcon.Location = new System.Drawing.Point(12, 80);
-            this.cbCaptureFromTryIcon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCaptureFromTryIcon.Margin = new System.Windows.Forms.Padding(4);
             this.cbCaptureFromTryIcon.Name = "cbCaptureFromTryIcon";
             this.cbCaptureFromTryIcon.Size = new System.Drawing.Size(256, 21);
             this.cbCaptureFromTryIcon.TabIndex = 16;
@@ -478,7 +476,7 @@ namespace FlexScreen
             this.cbStartSysEditor.AutoSize = true;
             this.cbStartSysEditor.ForeColor = System.Drawing.Color.Black;
             this.cbStartSysEditor.Location = new System.Drawing.Point(12, 52);
-            this.cbStartSysEditor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbStartSysEditor.Margin = new System.Windows.Forms.Padding(4);
             this.cbStartSysEditor.Name = "cbStartSysEditor";
             this.cbStartSysEditor.Size = new System.Drawing.Size(254, 21);
             this.cbStartSysEditor.TabIndex = 15;
@@ -491,7 +489,7 @@ namespace FlexScreen
             this.cbSuppresStartUpHelp.BackColor = System.Drawing.Color.Transparent;
             this.cbSuppresStartUpHelp.ForeColor = System.Drawing.Color.Black;
             this.cbSuppresStartUpHelp.Location = new System.Drawing.Point(12, 108);
-            this.cbSuppresStartUpHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSuppresStartUpHelp.Margin = new System.Windows.Forms.Padding(4);
             this.cbSuppresStartUpHelp.Name = "cbSuppresStartUpHelp";
             this.cbSuppresStartUpHelp.Size = new System.Drawing.Size(175, 21);
             this.cbSuppresStartUpHelp.TabIndex = 14;
@@ -515,10 +513,10 @@ namespace FlexScreen
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox2.Location = new System.Drawing.Point(27, 155);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(356, 249);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(356, 298);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Default Tool Styles";
@@ -535,7 +533,7 @@ namespace FlexScreen
             this.cbTextWhiteBorder.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.cbTextWhiteBorder.ForeColor = System.Drawing.Color.Black;
             this.cbTextWhiteBorder.Location = new System.Drawing.Point(110, 80);
-            this.cbTextWhiteBorder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTextWhiteBorder.Margin = new System.Windows.Forms.Padding(4);
             this.cbTextWhiteBorder.Name = "cbTextWhiteBorder";
             this.cbTextWhiteBorder.Size = new System.Drawing.Size(113, 21);
             this.cbTextWhiteBorder.TabIndex = 19;
@@ -554,9 +552,9 @@ namespace FlexScreen
             this.FontSample.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.FontSample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FontSample.Location = new System.Drawing.Point(13, 108);
-            this.FontSample.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FontSample.Margin = new System.Windows.Forms.Padding(4);
             this.FontSample.Name = "FontSample";
-            this.FontSample.Size = new System.Drawing.Size(329, 129);
+            this.FontSample.Size = new System.Drawing.Size(329, 178);
             this.FontSample.TabIndex = 18;
             this.FontSample.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FontSample.UseVisualStyleBackColor = false;
@@ -569,7 +567,7 @@ namespace FlexScreen
             | System.Windows.Forms.AnchorStyles.Right)));
             this.numLineWidth.BackColor = System.Drawing.Color.WhiteSmoke;
             this.numLineWidth.Location = new System.Drawing.Point(271, 20);
-            this.numLineWidth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numLineWidth.Margin = new System.Windows.Forms.Padding(4);
             this.numLineWidth.Maximum = new decimal(new int[] {
             10,
             0,
@@ -619,7 +617,7 @@ namespace FlexScreen
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nudFillTransparency.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudFillTransparency.Location = new System.Drawing.Point(271, 50);
-            this.nudFillTransparency.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudFillTransparency.Margin = new System.Windows.Forms.Padding(4);
             this.nudFillTransparency.Minimum = new decimal(new int[] {
             1,
             0,
@@ -652,7 +650,7 @@ namespace FlexScreen
             this.btnFillColor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFillColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFillColor.Location = new System.Drawing.Point(105, 53);
-            this.btnFillColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFillColor.Margin = new System.Windows.Forms.Padding(4);
             this.btnFillColor.Name = "btnFillColor";
             this.btnFillColor.Size = new System.Drawing.Size(47, 16);
             this.btnFillColor.TabIndex = 10;
@@ -666,7 +664,7 @@ namespace FlexScreen
             this.btnLinesColor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLinesColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLinesColor.Location = new System.Drawing.Point(105, 22);
-            this.btnLinesColor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLinesColor.Margin = new System.Windows.Forms.Padding(4);
             this.btnLinesColor.Name = "btnLinesColor";
             this.btnLinesColor.Size = new System.Drawing.Size(47, 16);
             this.btnLinesColor.TabIndex = 9;
@@ -707,7 +705,7 @@ namespace FlexScreen
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.ForeColor = System.Drawing.Color.Brown;
             this.btnCancel.Location = new System.Drawing.Point(655, 411);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.RoundCorners = FlexScreen.Corners.BottomRight;
             this.btnCancel.Size = new System.Drawing.Size(83, 38);
@@ -724,7 +722,7 @@ namespace FlexScreen
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.ForeColor = System.Drawing.Color.MediumBlue;
             this.btnOK.Location = new System.Drawing.Point(391, 411);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(256, 38);
             this.btnOK.TabIndex = 0;
@@ -737,29 +735,12 @@ namespace FlexScreen
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // btnOpenFolder
-            // 
-            this.btnOpenFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnOpenFolder.BackColor = System.Drawing.Color.Transparent;
-            this.btnOpenFolder.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnOpenFolder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOpenFolder.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btnOpenFolder.Location = new System.Drawing.Point(27, 411);
-            this.btnOpenFolder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnOpenFolder.Name = "btnOpenFolder";
-            this.btnOpenFolder.RoundCorners = FlexScreen.Corners.BottomLeft;
-            this.btnOpenFolder.Size = new System.Drawing.Size(356, 38);
-            this.btnOpenFolder.TabIndex = 15;
-            this.btnOpenFolder.Text = "Open Options File Folder (Path to Clipboard)";
-            this.btnOpenFolder.Click += new System.EventHandler(this.FolderImage_DoubleClick);
-            // 
             // OptionsDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FlexScreen.Properties.Resources.BackgroundGray1;
             this.ClientSize = new System.Drawing.Size(765, 466);
-            this.Controls.Add(this.btnOpenFolder);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CursorArea);
@@ -769,7 +750,7 @@ namespace FlexScreen
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "OptionsDialog";
             this.Opacity = 0.98D;
             this.ShowInTaskbar = false;
@@ -841,6 +822,5 @@ namespace FlexScreen
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown nudCursorOpacity;
         private System.Windows.Forms.Label label9;
-        private CustomButton btnOpenFolder;
     }
 }

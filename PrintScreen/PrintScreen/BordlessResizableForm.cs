@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using System.Drawing;
 using System.Windows.Forms;
-using System.Drawing.Drawing2D;
 
 namespace FlexScreen
 {
@@ -31,7 +24,7 @@ namespace FlexScreen
 
         protected override void OnMouseDown(MouseEventArgs e)
         {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left && WindowState != FormWindowState.Maximized)
+            if (e.Button == MouseButtons.Left && WindowState != FormWindowState.Maximized)
             {
                 ResizeForm(GetResizeDirection(e));
             }
@@ -57,7 +50,7 @@ namespace FlexScreen
 
         void ResizeForm(ResizeDirection direction)
         {
-            int dir = -1;
+            var dir = -1;
             switch (direction)
             {
                 case ResizeDirection.Left:
@@ -94,7 +87,7 @@ namespace FlexScreen
             else
             {
                 Utils.ReleaseCapture();
-                this.Cursor = Cursors.SizeAll;
+                Cursor = Cursors.SizeAll;
                 Utils.SendMessage(Handle, Utils.WM_NCLBUTTONDOWN, Utils.HT_CAPTION, 0);
             }
         }
@@ -104,47 +97,47 @@ namespace FlexScreen
             const int delta = 6;
             if (e.Location.X < delta && e.Location.Y < delta)
             {
-                this.Cursor = Cursors.SizeNWSE;
+                Cursor = Cursors.SizeNWSE;
                 return ResizeDirection.TopLeft;
             }
             else if (e.Location.X < delta && e.Location.Y > Height - delta)
             {
-                this.Cursor = Cursors.SizeNESW;
+                Cursor = Cursors.SizeNESW;
                 return ResizeDirection.BottomLeft;
             }
             else if (e.Location.X > (Width - delta) && e.Location.Y > (Height - delta))
             {
-                this.Cursor = Cursors.SizeNWSE;
+                Cursor = Cursors.SizeNWSE;
                 return ResizeDirection.BottomRight;
             }
             else if (e.Location.X > Width - delta && e.Location.Y < delta)
             {
-                this.Cursor = Cursors.SizeNESW;
+                Cursor = Cursors.SizeNESW;
                 return ResizeDirection.TopRight;
             }
             else if (e.Location.X < delta)
             {
-                this.Cursor = Cursors.SizeWE;
+                Cursor = Cursors.SizeWE;
                 return ResizeDirection.Left;
             }
             else if (e.Location.X > Width - delta)
             {
-                this.Cursor = Cursors.SizeWE;
+                Cursor = Cursors.SizeWE;
                 return ResizeDirection.Right;
             }
             else if (e.Location.Y < delta)
             {
-                this.Cursor = Cursors.SizeNS;
+                Cursor = Cursors.SizeNS;
                 return ResizeDirection.Top;
             }
             else if (e.Location.Y > Height - delta)
             {
-                this.Cursor = Cursors.SizeNS;
+                Cursor = Cursors.SizeNS;
                 return ResizeDirection.Bottom;
             }
             else
             {
-                this.Cursor = Cursors.Default;
+                Cursor = Cursors.Default;
                 return ResizeDirection.None;
             }
         }

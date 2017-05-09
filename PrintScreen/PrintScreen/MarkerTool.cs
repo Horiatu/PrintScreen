@@ -8,91 +8,91 @@ namespace FlexScreen
     {
         public static Image[][] CursorImages = {
                                    new Image[] {
-                                       Properties.Resources.Img2_0,
-                                       Properties.Resources.Img2_1,
-                                       Properties.Resources.Img2_2,
+                                       Resources.Img2_0,
+                                       Resources.Img2_1,
+                                       Resources.Img2_2,
                                    },
 
                                    new Image[] {
-                                       Properties.Resources.HandCursor_22x22,
-                                       Properties.Resources.ArrowCursor_22x22,
-                                       Properties.Resources.MoveCursor,
-                                       Properties.Resources.CrossCursorIcon
+                                       Resources.HandCursor_22x22,
+                                       Resources.ArrowCursor_22x22,
+                                       Resources.MoveCursor,
+                                       Resources.CrossCursorIcon
                                    },
                                    
                                    new Image[] {
-                                       Properties.Resources.Help1,
-                                       Properties.Resources.exclamation2
+                                       Resources.Help1,
+                                       Resources.exclamation2
                                    },
                                    
                                    new Image[] {
-                                       Properties.Resources.Apply,
-                                       Properties.Resources.Browse,
-                                       Properties.Resources.Write,
-                                       Properties.Resources.Font1,
-                                       Properties.Resources.Options,
-                                       Properties.Resources.Options1,
+                                       Resources.Apply,
+                                       Resources.Browse,
+                                       Resources.Write,
+                                       Resources.Font1,
+                                       Resources.Options,
+                                       Resources.Options1,
                                    },
                                    
                                    new Image[] {
-                                       Properties.Resources.Fancy_Pin_Black,
-                                       Properties.Resources.Fancy_Pin_Blue,
-                                       Properties.Resources.Fancy_Pin_Brown,
-                                       Properties.Resources.Fancy_Pin_Cyan,
-                                       Properties.Resources.Fancy_Pin_Gray,
-                                       Properties.Resources.Fancy_Pin_Green,
-                                       Properties.Resources.Fancy_Pin_Lime,
-                                       Properties.Resources.Fancy_Pin_Orange,
-                                       Properties.Resources.Fancy_Pin_Pink,
-                                       Properties.Resources.Fancy_Pin_Purple,
-                                       Properties.Resources.Fancy_Pin_Red,
-                                       Properties.Resources.Fancy_Pin_Yellow,
+                                       Resources.Fancy_Pin_Black,
+                                       Resources.Fancy_Pin_Blue,
+                                       Resources.Fancy_Pin_Brown,
+                                       Resources.Fancy_Pin_Cyan,
+                                       Resources.Fancy_Pin_Gray,
+                                       Resources.Fancy_Pin_Green,
+                                       Resources.Fancy_Pin_Lime,
+                                       Resources.Fancy_Pin_Orange,
+                                       Resources.Fancy_Pin_Pink,
+                                       Resources.Fancy_Pin_Purple,
+                                       Resources.Fancy_Pin_Red,
+                                       Resources.Fancy_Pin_Yellow,
                                    },
                                    
                                    new Image[] {
-                                       Properties.Resources.Pin_Red,
-                                       Properties.Resources.Pin_Brown,
-                                       Properties.Resources.Pin_Down
+                                       Resources.Pin_Red,
+                                       Resources.Pin_Brown,
+                                       Resources.Pin_Down
                                    },
                                    
                                    new Image[] {
-                                       Properties.Resources.Star_Burst_Blue,
-                                       Properties.Resources.Star_Burst_Cyan,
-                                       Properties.Resources.Star_Burst_Green,
-                                       Properties.Resources.Star_Burst_Orange,
-                                       Properties.Resources.Star_Burst_Pink,
-                                       Properties.Resources.Star_Burst_Purple,
-                                       Properties.Resources.Star_Burst_Red,
-                                       Properties.Resources.Star_Burst_Yellow,
+                                       Resources.Star_Burst_Blue,
+                                       Resources.Star_Burst_Cyan,
+                                       Resources.Star_Burst_Green,
+                                       Resources.Star_Burst_Orange,
+                                       Resources.Star_Burst_Pink,
+                                       Resources.Star_Burst_Purple,
+                                       Resources.Star_Burst_Red,
+                                       Resources.Star_Burst_Yellow,
                                    },
                                    
                                    new Image[] {
-                                       Properties.Resources.Img_0,
-                                       Properties.Resources.Img_1,
-                                       Properties.Resources.Img_2,
-                                       Properties.Resources.Img_3,
-                                       Properties.Resources.Img_4,
-                                       Properties.Resources.Img_5,
+                                       Resources.Img_0,
+                                       Resources.Img_1,
+                                       Resources.Img_2,
+                                       Resources.Img_3,
+                                       Resources.Img_4,
+                                       Resources.Img_5,
                                    },
 
                                    new Image[] {
-                                       Properties.Resources.Img1_0,
-                                       Properties.Resources.Img1_1,
-                                       Properties.Resources.Img1_2,
-                                       Properties.Resources.Img1_4,
-                                       Properties.Resources.Img1_5,
-                                       Properties.Resources.Img1_5,
-                                       Properties.Resources.Img1_5,
+                                       Resources.Img1_0,
+                                       Resources.Img1_1,
+                                       Resources.Img1_2,
+                                       Resources.Img1_4,
+                                       Resources.Img1_5,
+                                       Resources.Img1_5,
+                                       Resources.Img1_5,
                                    },
 
                                    new Image[] {
-                                       Properties.Resources.flag_blue,
-                                       Properties.Resources.flag_green,
-                                       Properties.Resources.flag_orange,
-                                       Properties.Resources.flag_pink,
-                                       Properties.Resources.flag_purple,
-                                       Properties.Resources.flag_red,
-                                       Properties.Resources.flag_yellow
+                                       Resources.flag_blue,
+                                       Resources.flag_green,
+                                       Resources.flag_orange,
+                                       Resources.flag_pink,
+                                       Resources.flag_purple,
+                                       Resources.flag_red,
+                                       Resources.flag_yellow
                                    },
                                    
                                    new Image[] {
@@ -135,10 +135,7 @@ namespace FlexScreen
 
     public class MarkerTool : DrawingTool
     {
-        public override string Name
-        {
-            get { return m_custom ? "Insert Image From File" : "Insert Marker"; }
-        }
+        public override string Name => m_custom ? "Insert Image From File" : "Insert Marker";
 
         public override string Tip
         {
@@ -271,8 +268,9 @@ namespace FlexScreen
             }
         }
 
-        int width { get { return MarkerImage.Width; } }
-        int height { get { return MarkerImage.Height; } }
+        int width => MarkerImage.Width;
+        int height => MarkerImage.Height;
+
         Point startPoint
         {
             get { return ParentForm.StartPoint; }
