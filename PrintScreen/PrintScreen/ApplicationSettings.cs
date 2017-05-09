@@ -7,12 +7,13 @@ using System.IO;
 using System.Xml.Serialization;
 using System.Windows.Forms;
 using System.ComponentModel;
+using FlexScreen.Properties;
 
 namespace FlexScreen
 {
     public class ApplicationSettings
     {
-        private bool appSettingsChanged;
+        private bool m_appSettingsChanged;
 
         // Properties used to access the application settings variables.
         private string m_defaultDirectory;
@@ -23,7 +24,7 @@ namespace FlexScreen
             {
                 if (value == m_defaultDirectory) return;
                 m_defaultDirectory = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -35,7 +36,7 @@ namespace FlexScreen
             {
                 if (value == m_imagesDirectory) return;
                 m_imagesDirectory = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -47,7 +48,7 @@ namespace FlexScreen
             {
                 if (value == m_autoSaveProjectFile) return;
                 m_autoSaveProjectFile = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -59,7 +60,7 @@ namespace FlexScreen
             {
                 if (value == m_optionFormLocation) return;
                 m_optionFormLocation = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -71,7 +72,7 @@ namespace FlexScreen
             {
                 if (value == m_splashScreenBounds) return;
                 m_splashScreenBounds = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -83,7 +84,7 @@ namespace FlexScreen
             {
                 if (value == m_suppressStartUpHelp) return;
                 m_suppressStartUpHelp = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -95,7 +96,7 @@ namespace FlexScreen
             {
                 if (value == m_afterCaptureStayOnTop) return;
                 m_afterCaptureStayOnTop = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -107,7 +108,7 @@ namespace FlexScreen
             {
                 if (value == m_transparentWhenNotFocussed) return;
                 m_transparentWhenNotFocussed = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -119,7 +120,7 @@ namespace FlexScreen
             {
                 if (value == m_formTransparencyFactor) return;
                 m_formTransparencyFactor = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -131,7 +132,7 @@ namespace FlexScreen
             {
                 if (value == m_shapeFillTransparencyFactor) return;
                 m_shapeFillTransparencyFactor = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -143,7 +144,7 @@ namespace FlexScreen
             {
                 if (value == m_pasteImagesWithBorder) return;
                 m_pasteImagesWithBorder = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -155,7 +156,7 @@ namespace FlexScreen
             {
                 if (value == m_textWithBorder) return;
                 m_textWithBorder = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -167,7 +168,7 @@ namespace FlexScreen
             {
                 if (value == m_startImageEditorOnSave) return;
                 m_startImageEditorOnSave = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -179,7 +180,7 @@ namespace FlexScreen
             {
                 if (value == m_autoHideMenu) return;
                 m_autoHideMenu = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -191,7 +192,7 @@ namespace FlexScreen
             {
                 if (m_captureFromTryIcon == value) return;
                 m_captureFromTryIcon = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -203,7 +204,7 @@ namespace FlexScreen
             {
                 if (m_automaticallyCrop == value) return;
                 m_automaticallyCrop = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -215,7 +216,7 @@ namespace FlexScreen
             {
                 if (m_noToolTips == value) return;
                 m_noToolTips = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -228,7 +229,7 @@ namespace FlexScreen
                 if (m_applyToAll != value)
                 {
                     m_applyToAll = value;
-                    appSettingsChanged = true;
+                    m_appSettingsChanged = true;
                 }
             }
         }
@@ -241,7 +242,7 @@ namespace FlexScreen
             {
                 if (m_lineWidth == value) return;
                 m_lineWidth = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -253,7 +254,7 @@ namespace FlexScreen
             {
                 if (m_autoSave == value) return;
                 m_autoSave = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -265,7 +266,7 @@ namespace FlexScreen
             {
                 if (m_autoSaveAsk == value) return;
                 m_autoSaveAsk = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -277,21 +278,21 @@ namespace FlexScreen
             {
                 if (m_fillTransparency == value) return;
                 m_fillTransparency = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
-        private decimal m_cursorOpacity;
-        public decimal CursorOpacity
-        {
-            get { return m_cursorOpacity; }
-            set
-            {
-                if (value == m_cursorOpacity) return;
-                m_cursorOpacity = value;
-                appSettingsChanged = true;
-            }
-        }
+        //private decimal m_cursorOpacity;
+        //public decimal CursorOpacity
+        //{
+        //    get { return m_cursorOpacity; }
+        //    set
+        //    {
+        //        if (value == m_cursorOpacity) return;
+        //        m_cursorOpacity = value;
+        //        appSettingsChanged = true;
+        //    }
+        //}
 
         private decimal m_selectionOpacity;
         public decimal SelectionOpacity
@@ -301,7 +302,7 @@ namespace FlexScreen
             {
                 if (value == m_selectionOpacity) return;
                 m_selectionOpacity = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -317,7 +318,7 @@ namespace FlexScreen
             {
                 if (m_cursorColor == value) return;
                 m_cursorColor = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -340,7 +341,7 @@ namespace FlexScreen
             {
                 if (m_fillColor == value) return;
                 m_fillColor = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -363,7 +364,7 @@ namespace FlexScreen
             {
                 if (m_lineColor == value) return;
                 m_lineColor = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -386,7 +387,7 @@ namespace FlexScreen
             {
                 if (value.A == 0 || m_selectionColor == value) return;
                 m_selectionColor = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -409,7 +410,7 @@ namespace FlexScreen
             {
                 if (m_fontColor == value) return;
                 m_fontColor = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -435,7 +436,7 @@ namespace FlexScreen
             {
                 if (m_textFont == value) return;
                 m_textFont = value;
-                appSettingsChanged = true;
+                m_appSettingsChanged = true;
             }
         }
 
@@ -450,7 +451,7 @@ namespace FlexScreen
         // Serializes the class to the config file if any of the settings have changed.
         public bool Save()
         {
-            if (appSettingsChanged)
+            if (m_appSettingsChanged)
             {
                 StreamWriter myWriter = null;
                 try
@@ -473,7 +474,7 @@ namespace FlexScreen
                     myWriter?.Close();
                 }
             }
-            return appSettingsChanged;
+            return m_appSettingsChanged;
         }
 
         public bool ConfigurationFileExists { get; set; }
@@ -488,41 +489,41 @@ namespace FlexScreen
                 if (fi.Exists)
                 {
                     ConfigurationFileExists = true;
-                    ApplicationSettings myAppSettings;
-                    using (var myFileStream = fi.OpenRead())
-                    {
-                        myAppSettings = (ApplicationSettings)mySerializer.Deserialize(myFileStream);
-                    }
+                    //ApplicationSettings Settings.Default;
+                    //using (var myFileStream = fi.OpenRead())
+                    //{
+                    //    Settings.Default = (ApplicationSettings)mySerializer.Deserialize(myFileStream);
+                    //}
 
-                    m_optionFormLocation = myAppSettings.OptionFormLocation;
-                    m_splashScreenBounds = myAppSettings.SplashScreenBounds;
-                    m_defaultDirectory = myAppSettings.DefaultDirectory;
-                    m_imagesDirectory = myAppSettings.ImagesDirectory;
-                    m_autoSaveProjectFile = myAppSettings.AutoSaveProjectFile;
-                    m_suppressStartUpHelp = myAppSettings.SuppressStartUpHelp;
-                    m_pasteImagesWithBorder = myAppSettings.PasteImagesWithBorder;
-                    m_textWithBorder = myAppSettings.TextWithBorder;
-                    m_afterCaptureStayOnTop = myAppSettings.AfterCaptureStayOnTop;
-                    m_transparentWhenNotFocussed = myAppSettings.TransparentWhenNotFocussed;
-                    m_formTransparencyFactor = myAppSettings.FormTransparencyFactor;
-                    m_shapeFillTransparencyFactor = myAppSettings.ShapeFillTransparencyFactor;
-                    m_captureFromTryIcon = myAppSettings.CaptureFromTryIcon;
-                    m_autoHideMenu = myAppSettings.AutoHideMenu;
-                    m_automaticallyCrop = myAppSettings.AutomaticallyCrop;
-                    m_cursorColor = myAppSettings.CursorColor;
-                    m_fillColor = myAppSettings.FillColor;
-                    m_lineColor = myAppSettings.LineColor;
-                    m_lineWidth = myAppSettings.LineWidth;
-                    m_selectionColor = myAppSettings.SelectionColor;
-                    m_textFont = myAppSettings.TextFont;
-                    m_fontColor = myAppSettings.FontColor;
-                    m_noToolTips = myAppSettings.NoToolTips;
-                    m_applyToAll = myAppSettings.ApplyToAll;
-                    m_autoSave = myAppSettings.AutoSave;
-                    m_autoSaveAsk = myAppSettings.AutoSaveAsk;
-                    m_fillTransparency = myAppSettings.FillTransparency;
-                    m_cursorOpacity = myAppSettings.CursorOpacity;
-                    m_selectionOpacity = myAppSettings.SelectionOpacity;
+                    m_optionFormLocation = Settings.Default.OptionFormLocation;
+                    m_splashScreenBounds = Settings.Default.SplashScreenBounds;
+                    m_defaultDirectory = Settings.Default.DefaultDirectory;
+                    m_imagesDirectory = Settings.Default.ImagesDirectory;
+                    m_autoSaveProjectFile = Settings.Default.AutoSaveProjectFile;
+                    m_suppressStartUpHelp = Settings.Default.SuppressStartUpHelp;
+                    m_pasteImagesWithBorder = Settings.Default.PasteImagesWithBorder;
+                    m_textWithBorder = Settings.Default.TextWithBorder;
+                    m_afterCaptureStayOnTop = Settings.Default.AfterCaptureStayOnTop;
+                    m_transparentWhenNotFocussed = Settings.Default.TransparentWhenNotFocused;
+                    m_formTransparencyFactor = Settings.Default.FormTransparencyFactor;
+                    m_shapeFillTransparencyFactor = Settings.Default.FillTransparency;
+                    m_captureFromTryIcon = Settings.Default.CaptureFromTryIcon;
+                    m_autoHideMenu = Settings.Default.AutoHideMenu;
+                    m_automaticallyCrop = Settings.Default.AutomaticallyCrop;
+                    m_cursorColor = Settings.Default.CursorColor;
+                    m_fillColor = Settings.Default.FillColor;
+                    m_lineColor = Settings.Default.LineColor;
+                    m_lineWidth = Settings.Default.LineWidth;
+                    m_selectionColor = Settings.Default.SelectionColor;
+                    m_textFont = Settings.Default.TextFont;
+                    m_fontColor = Settings.Default.FontColor;
+                    m_noToolTips = Settings.Default.NoToolTips;
+                    m_applyToAll = Settings.Default.ApplyToAll;
+                    m_autoSave = Settings.Default.AutoSave;
+                    m_autoSaveAsk = Settings.Default.AutoSaveAsk;
+                    m_fillTransparency = Settings.Default.FillTransparency;
+                    //m_cursorOpacity = Settings.Default.CursorOpacity;
+                    m_selectionOpacity = Settings.Default.SelectionOpacity;
                 }
             }
             catch (Exception ex)
@@ -531,9 +532,9 @@ namespace FlexScreen
             }
             finally
             {
-                if (m_defaultDirectory == null)
+                if (string.IsNullOrEmpty(Settings.Default.DefaultDirectory))
                 {
-                    DefaultDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                    Settings.Default.DefaultDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 }
             }
             return ConfigurationFileExists;

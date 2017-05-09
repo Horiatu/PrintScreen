@@ -3,6 +3,7 @@ using System.Drawing.Drawing2D;
 using System.Globalization;
 using System.Windows.Forms;
 using System;
+using FlexScreen.Properties;
 
 namespace FlexScreen
 {
@@ -129,7 +130,7 @@ namespace FlexScreen
 
             if (!HideRectangle)
             {
-                g.DrawRectangle(new Pen(Color.FromArgb((int)(Program.MySettings.SelectionOpacity), Program.MySettings.SelectionColor)), ParentForm.SelectedRectangle);
+                g.DrawRectangle(new Pen(Color.FromArgb((int)(Settings.Default.SelectionOpacity), Settings.Default.SelectionColor)), ParentForm.SelectedRectangle);
             }
         }
 

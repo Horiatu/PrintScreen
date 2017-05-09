@@ -36,7 +36,7 @@ namespace FlexScreen
             NotifyIcon1.BalloonTipText = string.Format(Resources.BalloonTipTextFormat, VersionText);
             NotifyIcon1.ShowBalloonTip(2000);
 
-            if (!Program.MySettings.SuppressStartUpHelp)
+            if (!Settings.Default.SuppressStartUpHelp)
             {
                 Help.ShowHelp(this, SplashScreen.HelpFile, 0);
             }
@@ -60,19 +60,19 @@ namespace FlexScreen
             var f = (sender as Form);
             if (f != null && f.Bounds.X > 0 && f.Bounds.Y > 0)
             {
-                Program.MySettings.SplashScreenBounds = f.Bounds;
+                Settings.Default.SplashScreenBounds = f.Bounds;
             }
         }
 
         private void SplashScreenActivated(object sender, EventArgs e)
         {
-            if (Program.MySettings.SplashScreenBounds.X > 0 && Program.MySettings.SplashScreenBounds.Y > 0)
+            if (Settings.Default.SplashScreenBounds.X > 0 && Settings.Default.SplashScreenBounds.Y > 0)
             {
                 var f = (sender as Form);
                 if (f != null)
                 {
                     f.StartPosition = FormStartPosition.Manual;
-                    f.Bounds = Program.MySettings.SplashScreenBounds;
+                    f.Bounds = Settings.Default.SplashScreenBounds;
                 }
             }
         }
@@ -148,7 +148,7 @@ namespace FlexScreen
         {
             if (e.Button == MouseButtons.Left)
             {
-                if (Program.MySettings.CaptureFromTryIcon)
+                if (Settings.Default.CaptureFromTryIcon)
                 {
                     if (WindowState != FormWindowState.Minimized)
                     {
@@ -176,8 +176,8 @@ namespace FlexScreen
 
         private void ContextMenuStrip1Opening(object sender, CancelEventArgs e)
         {
-            aboutToolStripMenuItem.Font = new Font(aboutToolStripMenuItem.Font, Program.MySettings.CaptureFromTryIcon ? FontStyle.Regular : FontStyle.Bold);
-            captureToolStripMenuItem.Font = new Font(captureToolStripMenuItem.Font, Program.MySettings.CaptureFromTryIcon ? FontStyle.Bold : FontStyle.Regular);
+            aboutToolStripMenuItem.Font = new Font(aboutToolStripMenuItem.Font, Settings.Default.CaptureFromTryIcon ? FontStyle.Regular : FontStyle.Bold);
+            captureToolStripMenuItem.Font = new Font(captureToolStripMenuItem.Font, Settings.Default.CaptureFromTryIcon ? FontStyle.Bold : FontStyle.Regular);
 
             var screens = Screen.AllScreens;
             captureOtherScreenToolStripMenuItem.Visible = screens.Count() > 1;

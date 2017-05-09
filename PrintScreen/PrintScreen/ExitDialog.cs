@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using FlexScreen.Properties;
 
 namespace FlexScreen
 {
@@ -28,18 +29,18 @@ namespace FlexScreen
 
         protected override void OnClosed(EventArgs e)
         {
-            if (!Program.MySettings.AutoSave) return;
-            if (!Program.MySettings.AutoSave && !string.IsNullOrEmpty(Program.MySettings.AutoSaveProjectFile)) return;
-            if (Program.MySettings.AutoSaveAsk || string.IsNullOrEmpty(Program.MySettings.AutoSaveProjectFile))
+            if (!Settings.Default.AutoSave) return;
+            if (!Settings.Default.AutoSave && !string.IsNullOrEmpty(Settings.Default.AutoSaveProjectFile)) return;
+            if (Settings.Default.AutoSaveAsk || string.IsNullOrEmpty(Settings.Default.AutoSaveProjectFile))
             {
-                if (!string.IsNullOrEmpty(Program.MySettings.AutoSaveProjectFile))
+                if (!string.IsNullOrEmpty(Settings.Default.AutoSaveProjectFile))
                 {
-                    saveFileDialog1.InitialDirectory = Path.GetDirectoryName(Program.MySettings.AutoSaveProjectFile);
-                    saveFileDialog1.FileName = Program.MySettings.AutoSaveProjectFile;
+                    saveFileDialog1.InitialDirectory = Path.GetDirectoryName(Settings.Default.AutoSaveProjectFile);
+                    saveFileDialog1.FileName = Settings.Default.AutoSaveProjectFile;
                 }
                 if (saveFileDialog1.ShowDialog(this) == DialogResult.OK)
                 {
-                    Program.MySettings.AutoSaveProjectFile = saveFileDialog1.FileName;
+                    Settings.Default.AutoSaveProjectFile = saveFileDialog1.FileName;
                 }
                 else
                 {
@@ -47,12 +48,12 @@ namespace FlexScreen
                 }
             }
 
-            if (File.Exists(Program.MySettings.AutoSaveProjectFile))
+            if (File.Exists(Settings.Default.AutoSaveProjectFile))
             {
-                File.Delete(Program.MySettings.AutoSaveProjectFile);
+                File.Delete(Settings.Default.AutoSaveProjectFile);
             }
 
-            Utils.ZipAll(Program.MySettings.AutoSaveProjectFile);
+            Utils.ZipAll(Settings.Default.AutoSaveProjectFile);
         }
     }
 }

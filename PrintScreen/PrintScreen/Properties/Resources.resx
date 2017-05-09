@@ -735,4 +735,19 @@ Right-click here for the Pop-Up Menu.</value>
   <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CherrySwash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CherrySwash.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CherrySwash_bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CherrySwash-bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Pacifico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pacifico.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RaviPrakash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RaviPrakash.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Sniglet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sniglet.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

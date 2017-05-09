@@ -70,7 +70,7 @@ namespace FlexScreen
                 m_fileName = value;
                 SetCaption();
                 if (value == null) return;
-                Program.MySettings.DefaultDirectory = Path.GetFullPath(value);
+                Settings.Default.DefaultDirectory = Path.GetFullPath(value);
             }
         }
 
@@ -221,7 +221,7 @@ namespace FlexScreen
 
             ActiveTool = new DefaultTool(this);
 
-            //ShowStartUpHelp = !Program.MySettings.SuppressStartUpHelp;
+            //ShowStartUpHelp = !Settings.Default.SuppressStartUpHelp;
             //if (ShowStartUpHelp)
             //{
             //    Help.ShowHelp(this, SplashScreen.HelpFile, 0);
@@ -241,7 +241,7 @@ namespace FlexScreen
                 if (m_activeTool == value) return;
                 m_activeTool = value;
                 if (ActiveTool is DefaultTool) return;
-                if (Program.MySettings.NoToolTips || string.IsNullOrEmpty(ActiveTool.Name)) return;
+                if (Settings.Default.NoToolTips || string.IsNullOrEmpty(ActiveTool.Name)) return;
                 var tip = (ActiveTool.Tip ?? "") + @"
 Press [F1] for more help.";
                 Program.MyContext.SplashScreenForm.NotifyIcon1.ShowBalloonTip(tip.Length * 100, ActiveTool.Name, tip, ToolTipIcon.None);
@@ -313,7 +313,7 @@ Press [F1] for more help.";
                 Focus();
                 menuStrip1.Focus();
                 menuStrip1.Cursor = Cursors.SizeAll;
-                Opacity = TransparencyToOpacity(Program.MySettings.FormTransparencyFactor);
+                Opacity = TransparencyToOpacity(Settings.Default.FormTransparencyFactor);
                 Utils.ReleaseCapture();
                 Utils.SendMessage(Handle, Utils.WM_NCLBUTTONDOWN, Utils.HT_CAPTION, 0);
             }
@@ -361,7 +361,7 @@ Press [F1] for more help.";
                 Capturing = false;
                 var defaultTool = ActiveTool is DefaultTool;
                 SetState(CaptureStep.End);
-                if (!IsCroped && Program.MySettings.AutomaticallyCrop && defaultTool &&
+                if (!IsCroped && Settings.Default.AutomaticallyCrop && defaultTool &&
                     m_startPoint.X != m_endPoint.X &&
                     m_startPoint.Y != m_endPoint.Y)
                 {
@@ -461,20 +461,20 @@ Press [F1] for more help.";
                 if (SelectedRectangle.Width > 0 || SelectedRectangle.Height > 0)
                 {
                     e.Graphics.DrawString(string.Format("{0}, {1}", SelectedRectangle.Left, SelectedRectangle.Top),
-                        new Font("Arial", 7), new SolidBrush(Program.MySettings.SelectionColor), new Point(Math.Min(m_startPoint.X, m_endPoint.X) + 1, Math.Min(m_startPoint.Y, m_endPoint.Y) - 11));
+                        new Font("Arial", 7), new SolidBrush(Settings.Default.SelectionColor), new Point(Math.Min(m_startPoint.X, m_endPoint.X) + 1, Math.Min(m_startPoint.Y, m_endPoint.Y) - 11));
                     e.Graphics.DrawString(string.Format("{0}, {1}", SelectedRectangle.Width, SelectedRectangle.Height),
-                        new Font("Arial", 7), new SolidBrush(Program.MySettings.SelectionColor), new Point(m_endPoint.X + 1, m_endPoint.Y + 1));
+                        new Font("Arial", 7), new SolidBrush(Settings.Default.SelectionColor), new Point(m_endPoint.X + 1, m_endPoint.Y + 1));
                 }
             }
 
             if (FormIn)
             {
-                var cursorPen = new Pen(Color.FromArgb((int)(Program.MySettings.CursorOpacity), Program.MySettings.CursorColor));
+                var cursorPen = new Pen(Color.FromArgb(Settings.Default.CursorOpacity, Settings.Default.CursorColor));
                 e.Graphics.DrawLine(cursorPen, 0, CrossPoint.Y, CrossPoint.X - 2, CrossPoint.Y);
                 e.Graphics.DrawLine(cursorPen, CrossPoint.X + 2, CrossPoint.Y, ClientRectangle.Width, CrossPoint.Y);
                 e.Graphics.DrawLine(cursorPen, CrossPoint.X, 0, CrossPoint.X, CrossPoint.Y - 2);
                 e.Graphics.DrawLine(cursorPen, CrossPoint.X, CrossPoint.Y + 2, CrossPoint.X, ClientRectangle.Height);
-                cursorPen = new Pen(Program.MySettings.CursorColor);
+                cursorPen = new Pen(Settings.Default.CursorColor);
                 e.Graphics.DrawLine(cursorPen, Math.Max(0, CrossPoint.X - 20), CrossPoint.Y, CrossPoint.X - 3, CrossPoint.Y);
                 e.Graphics.DrawLine(cursorPen, CrossPoint.X + 3, CrossPoint.Y, Math.Min(CrossPoint.X + 20, ClientRectangle.Width), CrossPoint.Y);
                 e.Graphics.DrawLine(cursorPen, CrossPoint.X, Math.Max(0, CrossPoint.Y - 20), CrossPoint.X, CrossPoint.Y - 3);
@@ -557,7 +557,7 @@ Press [F1] for more help.";
                 BackgroundImage = backgroundImage;
 
                 Invalidate();
-                if (!Program.MySettings.AutoHideMenu)
+                if (!Settings.Default.AutoHideMenu)
                 {
                     MenuStrip1MouseEnter(this, null);
                 }
@@ -592,7 +592,7 @@ Press [F1] for more help.";
         {
             ToolStripMenuItem_Click(sender, e);
             Program.MainForm.SaveFileDialog.FileName = FileName;
-            Program.MainForm.SaveFileDialog.InitialDirectory = Program.MySettings.DefaultDirectory;
+            Program.MainForm.SaveFileDialog.InitialDirectory = Settings.Default.DefaultDirectory;
             if (Program.MainForm.SaveFileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 Save();
@@ -638,7 +638,7 @@ Press [F1] for more help.";
 
         public static void OpenInSystemEditor(string fileName)
         {
-            if (Program.MySettings.StartImageEditorOnSave)
+            if (Settings.Default.StartImageEditorOnSave)
             {
                 try
                 {
@@ -687,8 +687,8 @@ Press [F1] for more help.";
         private void TextToolStripMenuItem1Click(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            TextDialog.Font = Program.MySettings.TextFont;
-            TextDialog.Color = Program.MySettings.FontColor;
+            TextDialog.Font = Settings.Default.TextFont;
+            TextDialog.Color = Settings.Default.FontColor;
             TextDialog.btnFont_Click(sender, e);
             RestoreInFormCursorPossition();
         }
@@ -700,7 +700,7 @@ Press [F1] for more help.";
             ToolStripMenuItem_Click(sender, e);
             if (TextDialog.ShowDialog(this) == DialogResult.OK)
             {
-                ActiveTool = new TextTool(this, TextDialog.Annotate, Program.MySettings.TextFont, new SolidBrush(Program.MySettings.FontColor));
+                ActiveTool = new TextTool(this, TextDialog.Annotate, Settings.Default.TextFont, new SolidBrush(Settings.Default.FontColor));
             }
             RestoreInFormCursorPossition();
         }
@@ -708,25 +708,25 @@ Press [F1] for more help.";
         private void RectangleToolStripMenuItemClick(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            ActiveTool = new RectangleTool(this, new Pen(Program.MySettings.LineColor, Program.MySettings.LineWidth), new SolidBrush(Color.FromArgb(Program.MySettings.ShapeFillTransparencyFactor * 255 / 100, Program.MySettings.FillColor)));
+            ActiveTool = new RectangleTool(this, new Pen(Settings.Default.LineColor, Settings.Default.LineWidth), new SolidBrush(Color.FromArgb(Settings.Default.FillTransparency * 255 / 100, Settings.Default.FillColor)));
         }
 
         private void EllipseToolStripMenuItemClick(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            ActiveTool = new EllipseTool(this, new Pen(Program.MySettings.LineColor, Program.MySettings.LineWidth), new SolidBrush(Color.FromArgb(Program.MySettings.ShapeFillTransparencyFactor * 255 / 100, Program.MySettings.FillColor)));
+            ActiveTool = new EllipseTool(this, new Pen(Settings.Default.LineColor, Settings.Default.LineWidth), new SolidBrush(Color.FromArgb(Settings.Default.FillTransparency * 255 / 100, Settings.Default.FillColor)));
         }
 
         private void LineToolStripMenuItemClick(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            ActiveTool = new LineTool(this, new Pen(Program.MySettings.LineColor, Program.MySettings.LineWidth) { StartCap = LineCap.Round, EndCap = LineCap.Round });
+            ActiveTool = new LineTool(this, new Pen(Settings.Default.LineColor, Settings.Default.LineWidth) { StartCap = LineCap.Round, EndCap = LineCap.Round });
         }
 
         private void ArrowToolStripMenuItemClick(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            ActiveTool = new ArrowTool(this, new Pen(Color.FromArgb(127, Program.MySettings.LineColor)) { Width = 5, CustomEndCap = new AdjustableArrowCap(4, 6) });
+            ActiveTool = new ArrowTool(this, new Pen(Color.FromArgb(127, Settings.Default.LineColor)) { Width = 5, CustomEndCap = new AdjustableArrowCap(4, 6) });
         }
 
         private readonly Color m_highlighterPink = Color.FromArgb(127, Color.HotPink);
@@ -771,10 +771,10 @@ Press [F1] for more help.";
         private void FromFileToolStripMenuItemClick(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            Program.MyContext.OpenImageDialog.InitialDirectory = Program.MySettings.ImagesDirectory ?? Path.GetDirectoryName(Application.ExecutablePath) + @"\Resources";
+            Program.MyContext.OpenImageDialog.InitialDirectory = Settings.Default.ImagesDirectory ?? Path.GetDirectoryName(Application.ExecutablePath) + @"\Resources";
             if (Program.MyContext.OpenImageDialog.ShowDialog() == DialogResult.OK)
             {
-                Program.MySettings.ImagesDirectory = Program.MyContext.OpenImageDialog.InitialDirectory;
+                Settings.Default.ImagesDirectory = Program.MyContext.OpenImageDialog.InitialDirectory;
                 Image markerImage = Image.FromFile(Program.MyContext.OpenImageDialog.FileName);
                 //ToolStripMenuItem_Click(sender, e);
                 ActiveTool = new MarkerTool(this, markerImage, true);
@@ -801,7 +801,7 @@ Press [F1] for more help.";
         private void IndexToolStripMenuItemClick(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            ActiveTool = new IndexTool(this, ++LastIndex, new Pen(Program.MySettings.LineColor), new SolidBrush(Program.MySettings.FillColor), Program.MySettings.TextFont);
+            ActiveTool = new IndexTool(this, ++LastIndex, new Pen(Settings.Default.LineColor), new SolidBrush(Settings.Default.FillColor), Settings.Default.TextFont);
         }
 
         #endregion
@@ -861,7 +861,7 @@ Press [F1] for more help.";
                 var markerImage = Clipboard.GetImage();
                 if (markerImage != null)
                 {
-                    if (Program.MySettings.PasteImagesWithBorder)
+                    if (Settings.Default.PasteImagesWithBorder)
                     {
                         using (Graphics g = Graphics.FromImage(markerImage))
                         {
@@ -880,7 +880,7 @@ Press [F1] for more help.";
                     try
                     {
                         Image markerImage = Image.FromFile(fileList[0]);
-                        if (Program.MySettings.PasteImagesWithBorder)
+                        if (Settings.Default.PasteImagesWithBorder)
                         {
                             using (Graphics g = Graphics.FromImage(markerImage))
                             {
@@ -950,12 +950,12 @@ Press [F1] for more help.";
         {
             var R = new Rectangle(new Point(0, 2), new Size(15, 12));
 
-            var linePen = new Pen(Program.MySettings.LineColor);
-            var fillBrush = new SolidBrush(Color.FromArgb(50, Program.MySettings.FillColor));
+            var linePen = new Pen(Settings.Default.LineColor);
+            var fillBrush = new SolidBrush(Color.FromArgb(50, Settings.Default.FillColor));
 
             using (var g = GetMenuIcon(arrowToolStripMenuItem1))
             {
-                g.DrawLine(new Pen(Program.MySettings.LineColor) { Width = 2, CustomEndCap = new AdjustableArrowCap(3, 4) }, 0, 8, 16, 8);
+                g.DrawLine(new Pen(Settings.Default.LineColor) { Width = 2, CustomEndCap = new AdjustableArrowCap(3, 4) }, 0, 8, 16, 8);
             }
 
             using (var g = GetMenuIcon(lineToolStripMenuItem1))
@@ -991,14 +991,14 @@ Press [F1] for more help.";
                 g.DrawString("Tx", font, Brushes.White, new Point(0, 2));
                 g.DrawString("Tx", font, Brushes.White, new Point(1, 2));
                 g.DrawString("Tx", font, Brushes.White, new Point(2, 2));
-                g.DrawString("Tx", font, new SolidBrush(Program.MySettings.FontColor), new Point(1, 3));
+                g.DrawString("Tx", font, new SolidBrush(Settings.Default.FontColor), new Point(1, 3));
             }
 
             using (var g = GetMenuIcon(indexToolStripMenuItem))
             {
                 R = new Rectangle(new Point(1, 1), new Size(13, 13));
-                linePen = new Pen(Program.MySettings.LineColor) { Width = 2 };
-                fillBrush = new SolidBrush(Program.MySettings.FillColor);
+                linePen = new Pen(Settings.Default.LineColor) { Width = 2 };
+                fillBrush = new SolidBrush(Settings.Default.FillColor);
                 var textFont = new Font("Arial", 8.0f, FontStyle.Bold);
                 var textBrush = new SolidBrush(TextDialog.Color);
 
@@ -1054,7 +1054,7 @@ Press [F1] for more help.";
             }
         }
 
-        bool m_isTransparent = Program.MySettings.TransparentWhenNotFocussed;
+        bool m_isTransparent = Settings.Default.TransparentWhenNotFocused;
 
         public bool IsTransparent
         {
@@ -1089,7 +1089,7 @@ Press [F1] for more help.";
 
         private void MakeTransparent()
         {
-            Opacity = (IsTransparent) ? TransparencyToOpacity(Program.MySettings.FormTransparencyFactor) : 1.0;
+            Opacity = (IsTransparent) ? TransparencyToOpacity(Settings.Default.FormTransparencyFactor) : 1.0;
         }
 
         private void TransparentClick(object sender, EventArgs e)
@@ -1311,8 +1311,8 @@ Press [F1] for more help.";
         private void AddBorderToolStripMenuItemClick(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            //ActiveTool = new RectangleTool(this, new Pen(Program.MySettings.LineColor, Program.MySettings.LineWidth), new SolidBrush(Color.FromArgb(Program.MySettings.ShapeFillTransparencyFactor * 255 / 100, Program.MySettings.FillColor)));
-            Graphics.FromImage(BackgroundImage).DrawRectangle(new Pen(Color.FromArgb(128, Program.MySettings.LineColor), 3), new Rectangle(1, 1, BackgroundImage.Width - 3, BackgroundImage.Height - 3));
+            //ActiveTool = new RectangleTool(this, new Pen(Settings.Default.LineColor, Settings.Default.LineWidth), new SolidBrush(Color.FromArgb(Settings.Default.ShapeFillTransparencyFactor * 255 / 100, Settings.Default.FillColor)));
+            Graphics.FromImage(BackgroundImage).DrawRectangle(new Pen(Color.FromArgb(128, Settings.Default.LineColor), 3), new Rectangle(1, 1, BackgroundImage.Width - 3, BackgroundImage.Height - 3));
         }
 
         private void MenuStrip1HelpRequested(object sender, HelpEventArgs hlpevent)

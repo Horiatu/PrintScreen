@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
+using FlexScreen.Properties;
 
 namespace FlexScreen
 {
@@ -85,7 +86,7 @@ whille holding the mouse left-button:
 
             if (!HideRectangle)
             {
-                g.DrawRectangle(new Pen(Color.FromArgb((int)(Program.MySettings.SelectionOpacity), Program.MySettings.SelectionColor)), ParentForm.SelectedRectangle);
+                g.DrawRectangle(new Pen(Color.FromArgb(Settings.Default.SelectionOpacity, Settings.Default.SelectionColor)), ParentForm.SelectedRectangle);
             }
         }
 

@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PrintScreen.exe" size="803328">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PrintScreen.exe" size="954368">
       <assemblyIdentity name="PrintScreen" version="2.0.1.2" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pdFTyASiXodgrZWWuUTH1PVRuJI=</dsig:DigestValue>
+        <dsig:DigestValue>WyNuw77HqOo4I67YZ4b/hIOydwU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,13 +75,13 @@
       <dsig:DigestValue>5cn0ZA6/Ezjh38wVU/ikWZf3yls=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="PrintScreen.exe.config" size="189">
+  <file name="PrintScreen.exe.config" size="4861">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>LVSG+8JwncKNRgYiojZLonLGlTY=</dsig:DigestValue>
+      <dsig:DigestValue>zG1YtQSY0reFE5wYI1nONvLeUZU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\Crop Icon NotSaved.ico" size="3262">

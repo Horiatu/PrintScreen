@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using FlexScreen.Properties;
 
 namespace FlexScreen
 {
@@ -42,7 +43,7 @@ namespace FlexScreen
             var g = Graphics.FromImage(textImage);
             g.SmoothingMode = SmoothingMode.AntiAlias;
             m_size = g.MeasureString(Text, TextFont);
-            m_textWithBorder = Program.MySettings.TextWithBorder;
+            m_textWithBorder = Settings.Default.TextWithBorder;
             ParentForm.KeyUp += parentForm_KeyUp;
         }
 
@@ -72,7 +73,7 @@ namespace FlexScreen
             ParentForm.EndPoint = new Point(startPoint.X + (int)m_size.Width + 1, startPoint.Y + (int)m_size.Height + 1);
             if (!HideRectangle)
             {
-                g.DrawRectangle(new Pen(Color.FromArgb((int)(Program.MySettings.SelectionOpacity), Program.MySettings.SelectionColor)), ParentForm.SelectedRectangle);
+                g.DrawRectangle(new Pen(Color.FromArgb((int)(Settings.Default.SelectionOpacity), Settings.Default.SelectionColor)), ParentForm.SelectedRectangle);
             }
         }
 

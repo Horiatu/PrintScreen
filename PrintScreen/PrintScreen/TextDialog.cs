@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using FlexScreen.Properties;
 
 namespace FlexScreen
 {
@@ -86,26 +87,26 @@ namespace FlexScreen
 
         public new DialogResult ShowDialog()
         {
-            this.Font = Program.MySettings.TextFont;
-            this.Color = Program.MySettings.FontColor;
+            this.Font = Settings.Default.TextFont;
+            this.Color = Settings.Default.FontColor;
             System.Windows.Forms.DialogResult result;
             if ((result = base.ShowDialog()) == System.Windows.Forms.DialogResult.OK)
             {
-                Program.MySettings.TextFont = this.Font;
-                Program.MySettings.FontColor = this.Color;
+                Settings.Default.TextFont = this.Font;
+                Settings.Default.FontColor = this.Color;
             }
             return result;
         }
 
         public new DialogResult ShowDialog(IWin32Window owner)
         {
-            this.Font = Program.MySettings.TextFont;
-            this.Color = Program.MySettings.FontColor;
+            this.Font = Settings.Default.TextFont;
+            this.Color = Settings.Default.FontColor;
             System.Windows.Forms.DialogResult result;
             if ((result = base.ShowDialog(owner)) == System.Windows.Forms.DialogResult.OK)
             {
-                Program.MySettings.TextFont = this.Font;
-                Program.MySettings.FontColor = this.Color;
+                Settings.Default.TextFont = this.Font;
+                Settings.Default.FontColor = this.Color;
             }
             return result;
         }

@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using FlexScreen.Properties;
 
 namespace FlexScreen
 {
@@ -179,7 +180,7 @@ namespace FlexScreen
             m_custom = custom;
             if (custom)
             {
-                m_drawBorder = Program.MySettings.PasteImagesWithBorder;
+                m_drawBorder = Settings.Default.PasteImagesWithBorder;
             }
             MarkerImage = OriginalMarkerImage = image ?? CursorImage.CurrentImage(ParentForm.CursorImagePointerX, ParentForm.CursorImagePointerY);
         }
@@ -305,7 +306,7 @@ namespace FlexScreen
 
             if (!HideRectangle)
             {
-                g.DrawRectangle(new Pen(Color.FromArgb((int)(Program.MySettings.SelectionOpacity), Program.MySettings.SelectionColor)), ParentForm.SelectedRectangle);
+                g.DrawRectangle(new Pen(Color.FromArgb((int)(Settings.Default.SelectionOpacity), Settings.Default.SelectionColor)), ParentForm.SelectedRectangle);
             }
         }
 

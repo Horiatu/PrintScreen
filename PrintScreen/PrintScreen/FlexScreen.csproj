@@ -245,6 +245,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\CherrySwash-bold.ttf" />
+    <None Include="Resources\CherrySwash.ttf" />
+    <None Include="Resources\Pacifico.ttf" />
+    <None Include="Resources\RaviPrakash.ttf" />
+    <None Include="Resources\Sniglet.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Crop Icon NotSaved.ico" />

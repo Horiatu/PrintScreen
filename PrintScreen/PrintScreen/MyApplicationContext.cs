@@ -39,11 +39,18 @@ namespace FlexScreen
             }
 
             SplashScreenForm.Show();
-            FontDialog = new FontDialog() { FontMustExist = true, ShowColor = true, ShowEffects = true, };
-
-            if (Program.MySettings.AutoSave && !string.IsNullOrEmpty(Program.MySettings.AutoSaveProjectFile) && File.Exists(Program.MySettings.AutoSaveProjectFile))
+            FontDialog = new FontDialog
             {
-                Utils.UnZipAll(Program.MySettings.AutoSaveProjectFile);
+                FontMustExist = true,
+                ShowColor = true,
+                ShowEffects = true,
+                AllowVerticalFonts = true,
+                ShowApply = true,
+            };
+
+            if (Settings.Default.AutoSave && !string.IsNullOrEmpty(Settings.Default.AutoSaveProjectFile) && File.Exists(Settings.Default.AutoSaveProjectFile))
+            {
+                Utils.UnZipAll(Settings.Default.AutoSaveProjectFile);
             }
         }
 
@@ -54,12 +61,12 @@ namespace FlexScreen
 
         void OptionsDialogForm_Closing(object sender, CancelEventArgs e)
         {
-            Program.MySettings.OptionFormLocation = ((Form) sender).Location;
+            Settings.Default.OptionFormLocation = ((Form) sender).Location;
         }
 
         private void OnApplicationExit(object sender, EventArgs e)
         {
-            Program.MySettings.Save();
+            Settings.Default.Save();
         }
     }
 }

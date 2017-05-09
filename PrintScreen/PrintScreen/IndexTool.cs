@@ -6,6 +6,7 @@ using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Threading;
+using FlexScreen.Properties;
 
 namespace FlexScreen
 {
@@ -162,8 +163,8 @@ namespace FlexScreen
             if (!HideRectangle)
             {
                 g.DrawRectangle(
-                    new Pen(Color.FromArgb((int)(Program.MySettings.SelectionOpacity),
-                                           Program.MySettings.SelectionColor)), ParentForm.SelectedRectangle);
+                    new Pen(Color.FromArgb(Settings.Default.SelectionOpacity,
+                                           Settings.Default.SelectionColor)), ParentForm.SelectedRectangle);
             }
         }
 

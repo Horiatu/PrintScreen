@@ -82,7 +82,7 @@ namespace FlexScreen
         {
             var bitmap = new Bitmap(size * 2, size * 2);
 
-            var cursorPen = new Pen(Color.Black);//Program.MySettings.CursorColor);
+            var cursorPen = new Pen(Color.Black);//Settings.Default.CursorColor);
             Graphics g = Graphics.FromImage(bitmap);
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
