@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Globalization;
 using System.Windows.Forms;
 
 namespace FlexScreen
@@ -39,27 +38,23 @@ namespace FlexScreen
             return false;
         }
 
-        private static void SetFontSample()
-        {
-            SetFontSample(null, null);
-        }
-
-        private static void SetFontSample(Font font, Color? color)
+        private static void SetFontSample(Font font = null, Color? color = null)
         {
             //Program.MyContext.OptionsDialogForm.FontSample.Text = Program.MyContext.FontDialog.Font.Name;
-            Program.MyContext.OptionsDialogForm.FontSample.ForeColor = color.HasValue ? color.Value : Program.MyContext.FontDialog.Color;
-            Program.MyContext.OptionsDialogForm.FontSample.Font = font != null ? font : Program.MyContext.FontDialog.Font;
+            Program.MyContext.OptionsDialogForm.FontSample.ForeColor = color ?? Program.MyContext.FontDialog.Color;
+            Program.MyContext.OptionsDialogForm.FontSample.Font = font ?? Program.MyContext.FontDialog.Font;
             Program.MyContext.OptionsDialogForm.FontSample.Invalidate();
         }
 
         private void FontSamplePaint(object sender, PaintEventArgs e)
         {
-            Button fontSample = sender as Button;
+            var fontSample = sender as Button;
+            if (fontSample == null) return;
             Image tmp = new Bitmap(10, 10);
-            Graphics g = Graphics.FromImage(tmp);
-            SizeF s = g.MeasureString(fontSample.Font.Name, fontSample.Font);
-            int x = Math.Max(2, (int)(fontSample.Width - s.Width) / 2);
-            int y = Math.Max(2, (int)(fontSample.Height - s.Height) / 2);
+            var g = Graphics.FromImage(tmp);
+            var s = g.MeasureString(fontSample.Font.Name, fontSample.Font);
+            var x = Math.Max(2, (int)(fontSample.Width - s.Width) / 2);
+            var y = Math.Max(2, (int)(fontSample.Height - s.Height) / 2);
 
             if (cbTextWhiteBorder.Checked)
             {
@@ -86,6 +81,7 @@ namespace FlexScreen
         private void BtnOkClick(object sender, EventArgs e)
         {
             GetSetingsFromOptionsForm();
+            Program.MySettings.Save();
         }
 
         public void GetSetingsFromOptionsForm()

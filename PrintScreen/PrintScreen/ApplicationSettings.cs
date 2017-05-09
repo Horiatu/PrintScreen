@@ -225,9 +225,11 @@ namespace FlexScreen
             get { return m_applyToAll; }
             set
             {
-                if (m_applyToAll == value) return;
-                m_applyToAll = value;
-                appSettingsChanged = true;
+                if (m_applyToAll != value)
+                {
+                    m_applyToAll = value;
+                    appSettingsChanged = true;
+                }
             }
         }
 
@@ -468,10 +470,7 @@ namespace FlexScreen
                 }
                 finally
                 {
-                    if (myWriter != null)
-                    {
-                        myWriter.Close();
-                    }
+                    myWriter?.Close();
                 }
             }
             return appSettingsChanged;

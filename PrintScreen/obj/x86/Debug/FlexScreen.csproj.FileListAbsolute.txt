@@ -180,3 +180,8 @@ F:\GitHub\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csproj.GenerateResour
 F:\GitHub\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TrustInfo.xml
 F:\GitHub\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe.manifest
 F:\GitHub\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.application
+D:\F\GitHub\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.config
+D:\F\GitHub\PrintScreen\PrintScreen\obj\x86\Debug\Interop.SHDocVw.dll
+D:\F\GitHub\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csproj.ResolveComReference.cache
+D:\F\GitHub\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+D:\F\GitHub\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
