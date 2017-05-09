@@ -14,22 +14,13 @@ namespace FlexScreen
         public Point MagnifierPoint { get; set; }
         public int MagnifyFactor { get; set; }
 
-        public override string Name
-        {
-            get { return "Magnify Lens"; }
-        }
+        public override string Name => "Magnify Lens";
 
-        public override string Tip
-        {
-            get
-            {
-                return base.Tip +
-@"- Hold [Ctrl] key down to resize.
+        public override string Tip => $@"{base.Tip}
+- Hold [Ctrl] key down to resize.
 - Press [Up]/[Down] keys to change the magnify factor.";
-            }
-        }
 
-        public int MagnifyIndex
+        private int MagnifyIndex
         {
             get
             {
@@ -39,23 +30,24 @@ namespace FlexScreen
             {
                 if (m_magnifyIndex != value)
                 {
-                    m_magnifyIndex = value % magnifyFactors.Length;
-                    MagnifyFactor = magnifyFactors[m_magnifyIndex];
+                    m_magnifyIndex = value % m_magnifyFactors.Length;
+                    MagnifyFactor = m_magnifyFactors[m_magnifyIndex];
                 }
             }
         }
 
-        readonly int[] magnifyFactors = { 2, 3, 5, 7 };
+        readonly int[] m_magnifyFactors = { 2, 3, 5, 7 };
         int m_magnifyIndex = 1;
 
-        int width { get { return MagnifierGlassImage.Width; } }
-        int height { get { return MagnifierGlassImage.Height; } }
-        Point startPoint
+        int Width => MagnifierGlassImage.Width;
+        int Height => MagnifierGlassImage.Height;
+
+        Point StartPoint
         {
             get { return ParentForm.StartPoint; }
             set { ParentForm.StartPoint = value; }
         }
-        Point endPoint
+        Point EndPoint
         {
             get { return ParentForm.EndPoint; }
             set { ParentForm.EndPoint = value; }
@@ -90,7 +82,7 @@ namespace FlexScreen
 
         public void PrevMagnifyFactor()
         {
-            MagnifyIndex = MagnifyIndex + magnifyFactors.Length - 1;
+            MagnifyIndex = MagnifyIndex + m_magnifyFactors.Length - 1;
             ParentForm.Invalidate();
         }
 
@@ -111,32 +103,32 @@ namespace FlexScreen
 
         public override void DrawRectangle(Graphics g)
         {
-            var current = ParentForm.CrossPoint; //  PointToClient(Cursor.Position);
+            var current = ParentForm.CrossPoint; 
 
             if (ParentForm.ControlKeyPressed)
             {
-                var p = new Point(current.X + width/2, current.Y + height/2);
-                if (p.X - startPoint.X > 25 && p.Y - startPoint.Y > 25)
+                var p = new Point(current.X + Width/2, current.Y + Height/2);
+                if (p.X - StartPoint.X > 25 && p.Y - StartPoint.Y > 25)
                 {
-                    endPoint = p;
+                    EndPoint = p;
                     MagnifierGlassImage = new Bitmap(OriginalMagnifierGlassImage, ParentForm.SelectedRectangle.Size);
                 }
             }
             else
             {
-                startPoint = new Point(current.X - width / 2, current.Y - height / 2);
-                endPoint = new Point(startPoint.X + width, startPoint.Y + height);
+                StartPoint = new Point(current.X - Width / 2, current.Y - Height / 2);
+                EndPoint = new Point(StartPoint.X + Width, StartPoint.Y + Height);
             }
 
             if (!HideRectangle)
             {
-                g.DrawRectangle(new Pen(Color.FromArgb((int)(Settings.Default.SelectionOpacity), Settings.Default.SelectionColor)), ParentForm.SelectedRectangle);
+                g.DrawRectangle(new Pen(Color.FromArgb(Settings.Default.SelectionOpacity, Settings.Default.SelectionColor)), ParentForm.SelectedRectangle);
             }
         }
 
         public override void Draw(Graphics g)
         {
-            MagnifierPoint = new Point(startPoint.X + 1, startPoint.Y + 1);
+            MagnifierPoint = new Point(StartPoint.X + 1, StartPoint.Y + 1);
             Execute(g);
             if (ParentForm.AltKeyPressed)
             {
@@ -154,23 +146,23 @@ namespace FlexScreen
             base.Execute(g);
             try
             {
-                using (Image lensImage = new Bitmap(width, height))
+                using (Image lensImage = new Bitmap(Width, Height))
                 {
                     var lens = Graphics.FromImage(lensImage);
                     lens.CompositingMode = CompositingMode.SourceOver;
                     lens.SmoothingMode = SmoothingMode.HighQuality;
 
-                    var w = (int)Math.Round((double)width / MagnifyFactor);
-                    var h = (int)Math.Round((double)height / MagnifyFactor);
-                    var x = MagnifierPoint.X + (int)Math.Round((width - w) / 2.0);
-                    var y = MagnifierPoint.Y + (int)Math.Round((height - h) / 2.0);
+                    var w = (int)Math.Round((double)Width / MagnifyFactor);
+                    var h = (int)Math.Round((double)Height / MagnifyFactor);
+                    var x = MagnifierPoint.X + (int)Math.Round((Width - w) / 2.0);
+                    var y = MagnifierPoint.Y + (int)Math.Round((Height - h) / 2.0);
 
-                    using (Image bufferImage = new Bitmap(width, height))
+                    using (Image bufferImage = new Bitmap(Width, Height))
                     {
                         var buffer = Graphics.FromImage(bufferImage);
                         buffer.SmoothingMode = SmoothingMode.HighQuality;
                         //buffer.FillRectangle(new HatchBrush(HatchStyle.BackwardDiagonal, Color.FromArgb(220, Color.GhostWhite), Color.FromArgb(150, Color.Black)), new Rectangle(0, 0, width, height));
-                        buffer.FillRectangle(new SolidBrush(Color.FromArgb(180, Color.Black)), new Rectangle(0, 0, width, height));
+                        buffer.FillRectangle(new SolidBrush(Color.FromArgb(180, Color.Black)), new Rectangle(0, 0, Width, Height));
 
                         using (var cropImage = ParentForm.CropImage(ParentForm.BackgroundImage, new Rectangle(x, y, w, h)))
                         {
@@ -178,17 +170,17 @@ namespace FlexScreen
                             {
                                 var dw = cropImage.Width * MagnifyFactor;
                                 var dh = cropImage.Height * MagnifyFactor;
-                                var dx = (cropImage.Width < w && x < 0) ? width - dw : 0;
-                                var dy = (cropImage.Height < h && y < 0) ? height - dh : 0;
+                                var dx = (cropImage.Width < w && x < 0) ? Width - dw : 0;
+                                var dy = (cropImage.Height < h && y < 0) ? Height - dh : 0;
                                 buffer.DrawImage(cropImage, new Rectangle(dx, dy, dw, dh), 0, 0, cropImage.Width, cropImage.Height, GraphicsUnit.Pixel);
                             }
                         }
 
                         var tb = new TextureBrush(bufferImage);
-                        lens.FillEllipse(tb, 0, 0, width - 3, height - 3);
+                        lens.FillEllipse(tb, 0, 0, Width - 3, Height - 3);
                     }
-                    lens.DrawEllipse(new Pen(Color.FromArgb(80, Color.Black), 2), 1, 1, width - 4, height - 4);
-                    lens.DrawImage(MagnifierGlassImage, 0, 0);
+                    lens.DrawEllipse(new Pen(Color.FromArgb(80, Color.Black), 2), 1, 1, Width - 4, Height - 4);
+                    lens.DrawImage(MagnifierGlassImage, 0, 0, Width - 4, Height - 4);
 
                     g.DrawImage(lensImage, MagnifierPoint);
                 }

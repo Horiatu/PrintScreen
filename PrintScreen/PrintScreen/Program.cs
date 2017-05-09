@@ -26,22 +26,6 @@ namespace FlexScreen
             }
         }
 
-        static ApplicationSettings _mySettings;
-        public static ApplicationSettings MySettings
-        {
-            get
-            {
-                if (_mySettings == null)
-                {
-                    _mySettings = new ApplicationSettings();
-                    if (_mySettings.Restore())
-                    {
-                    }
-                }
-                return _mySettings;
-            }
-        }
-
         public static List<CaptureForm> CaptureForms = new List<CaptureForm>();
 
         internal static CaptureForm GetCaptureForm(Image img)
@@ -72,10 +56,6 @@ namespace FlexScreen
         internal static CaptureForm GetCaptureForm()
         {
             return SplashScreen.CaptureImage(Screen.FromPoint(Cursor.Position));
-            //var form = new CaptureForm(ScreenCapture.CaptureScreen());
-            //CaptureForms.Add(form);
-            //form.Visible = true;
-            //return form;
         }
 
         internal static CaptureForm GetCaptureForm(IntPtr winHandle)
@@ -107,20 +87,19 @@ namespace FlexScreen
             Application.SetCompatibleTextRenderingDefault(true);
 
             Application.ApplicationExit += Application_ApplicationExit;
-            _hookID = SetHook(_proc);
+            m_hookId = SetHook(Proc);
 
             _myContext = null;
-            _mySettings = null;
             Application.Run(MyContext);
         }
 
         static void Application_ApplicationExit(object sender, EventArgs e)
         {
-            UnhookWindowsHookEx(_hookID);
+            UnhookWindowsHookEx(m_hookId);
         }
 
-        private static LowLevelKeyboardProc _proc = HookCallback;
-        private static IntPtr _hookID = IntPtr.Zero;
+        private static readonly LowLevelKeyboardProc Proc = HookCallback;
+        private static IntPtr m_hookId = IntPtr.Zero;
 
         private static IntPtr SetHook(LowLevelKeyboardProc proc)
         {
@@ -136,28 +115,22 @@ namespace FlexScreen
 
         public delegate void EscapeKeyPressedHandler();
         public static event EscapeKeyPressedHandler EscapeKeyPressed;
-        private static void OnEscapeKeyPressed()
-        {
-            if (EscapeKeyPressed != null) EscapeKeyPressed();
-        }
+        private static void OnEscapeKeyPressed() => EscapeKeyPressed?.Invoke();
 
         public delegate void SpaceKeyPressedHandler();
         public static event SpaceKeyPressedHandler SpaceKeyPressed;
-        private static void OnSpaceKeyPressed()
-        {
-            if (SpaceKeyPressed != null) SpaceKeyPressed();
-        }
+        private static void OnSpaceKeyPressed() => SpaceKeyPressed?.Invoke();
 
         private static IntPtr HookCallback(int nCode, IntPtr wParam, IntPtr lParam)
         {
-            if (nCode >= 0)
+            if (nCode < 0) return CallNextHookEx(IntPtr.Zero, nCode, wParam, lParam);
+
+            var number = (Keys)Marshal.ReadInt32(lParam);
+            switch (number)
             {
-                var number = (Keys)Marshal.ReadInt32(lParam);
-                if (number == Keys.PrintScreen)
-                {
+                case Keys.PrintScreen:
                     if ((wParam == (IntPtr)260 && Keys.Alt == Control.ModifierKeys && number == Keys.PrintScreen))
                     {
-                        //MessageBox.Show("You've pressed alt + print screen");
                         if (!CaptureForm.Capturing)
                         {
                             CaptureForm.Capturing = true;
@@ -172,16 +145,13 @@ namespace FlexScreen
                             GetCaptureForm();
                         }
                     }
-                }
-                else if (number == Keys.Escape)
-                {
+                    break;
+                case Keys.Escape:
                     OnEscapeKeyPressed();
-                    //SplashScreen.MinimizeAll();
-                }
-                else if (number == Keys.Space)
-                {
+                    break;
+                case Keys.Space:
                     OnSpaceKeyPressed();
-                }
+                    break;
             }
             return CallNextHookEx(IntPtr.Zero, nCode, wParam, lParam);
         }
