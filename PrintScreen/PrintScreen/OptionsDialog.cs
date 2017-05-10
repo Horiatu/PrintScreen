@@ -11,13 +11,6 @@ namespace FlexScreen
         {
             InitializeComponent();
         }
-
-        private void OptionsDialog_Activated(object sender, EventArgs e)
-        {
-            SetFontSample();
-            BtnCancelClick(this, null);
-        }
-
         #region Font
         private void btnTextFont_Click(object sender, EventArgs e)
         {
@@ -26,19 +19,23 @@ namespace FlexScreen
 
         public static bool ConfigureFont(Form parent)
         {
-            var oldFont = Program.MyContext.FontDialog.Font;
-            var oldColor = Program.MyContext.FontDialog.Color;
             Program.MyContext.FontDialog.Apply += FontDialog_Apply;
-            if (Program.MyContext.FontDialog.ShowDialog(parent) == DialogResult.OK)
+            try
             {
-                SetFontSample();
-                return true;
+
+                Program.MyContext.OptionsDialogForm.FontSample.ForeColor = Settings.Default.FontColor;
+                Program.MyContext.OptionsDialogForm.FontSample.Font = Settings.Default.TextFont;
+                if (Program.MyContext.FontDialog.ShowDialog(parent) == DialogResult.OK)
+                {
+                    SetFontSample(Program.MyContext.FontDialog.Font, Program.MyContext.FontDialog.Color);
+                    return true;
+                }
+                return false;
             }
-            SetFontSample(oldFont, oldColor);
-            Program.MyContext.FontDialog.Apply -= FontDialog_Apply;
-            Program.MyContext.OptionsDialogForm.FontSample.ForeColor = oldColor;
-            Program.MyContext.OptionsDialogForm.FontSample.Font = oldFont;
-            return false;
+            finally
+            {
+                Program.MyContext.FontDialog.Apply -= FontDialog_Apply;
+            }
         }
 
         private static void FontDialog_Apply(object sender, EventArgs e)
@@ -49,11 +46,12 @@ namespace FlexScreen
             SetFontSample(fontDialog.Font, fontDialog.Color);
         }
 
-        private static void SetFontSample(Font font = null, Color? color = null)
+        private static void SetFontSample(Font font, Color color)
         {
-            //Program.MyContext.OptionsDialogForm.FontSample.Text = Program.MyContext.FontDialog.Font.Name;
-            Program.MyContext.OptionsDialogForm.FontSample.ForeColor = color ?? Program.MyContext.FontDialog.Color;
-            Program.MyContext.OptionsDialogForm.FontSample.Font = font ?? Program.MyContext.FontDialog.Font;
+            Program.MyContext.OptionsDialogForm.FontSample.ForeColor = Settings.Default.FontColor = color;
+            Program.MyContext.OptionsDialogForm.FontSample.Font = Settings.Default.TextFont = font;
+            Settings.Default.Save();
+
             Program.MyContext.OptionsDialogForm.FontSample.Invalidate();
         }
 
@@ -83,16 +81,11 @@ namespace FlexScreen
             e.Graphics.DrawString(fontSample.Font.Name, fontSample.Font, new SolidBrush(fontSample.ForeColor), new Point(x, y));
         }
 
-        private void CbTextWhiteBorderCheckedChanged(object sender, EventArgs e)
-        {
-            Program.MyContext.OptionsDialogForm.FontSample.Invalidate();
-        }
         #endregion
 
         private void BtnOkClick(object sender, EventArgs e)
         {
             GetSetingsFromOptionsForm();
-            Settings.Default.Save();
             Settings.Default.Save();
         }
 
@@ -133,42 +126,6 @@ namespace FlexScreen
             }
         }
 
-        private void BtnCancelClick(object sender, EventArgs e)
-        {
-            cbSuppresStartUpHelp.Checked = Settings.Default.SuppressStartUpHelp;
-            cbImageBorder.Checked = Settings.Default.PasteImagesWithBorder;
-            cbTextWhiteBorder.Checked = Settings.Default.TextWithBorder;
-            cbOnTop.Checked = Settings.Default.AfterCaptureStayOnTop;
-            cbTransparent.Checked = Settings.Default.TransparentWhenNotFocused;
-            nudTransparency.Value = Settings.Default.FormTransparencyFactor >= 20 ? Settings.Default.FormTransparencyFactor : 20;
-            nudFillTransparency.Value = Settings.Default.FillTransparency > 20 ? Settings.Default.FillTransparency : 20;
-            nudCursorOpacity.Value = Settings.Default.CursorOpacity > 90 ? Settings.Default.CursorOpacity : 90;
-            nudSelectionOpacity.Value = Settings.Default.SelectionOpacity > 90 ? Settings.Default.SelectionOpacity : 90;
-            cbStartSysEditor.Checked = Settings.Default.StartImageEditorOnSave;
-            cbKeepMenuOn.Checked = !Settings.Default.AutoHideMenu;
-            cbCaptureFromTryIcon.Checked = Settings.Default.CaptureFromTryIcon;
-            cbAutomaticallyCrop.Checked = Settings.Default.AutomaticallyCrop;
-
-            btnCursorColor.BackColor = Settings.Default.CursorColor;
-            btnLinesColor.BackColor = Settings.Default.LineColor;
-            numLineWidth.Value = Settings.Default.LineWidth >= 1 ? Settings.Default.LineWidth : 1;
-            btnFillColor.BackColor = Settings.Default.FillColor;
-            btnSelectionColor.BackColor = Settings.Default.SelectionColor;
-            cbTurnOnTips.Checked = !Settings.Default.NoToolTips;
-            cbApplyToAll.Checked = Settings.Default.ApplyToAll;
-            cbAutoSave.Checked = Settings.Default.AutoSave;
-            cbAutoSaveAsk.Checked = Settings.Default.AutoSaveAsk;
-            nudFillTransparency.Value = Settings.Default.FillTransparency;
-            nudCursorOpacity.Value = Settings.Default.CursorOpacity;
-            nudSelectionOpacity.Value = Settings.Default.SelectionOpacity;
-            cbAutoSaveAsk.Visible = cbAutoSave.Checked;
-
-            Program.MyContext.FontDialog.Font = Settings.Default.TextFont;
-            Program.MyContext.FontDialog.Color = Settings.Default.FontColor;
-
-            SetFontSample();
-        }
-
         private void OptionsDialogHelpRequested(object sender, HelpEventArgs hlpevent)
         {
             SplashScreen.ShowHelp(this, 46);
@@ -202,50 +159,6 @@ namespace FlexScreen
             ((GroupBox)sender).ForeColor = Color.RoyalBlue;
         }
 
-        private void BtnCursorColorClick(object sender, EventArgs e)
-        {
-            colorDialog1.Color = Settings.Default.CursorColor;
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            {
-                Settings.Default.CursorColor = colorDialog1.Color;
-                btnCursorColor.BackColor = Settings.Default.CursorColor = colorDialog1.Color;
-            }
-        }
-
-        private void BtnSelectionColorClick(object sender, EventArgs e)
-        {
-            colorDialog1.Color = Settings.Default.SelectionColor;
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            {
-                Settings.Default.SelectionColor = colorDialog1.Color;
-                btnSelectionColor.BackColor = Settings.Default.SelectionColor = colorDialog1.Color;
-            }
-        }
-
-        public void BtnLinesColorClick(object sender, EventArgs e)
-        {
-            colorDialog1.Color = Settings.Default.LineColor;
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            {
-                Settings.Default.LineColor = colorDialog1.Color;
-                btnLinesColor.BackColor = Settings.Default.LineColor = colorDialog1.Color;
-            }
-        }
-
-        public void BtnFillColorClick(object sender, EventArgs e)
-        {
-            colorDialog1.Color = Settings.Default.FillColor;
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            {
-                Settings.Default.FillColor = colorDialog1.Color;
-                btnFillColor.BackColor = Settings.Default.FillColor = colorDialog1.Color;
-            }
-        }
-
-        private void CbAutoSaveCheckedChanged(object sender, EventArgs e)
-        {
-            cbAutoSaveAsk.Visible = Settings.Default.AutoSaveAsk = ((CheckBox)sender).Checked;
-        }
 
         private void OptionsDialogLoad(object sender, EventArgs e)
         {
@@ -258,7 +171,200 @@ namespace FlexScreen
 
         private void nudCursorOpacity_ValueChanged(object sender, EventArgs e)
         {
+            var cursorOpacity = sender as NumericUpDown;
+            if (cursorOpacity == null) return;
 
+            Settings.Default.CursorOpacity = (int)cursorOpacity.Value;
+            Settings.Default.Save();
+        }
+        private void nudSelectionOpacity_ValueChanged(object sender, EventArgs e)
+        {
+            var selectionOpacity = sender as NumericUpDown;
+            if (selectionOpacity == null) return;
+
+            Settings.Default.SelectionOpacity = (int)selectionOpacity.Value;
+            Settings.Default.Save();
+        }
+        private void BtnCursorColorClick(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if (btn == null) return;
+
+            colorDialog1.Color = Settings.Default.CursorColor;
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btn.BackColor = Settings.Default.CursorColor = colorDialog1.Color;
+                Settings.Default.Save();
+            }
+        }
+
+        private void BtnSelectionColorClick(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if (btn == null) return;
+
+            colorDialog1.Color = Settings.Default.SelectionColor;
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btn.BackColor = Settings.Default.SelectionColor = colorDialog1.Color;
+                Settings.Default.Save();
+            }
+        }
+
+        public void BtnLinesColorClick(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if (btn == null) return;
+
+            colorDialog1.Color = Settings.Default.LineColor;
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btn.BackColor = Settings.Default.LineColor = colorDialog1.Color;
+                Settings.Default.Save();
+            }
+        }
+
+        public void BtnFillColorClick(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if (btn == null) return;
+
+            colorDialog1.Color = Settings.Default.FillColor;
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btn.BackColor = Settings.Default.FillColor = colorDialog1.Color;
+                Settings.Default.Save();
+            }
+        }
+
+        private void numLineWidth_ValueChanged(object sender, EventArgs e)
+        {
+            var lineWidth = sender as NumericUpDown;
+            if (lineWidth == null) return;
+
+            Settings.Default.LineWidth = (int)lineWidth.Value;
+            Settings.Default.Save();
+        }
+        private void nudFillTransparency_ValueChanged(object sender, EventArgs e)
+        {
+            var nud = sender as NumericUpDown;
+            if (nud == null) return;
+
+            Settings.Default.FillTransparency = (int)nud.Value;
+            Settings.Default.Save();
+        }
+        private void CbTextWithBorderCheckedChanged(object sender, EventArgs e)
+        {
+            var cb = sender as CheckBox;
+            if (cb == null) return;
+
+            Settings.Default.TextWithBorder = cb.Checked;
+            Settings.Default.Save();
+
+            Program.MyContext.OptionsDialogForm.FontSample.Invalidate();
+        }
+
+        private void cbAutomaticallyCrop_CheckedChanged(object sender, EventArgs e)
+        {
+            var cb = sender as CheckBox;
+            if (cb == null) return;
+
+            Settings.Default.AutomaticallyCrop = cb.Checked;
+            Settings.Default.Save();
+        }
+
+        private void cbOnTop_CheckedChanged(object sender, EventArgs e)
+        {
+            var cb = sender as CheckBox;
+            if (cb == null) return;
+
+            Settings.Default.AfterCaptureStayOnTop = cb.Checked;
+            Settings.Default.Save();
+        }
+
+        private void cbTransparent_CheckedChanged(object sender, EventArgs e)
+        {
+            var cb = sender as CheckBox;
+            if (cb == null) return;
+
+            Settings.Default.TransparentWhenNotFocused = cb.Checked;
+            Settings.Default.Save();
+        }
+
+        private void cbKeepMenuOn_CheckedChanged(object sender, EventArgs e)
+        {
+            var cb = sender as CheckBox;
+            if (cb == null) return;
+
+            Settings.Default.KeepMenuOn = cb.Checked;
+            Settings.Default.Save();
+
+        }
+
+        private void cbImageBorder_CheckedChanged(object sender, EventArgs e)
+        {
+            var cb = sender as CheckBox;
+            if (cb == null) return;
+
+            Settings.Default.AddBorderToPastedImages = cb.Checked;
+            Settings.Default.Save();
+
+        }
+
+        private void cbTurnOnTips_CheckedChanged(object sender, EventArgs e)
+        {
+            var cb = sender as CheckBox;
+            if (cb == null) return;
+
+            Settings.Default.DrawingTips = cb.Checked;
+            Settings.Default.Save();
+        }
+        private void cbStartSysEditor_CheckedChanged(object sender, EventArgs e)
+        {
+            var cb = sender as CheckBox;
+            if (cb == null) return;
+
+            Settings.Default.StartImageEditorOnSave = cb.Checked;
+            Settings.Default.Save();
+        }
+        private void cbSuppresStartUpHelp_CheckedChanged(object sender, EventArgs e)
+        {
+            var cb = sender as CheckBox;
+            if (cb == null) return;
+
+            Settings.Default.SuppressStartUpHelp = cb.Checked;
+            Settings.Default.Save();
+        }
+
+        private void cbApplyToAll_CheckedChanged(object sender, EventArgs e)
+        {
+            var cb = sender as CheckBox;
+            if (cb == null) return;
+
+            Settings.Default.ApplyToAll = cb.Checked;
+            Settings.Default.Save();
+        }
+        private void CbAutoSaveCheckedChanged(object sender, EventArgs e)
+        {
+            var cb = sender as CheckBox;
+            if (cb == null) return;
+
+            cbAutoSaveAsk.Visible = Settings.Default.AutoSave = cb.Checked;
+            Settings.Default.Save();
+        }
+
+        private void cbAutoSaveAsk_CheckedChanged(object sender, EventArgs e)
+        {
+            var cb = sender as CheckBox;
+            if (cb == null) return;
+
+            Settings.Default.AutoSaveAsk = cb.Checked;
+            Settings.Default.Save();
+        }
+
+        private void OptionsDialog_Activated(object sender, EventArgs e)
+        {
+            SetFontSample(Settings.Default.TextFont, Settings.Default.FontColor);
         }
     }
 }

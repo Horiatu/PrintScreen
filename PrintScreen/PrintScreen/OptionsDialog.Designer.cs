@@ -1,7 +1,4 @@
-﻿using System.Drawing;
-using FlexScreen.Properties;
-
-namespace FlexScreen
+﻿namespace FlexScreen
 {
     partial class OptionsDialog
     {
@@ -32,7 +29,7 @@ namespace FlexScreen
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsDialog));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsDialog));
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -73,7 +70,6 @@ namespace FlexScreen
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCancel = new FlexScreen.CustomButton();
-            this.btnOK = new FlexScreen.CustomButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.CursorArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSelectionOpacity)).BeginInit();
@@ -157,6 +153,7 @@ namespace FlexScreen
             0,
             0,
             0});
+            this.nudSelectionOpacity.ValueChanged += new System.EventHandler(this.nudSelectionOpacity_ValueChanged);
             // 
             // label10
             // 
@@ -298,6 +295,7 @@ namespace FlexScreen
             this.cbAutomaticallyCrop.TabIndex = 19;
             this.cbAutomaticallyCrop.Text = global::FlexScreen.Properties.Resources.AutomaticallyCrop;
             this.cbAutomaticallyCrop.UseVisualStyleBackColor = false;
+            this.cbAutomaticallyCrop.CheckedChanged += new System.EventHandler(this.cbAutomaticallyCrop_CheckedChanged);
             // 
             // cbImageBorder
             // 
@@ -311,6 +309,7 @@ namespace FlexScreen
             this.cbImageBorder.TabIndex = 18;
             this.cbImageBorder.Text = global::FlexScreen.Properties.Resources.AddBorderToPastedImages;
             this.cbImageBorder.UseVisualStyleBackColor = false;
+            this.cbImageBorder.CheckedChanged += new System.EventHandler(this.cbImageBorder_CheckedChanged);
             // 
             // cbKeepMenuOn
             // 
@@ -325,6 +324,7 @@ namespace FlexScreen
             this.cbKeepMenuOn.TabIndex = 17;
             this.cbKeepMenuOn.Text = global::FlexScreen.Properties.Resources.KeepMenuOn;
             this.cbKeepMenuOn.UseVisualStyleBackColor = true;
+            this.cbKeepMenuOn.CheckedChanged += new System.EventHandler(this.cbKeepMenuOn_CheckedChanged);
             // 
             // nudTransparency
             // 
@@ -360,6 +360,7 @@ namespace FlexScreen
             this.cbTransparent.TabIndex = 1;
             this.cbTransparent.Text = global::FlexScreen.Properties.Resources.TransparentWhenNotFocused;
             this.cbTransparent.UseVisualStyleBackColor = false;
+            this.cbTransparent.CheckedChanged += new System.EventHandler(this.cbTransparent_CheckedChanged);
             // 
             // cbOnTop
             // 
@@ -373,6 +374,7 @@ namespace FlexScreen
             this.cbOnTop.TabIndex = 0;
             this.cbOnTop.Text = global::FlexScreen.Properties.Resources.AfterCaptureStayOnTop;
             this.cbOnTop.UseVisualStyleBackColor = false;
+            this.cbOnTop.CheckedChanged += new System.EventHandler(this.cbOnTop_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -413,6 +415,7 @@ namespace FlexScreen
             this.cbAutoSaveAsk.Text = "Ask";
             this.cbAutoSaveAsk.UseVisualStyleBackColor = false;
             this.cbAutoSaveAsk.Visible = false;
+            this.cbAutoSaveAsk.CheckedChanged += new System.EventHandler(this.cbAutoSaveAsk_CheckedChanged);
             // 
             // cbAutoSave
             // 
@@ -440,6 +443,7 @@ namespace FlexScreen
             this.cbApplyToAll.TabIndex = 18;
             this.cbApplyToAll.Text = "Apply to All";
             this.cbApplyToAll.UseVisualStyleBackColor = false;
+            this.cbApplyToAll.CheckedChanged += new System.EventHandler(this.cbApplyToAll_CheckedChanged);
             // 
             // cbTurnOnTips
             // 
@@ -455,6 +459,7 @@ namespace FlexScreen
             this.cbTurnOnTips.TabIndex = 17;
             this.cbTurnOnTips.Text = "Turn On Drawing Tool Tips";
             this.cbTurnOnTips.UseVisualStyleBackColor = false;
+            this.cbTurnOnTips.CheckedChanged += new System.EventHandler(this.cbTurnOnTips_CheckedChanged);
             // 
             // cbCaptureFromTryIcon
             // 
@@ -482,6 +487,7 @@ namespace FlexScreen
             this.cbStartSysEditor.TabIndex = 15;
             this.cbStartSysEditor.Text = "After Save, Start The System Editor";
             this.cbStartSysEditor.UseVisualStyleBackColor = true;
+            this.cbStartSysEditor.CheckedChanged += new System.EventHandler(this.cbStartSysEditor_CheckedChanged);
             // 
             // cbSuppresStartUpHelp
             // 
@@ -495,6 +501,7 @@ namespace FlexScreen
             this.cbSuppresStartUpHelp.TabIndex = 14;
             this.cbSuppresStartUpHelp.Text = "Suppress StartUp Help";
             this.cbSuppresStartUpHelp.UseVisualStyleBackColor = false;
+            this.cbSuppresStartUpHelp.CheckedChanged += new System.EventHandler(this.cbSuppresStartUpHelp_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -539,7 +546,7 @@ namespace FlexScreen
             this.cbTextWhiteBorder.TabIndex = 19;
             this.cbTextWhiteBorder.Text = global::FlexScreen.Properties.Resources.WhiteBorder;
             this.cbTextWhiteBorder.UseVisualStyleBackColor = false;
-            this.cbTextWhiteBorder.CheckedChanged += new System.EventHandler(this.CbTextWhiteBorderCheckedChanged);
+            this.cbTextWhiteBorder.CheckedChanged += new System.EventHandler(this.CbTextWithBorderCheckedChanged);
             // 
             // FontSample
             // 
@@ -586,6 +593,7 @@ namespace FlexScreen
             0,
             0,
             0});
+            this.numLineWidth.ValueChanged += new System.EventHandler(this.numLineWidth_ValueChanged);
             // 
             // label7
             // 
@@ -631,6 +639,7 @@ namespace FlexScreen
             0,
             0,
             0});
+            this.nudFillTransparency.ValueChanged += new System.EventHandler(this.nudFillTransparency_ValueChanged);
             // 
             // label5
             // 
@@ -704,30 +713,13 @@ namespace FlexScreen
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.ForeColor = System.Drawing.Color.Brown;
-            this.btnCancel.Location = new System.Drawing.Point(655, 411);
+            this.btnCancel.Location = new System.Drawing.Point(391, 411);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.RoundCorners = FlexScreen.Corners.BottomRight;
-            this.btnCancel.Size = new System.Drawing.Size(83, 38);
+            this.btnCancel.Size = new System.Drawing.Size(347, 38);
             this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
-            // 
-            // btnOK
-            // 
-            this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.BackColor = System.Drawing.Color.Honeydew;
-            this.btnOK.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.ForeColor = System.Drawing.Color.MediumBlue;
-            this.btnOK.Location = new System.Drawing.Point(391, 411);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(256, 38);
-            this.btnOK.TabIndex = 0;
-            this.btnOK.Text = "OK";
-            this.btnOK.Click += new System.EventHandler(this.BtnOkClick);
+            this.btnCancel.Text = "Close (Is Saved!)";
             // 
             // toolTip1
             // 
@@ -737,31 +729,30 @@ namespace FlexScreen
             // 
             // OptionsDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::FlexScreen.Properties.Resources.BackgroundGray1;
-            this.ClientSize = new System.Drawing.Size(765, 466);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.CursorArea);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnOK);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "OptionsDialog";
-            this.Opacity = 0.98D;
-            this.ShowInTaskbar = false;
-            this.TopMost = true;
-            this.Activated += new System.EventHandler(this.OptionsDialog_Activated);
-            this.Load += new System.EventHandler(this.OptionsDialogLoad);
-            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.OptionsDialogHelpRequested);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMouseDown);
-            this.MouseLeave += new System.EventHandler(this.FormMouseLeave);
-            this.CursorArea.ResumeLayout(false);
-            this.CursorArea.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImage = global::FlexScreen.Properties.Resources.BackgroundGray1;
+            ClientSize = new System.Drawing.Size(765, 466);
+            Controls.Add(this.label8);
+            Controls.Add(this.panel1);
+            Controls.Add(this.CursorArea);
+            Controls.Add(this.groupBox1);
+            Controls.Add(this.groupBox3);
+            Controls.Add(this.groupBox2);
+            Controls.Add(this.btnCancel);
+            Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            Margin = new System.Windows.Forms.Padding(5);
+            Name = "OptionsDialog";
+            Opacity = 0.98D;
+            ShowInTaskbar = false;
+            TopMost = true;
+            Activated += new System.EventHandler((o, args) => OptionsDialog_Activated(o, args));
+            Load += new System.EventHandler(this.OptionsDialogLoad);
+            HelpRequested += new System.Windows.Forms.HelpEventHandler(this.OptionsDialogHelpRequested);
+            MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMouseDown);
+            MouseLeave += new System.EventHandler(this.FormMouseLeave);
+            CursorArea.ResumeLayout(false);
+            CursorArea.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSelectionOpacity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCursorOpacity)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -779,8 +770,6 @@ namespace FlexScreen
         }
 
         #endregion
-
-        private CustomButton btnOK;
         private CustomButton btnCancel;
         private System.Windows.Forms.GroupBox CursorArea;
         private System.Windows.Forms.Label label2;

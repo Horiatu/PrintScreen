@@ -141,8 +141,8 @@ namespace FlexScreen
         {
             get
             {
-                var tip = base.Tip +
-@"- Press [Ctrl] to resize";
+                var tip = $@"{base.Tip}
+- Press [Ctrl] to resize";
                 if (m_custom)
                 {
                     tip += @"
