@@ -28,13 +28,12 @@ namespace FlexScreen
 
 
             OptionsDialogForm = new OptionsDialog();
-            OptionsDialogForm.Closing += (sender, e) =>
-            {
-                Settings.Default.OptionFormLocation = ((Form) sender).Location;
-                Settings.Default.Save();
-            };
-            OptionsDialogForm.Activated += (sender, e) =>
-                ((Form)sender).Location = Settings.Default.OptionFormLocation;
+            //OptionsDialogForm.Closing += (sender, e) =>
+            //{
+            //    Settings.Default.OptionFormLocation = ((Form) sender).Location;
+            //    Settings.Default.Save();
+            //};
+
 
             OpenImageDialog = new OpenFileDialog
             {

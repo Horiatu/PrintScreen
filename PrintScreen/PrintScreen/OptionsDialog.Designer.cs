@@ -509,7 +509,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(356, 298);
+            this.groupBox2.Size = new System.Drawing.Size(356, 295);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Default Tool Styles";
@@ -547,7 +547,7 @@
             this.FontSample.Location = new System.Drawing.Point(13, 108);
             this.FontSample.Margin = new System.Windows.Forms.Padding(4);
             this.FontSample.Name = "FontSample";
-            this.FontSample.Size = new System.Drawing.Size(329, 178);
+            this.FontSample.Size = new System.Drawing.Size(329, 175);
             this.FontSample.TabIndex = 18;
             this.FontSample.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FontSample.UseVisualStyleBackColor = false;
@@ -694,12 +694,13 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.BackColor = System.Drawing.Color.MistyRose;
-            this.btnCancel.BorderColor = System.Drawing.Color.Red;
+            this.btnCancel.BackColor = System.Drawing.Color.MintCream;
+            this.btnCancel.BorderColor = System.Drawing.Color.GreenYellow;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.ForeColor = System.Drawing.Color.Brown;
-            this.btnCancel.Location = new System.Drawing.Point(403, 415);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnCancel.Location = new System.Drawing.Point(391, 412);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.RoundCorners = FlexScreen.Corners.BottomRight;
@@ -718,7 +719,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FlexScreen.Properties.Resources.BackgroundGray1;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(765, 466);
+            this.ControlBox = false;
             this.Controls.Add(this.label8);
             this.Controls.Add(this.CursorArea);
             this.Controls.Add(this.groupBox1);
@@ -726,13 +729,21 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnCancel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
+            this.Location = new System.Drawing.Point(10, 10);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "OptionsDialog";
             this.Opacity = 0.98D;
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.TopMost = true;
+            this.Activated += new System.EventHandler(this.OptionsDialog_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OptionsDialog_FormClosing);
             this.Load += new System.EventHandler(this.OptionsDialog_Load);
+            this.LocationChanged += new System.EventHandler(this.OptionsDialog_LocationChanged);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.OptionsDialogHelpRequested);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OptionsDialog_KeyDown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMouseDown);
             this.MouseLeave += new System.EventHandler(this.FormMouseLeave);
             this.CursorArea.ResumeLayout(false);

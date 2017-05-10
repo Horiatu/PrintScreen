@@ -326,9 +326,26 @@ namespace FlexScreen
 
                 Settings.Default.OptionFormLocation = optionDialog.Location = new Point(10, 10);
                 Settings.Default.Save();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
 
-        
+        private void OptionsDialog_Activated(object sender, EventArgs e)
+        {
+            ((Form)sender).Location = Settings.Default.OptionFormLocation;
+        }
+
+        private void OptionsDialog_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Settings.Default.OptionFormLocation = ((Form)sender).Location;
+            Settings.Default.Save();
+        }
+
+        private void OptionsDialog_LocationChanged(object sender, EventArgs e)
+        {
+            Settings.Default.OptionFormLocation = ((Form)sender).Location;
+            Settings.Default.Save();
+        }
     }
 }
