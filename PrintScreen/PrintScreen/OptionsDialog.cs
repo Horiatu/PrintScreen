@@ -83,48 +83,41 @@ namespace FlexScreen
 
         #endregion
 
-        private void BtnOkClick(object sender, EventArgs e)
-        {
-            GetSetingsFromOptionsForm();
-            Settings.Default.Save();
-        }
+        //public void GetSetingsFromOptionsForm()
+        //{
+        //    //Settings.Default.SuppressStartUpHelp = cbSuppresStartUpHelp.Checked;
+        //    //Settings.Default.PasteImagesWithBorder = cbImageBorder.Checked;
+        //    //Settings.Default.TextWithBorder = cbTextWhiteBorder.Checked;
+        //    //Settings.Default.AfterCaptureStayOnTop = cbOnTop.Checked;
+        //    //Settings.Default.TransparentWhenNotFocused = cbTransparent.Checked;
+        //    //Settings.Default.FormTransparencyFactor = (int)nudTransparency.Value;
+        //    //Settings.Default.FillTransparency = (int)nudFillTransparency.Value;
+        //    //Settings.Default.CursorOpacity = (int)nudCursorOpacity.Value;
+        //    //Settings.Default.SelectionOpacity = (int)nudSelectionOpacity.Value;
+        //    //Settings.Default.StartImageEditorOnSave = cbStartSysEditor.Checked;
+        //    //Settings.Default.AutoHideMenu = !cbKeepMenuOn.Checked;
+        //    //Settings.Default.CaptureFromTryIcon = cbCaptureFromTryIcon.Checked;
+        //    //Settings.Default.AutomaticallyCrop = cbAutomaticallyCrop.Checked;
+        //    //Settings.Default.NoToolTips = !cbTurnOnTips.Checked;
+        //    //Settings.Default.ApplyToAll = cbApplyToAll.Checked;
+        //    //Settings.Default.AutoSave = cbAutoSave.Checked;
+        //    //Settings.Default.AutoSaveAsk = cbAutoSaveAsk.Checked;
+        //    //Settings.Default.CursorColor = btnCursorColor.BackColor;
+        //    //Settings.Default.LineColor = btnLinesColor.BackColor;
+        //    //Settings.Default.LineWidth = (int)numLineWidth.Value;
+        //    //Settings.Default.FillColor = btnFillColor.BackColor;
+        //    //Settings.Default.SelectionColor = btnSelectionColor.BackColor;
+        //    //Settings.Default.TextFont = FontSample.Font;
+        //    //Settings.Default.FontColor = FontSample.ForeColor;
 
-        public void GetSetingsFromOptionsForm()
-        {
-            Settings.Default.SuppressStartUpHelp = Settings.Default.SuppressStartUpHelp = cbSuppresStartUpHelp.Checked;
-            Settings.Default.PasteImagesWithBorder = Settings.Default.PasteImagesWithBorder = cbImageBorder.Checked;
-            Settings.Default.TextWithBorder = Settings.Default.TextWithBorder = cbTextWhiteBorder.Checked;
-            Settings.Default.AfterCaptureStayOnTop = Settings.Default.AfterCaptureStayOnTop = cbOnTop.Checked;
-            Settings.Default.TransparentWhenNotFocused = Settings.Default.TransparentWhenNotFocused = cbTransparent.Checked;
-            Settings.Default.FormTransparencyFactor = Settings.Default.FormTransparencyFactor = (int)nudTransparency.Value;
-            Settings.Default.FillTransparency = Settings.Default.FillTransparency = (int)nudFillTransparency.Value;
-            Settings.Default.CursorOpacity = (int)nudCursorOpacity.Value;
-            Settings.Default.SelectionOpacity = Settings.Default.SelectionOpacity = (int)nudSelectionOpacity.Value;
-            Settings.Default.StartImageEditorOnSave = Settings.Default.StartImageEditorOnSave = cbStartSysEditor.Checked;
-            Settings.Default.AutoHideMenu = Settings.Default.AutoHideMenu = !cbKeepMenuOn.Checked;
-            Settings.Default.CaptureFromTryIcon = Settings.Default.CaptureFromTryIcon = cbCaptureFromTryIcon.Checked;
-            Settings.Default.AutomaticallyCrop = Settings.Default.AutomaticallyCrop = cbAutomaticallyCrop.Checked;
-            Settings.Default.NoToolTips = Settings.Default.NoToolTips = !cbTurnOnTips.Checked;
-            Settings.Default.ApplyToAll = Settings.Default.ApplyToAll = cbApplyToAll.Checked;
-            Settings.Default.AutoSave = Settings.Default.AutoSave = cbAutoSave.Checked;
-            Settings.Default.AutoSaveAsk = Settings.Default.AutoSaveAsk = cbAutoSaveAsk.Checked;
-            Settings.Default.FillTransparency = Settings.Default.FillTransparency = (int) nudFillTransparency.Value;
-            Settings.Default.CursorColor = Settings.Default.CursorColor = btnCursorColor.BackColor;
-            Settings.Default.LineColor = Settings.Default.LineColor = btnLinesColor.BackColor;
-            Settings.Default.LineWidth = Settings.Default.LineWidth = (int)numLineWidth.Value;
-            Settings.Default.FillColor = Settings.Default.FillColor = btnFillColor.BackColor;
-            Settings.Default.SelectionColor = Settings.Default.SelectionColor = btnSelectionColor.BackColor;
-            Settings.Default.TextFont = Settings.Default.TextFont = FontSample.Font;
-            Settings.Default.FontColor = Settings.Default.FontColor = FontSample.ForeColor;
-
-            if (Settings.Default.ApplyToAll)
-            {
-                foreach (var captureForm in Program.CaptureForms)
-                {
-                    captureForm.IsTransparent = cbTransparent.Checked;
-                }
-            }
-        }
+        //    if (Settings.Default.ApplyToAll)
+        //    {
+        //        foreach (var captureForm in Program.CaptureForms)
+        //        {
+        //            captureForm.IsTransparent = cbTransparent.Checked;
+        //        }
+        //    }
+        //}
 
         private void OptionsDialogHelpRequested(object sender, HelpEventArgs hlpevent)
         {
@@ -157,16 +150,6 @@ namespace FlexScreen
         private void GroupBox1Leave(object sender, EventArgs e)
         {
             ((GroupBox)sender).ForeColor = Color.RoyalBlue;
-        }
-
-
-        private void OptionsDialogLoad(object sender, EventArgs e)
-        {
-            Load -= OptionsDialogLoad;
-            //if (!Settings.Default.ConfigurationFileExists)
-            {
-                GetSetingsFromOptionsForm();
-            }
         }
 
         private void nudCursorOpacity_ValueChanged(object sender, EventArgs e)
