@@ -22,7 +22,7 @@ namespace FlexScreen
 
             SplashScreenForm = new SplashScreen
             {
-                VersionText = Assembly.GetExecutingAssembly().GetName().Version.ToString()
+                //VersionText = Assembly.GetExecutingAssembly().GetName().Version.ToString()
             };
             SplashScreenForm.FormClosed += (sender, e) => Application.ExitThread();
 

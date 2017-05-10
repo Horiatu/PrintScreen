@@ -458,5 +458,15 @@ namespace FlexScreen
             transparentAllToolStripMenuItem.Text = !isTransparent ? Resources.TransparentAll : Resources.OpaqueAll;
             transparentAllToolStripMenuItem.Image = !isTransparent ? Resources.Transparent : Resources.Opaque;
         }
+
+        private void SplashScreen_Load(object sender, EventArgs e)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            VersionText = assembly.GetName().Version.ToString();
+            labelCopyright.Text = 
+                ((AssemblyCopyrightAttribute[])
+                    (assembly.GetCustomAttributes(typeof (AssemblyCopyrightAttribute), false)))[0].Copyright;
+
+        }
     }
 }
