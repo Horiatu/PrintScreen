@@ -22,8 +22,8 @@ namespace FlexScreen
             try
             {
 
-                Program.MyContext.OptionsDialogForm.FontSample.ForeColor = Settings.Default.FontColor;
-                Program.MyContext.OptionsDialogForm.FontSample.Font = Settings.Default.TextFont;
+                Program.MyContext.FontDialog.Color = Settings.Default.FontColor;
+                Program.MyContext.FontDialog.Font = Settings.Default.TextFont;
                 if (Program.MyContext.FontDialog.ShowDialog(parent) == DialogResult.OK)
                 {
                     SetFontSample(Program.MyContext.FontDialog.Font, Program.MyContext.FontDialog.Color);
