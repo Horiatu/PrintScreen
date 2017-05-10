@@ -9,16 +9,16 @@ namespace FlexScreen.GenericUndoRedo
     [Serializable]
     public class RoundStack<T>
     {
-        private T[] items; // items.Length is Capacity + 1
+        private readonly T[] m_items; // items.Length is Capacity + 1
 
         // top == bottom ==> full
-        private int top = 1;
-        private int bottom = 0;
+        private int m_top = 1;
+        private int m_bottom = 0;
 
         /// <summary>
         /// Gets if the <see cref="RoundStack&lt;T&gt;"/> is full.
         /// </summary>
-        public bool IsFull => top == bottom;
+        public bool IsFull => m_top == m_bottom;
 
         /// <summary>
         /// Gets the number of elements contained in the <see cref="RoundStack&lt;T&gt;"/>.
@@ -27,10 +27,10 @@ namespace FlexScreen.GenericUndoRedo
         {
             get
             {
-                var count = top - bottom - 1;
+                var count = m_top - m_bottom - 1;
                 if (count < 0)
                 {
-                    count += items.Length;
+                    count += m_items.Length;
                 }
                 return count;
             }
@@ -39,7 +39,7 @@ namespace FlexScreen.GenericUndoRedo
         /// <summary>
         /// Gets the capacity of the <see cref="RoundStack&lt;T&gt;"/>.
         /// </summary>
-        public int Capacity => items.Length - 1;
+        public int Capacity => m_items.Length - 1;
 
         /// <summary>
         /// Creates <see cref="RoundStack&lt;T&gt;"/> with given capacity
@@ -51,7 +51,7 @@ namespace FlexScreen.GenericUndoRedo
             {
                 throw new ArgumentOutOfRangeException("Capacity need to be at least 1");
             }
-            items = new T[capacity + 1];
+            m_items = new T[capacity + 1];
         }
 
         /// <summary>
@@ -60,20 +60,15 @@ namespace FlexScreen.GenericUndoRedo
         /// <returns></returns>
         public T Pop()
         {
-            if (Count > 0)
+            if (Count <= 0) throw new InvalidOperationException("Cannot pop from emtpy stack");
+
+            var removed = m_items[m_top];
+            m_items[m_top--] = default(T);
+            if (m_top < 0)
             {
-                var removed = items[top];
-                items[top--] = default(T);
-                if (top < 0)
-                {
-                    top += items.Length;
-                }
-                return removed;
+                m_top += m_items.Length;
             }
-            else
-            {
-                throw new InvalidOperationException("Cannot pop from emtpy stack");
-            }
+            return removed;
         }
 
         /// <summary>
@@ -84,17 +79,17 @@ namespace FlexScreen.GenericUndoRedo
         {
             if (IsFull)
             {
-                bottom++;
-                if (bottom >= items.Length)
+                m_bottom++;
+                if (m_bottom >= m_items.Length)
                 {
-                    bottom -= items.Length;
+                    m_bottom -= m_items.Length;
                 }
             }
-            if (++top >= items.Length)
+            if (++m_top >= m_items.Length)
             {
-                top -= items.Length;
+                m_top -= m_items.Length;
             }
-            items[top] = item;
+            m_items[m_top] = item;
         }
 
         /// <summary>
@@ -102,7 +97,7 @@ namespace FlexScreen.GenericUndoRedo
         /// </summary>
         public T Peek()
         {
-            return items[top];
+            return m_items[m_top];
         }
 
         /// <summary>
@@ -110,15 +105,14 @@ namespace FlexScreen.GenericUndoRedo
         /// </summary>
         public void Clear()
         {
-            if (Count > 0)
+            if (Count <= 0) return;
+
+            for (var i = 0; i < m_items.Length; i++)
             {
-                for (var i = 0; i < items.Length; i++)
-                {
-                    items[i] = default(T);
-                }
-                top = 1;
-                bottom = 0;
+                m_items[i] = default(T);
             }
+            m_top = 1;
+            m_bottom = 0;
         }
     }
 }

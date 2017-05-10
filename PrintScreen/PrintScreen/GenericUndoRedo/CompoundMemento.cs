@@ -13,7 +13,7 @@ namespace FlexScreen.GenericUndoRedo
     [Serializable]
     public class CompoundMemento<T> : IMemento<T>
     {
-        private List<IMemento<T>> mementos = new List<IMemento<T>>();
+        private readonly List<IMemento<T>> m_mementos = new List<IMemento<T>>();
 
         /// <summary>
         /// Adds memento to this complex memento. Note that the order of adding mementos is critical.
@@ -21,13 +21,13 @@ namespace FlexScreen.GenericUndoRedo
         /// <param name="m"></param>
         public void Add(IMemento<T> m)
         {
-            mementos.Add(m);
+            m_mementos.Add(m);
         }
 
         /// <summary>
         /// Gets number of sub-memento contained in this complex memento.
         /// </summary>
-        public int Size => mementos.Count;
+        public int Size => m_mementos.Count;
 
         #region IMemento Members
 
@@ -40,9 +40,9 @@ namespace FlexScreen.GenericUndoRedo
         {
             var inverse = new CompoundMemento<T>();
             //starts from the last action
-            for (var i = mementos.Count - 1; i >= 0; i--)
+            for (var i = m_mementos.Count - 1; i >= 0; i--)
             {
-                inverse.Add(mementos[i].Restore(target));
+                inverse.Add(m_mementos[i].Restore(target));
             }
             return inverse;
         }

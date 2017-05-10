@@ -13,16 +13,15 @@ namespace FlexScreen.GenericUndoRedo
     {
         private const int DEFAULT_CAPACITY = 100;
 
-        private bool supportRedo = true;
-        private bool inUndoRedo = false;
+        private bool m_supportRedo;
 
         [NonSerialized]
-        private CompoundMemento<T> tempMemento = null;
+        private CompoundMemento<T> m_tempMemento;
 
         /// <summary>
         /// The subject that this undo redo history is about.
         /// </summary>
-        protected T subject;
+        protected T Subject;
 
 #if LIMITED_CAPACITY
 /// <summary>
@@ -59,21 +58,23 @@ redoStack = new RoundStack<IMemento<T>>(capacity);
         /// <summary>
         /// Undo stack
         /// </summary>
-        protected Stack<IMemento<T>> undoStack = new Stack<IMemento<T>>(DEFAULT_CAPACITY);
+        protected Stack<IMemento<T>> UndoStack = new Stack<IMemento<T>>(DEFAULT_CAPACITY);
 
         /// <summary>
         /// Redo stack
         /// </summary>
-        protected Stack<IMemento<T>> redoStack = new Stack<IMemento<T>>(DEFAULT_CAPACITY);
+        protected Stack<IMemento<T>> RedoStack = new Stack<IMemento<T>>(DEFAULT_CAPACITY);
 
-        /// <summary>
-        /// Creates <see cref="UndoRedoHistory&lt;T&gt;"/>.
-        /// </summary>
-        /// <param name="subject"></param>
-        public UndoRedoHistory(T subject)
-        {
-            this.subject = subject;
-        }
+        ///// <summary>
+        ///// Creates <see cref="UndoRedoHistory&lt;T&gt;"/>.
+        ///// </summary>
+        ///// <param name="subject"></param>
+        ///// <param name="supportRedo"></param>
+        //public UndoRedoHistory(T subject, bool supportRedo)
+        //{
+        //    Subject = subject;
+        //    SupportRedo = supportRedo;
+        //}
 #endif
 
         /// <summary>
@@ -94,26 +95,22 @@ redoStack = new RoundStack<IMemento<T>>(capacity);
         /// }
         /// </code>
         /// </remarks>
-        public bool InUndoRedo => inUndoRedo;
+        public bool InUndoRedo { get; private set; } = false;
 
         /// <summary>
         /// Gets number of undo actions available
         /// </summary>
-        public int UndoCount => undoStack.Count;
+        public int UndoCount => UndoStack.Count;
 
         /// <summary>
         /// Gets number of redo actions available
         /// </summary>
-        public int RedoCount => redoStack.Count;
+        public int RedoCount => RedoStack.Count;
 
-        /// <summary>
-        /// Gets or sets whether the history supports redo.
-        /// </summary>
-        public bool SupportRedo
-        {
-            get { return supportRedo; }
-            set { supportRedo = value; }
-        }
+        ///// <summary>
+        ///// Gets or sets whether the history supports redo.
+        ///// </summary>
+        //public bool SupportRedo { get; set; }
 
         /// <summary>
         /// Begins a complex memento for grouping.
@@ -155,10 +152,10 @@ redoStack = new RoundStack<IMemento<T>>(capacity);
         /// <seealso cref="EndCompoundDo()"/>
         public void BeginCompoundDo()
         {
-            if (tempMemento != null)
+            if (m_tempMemento != null)
                 throw new InvalidOperationException("Previous complex memento wasn't commited.");
 
-            tempMemento = new CompoundMemento<T>();
+            m_tempMemento = new CompoundMemento<T>();
         }
 
         /// <summary>
@@ -172,20 +169,20 @@ redoStack = new RoundStack<IMemento<T>>(capacity);
         /// </exception>/// <seealso cref="BeginCompoundDo()"/>
         public void EndCompoundDo()
         {
-            if (tempMemento == null)
+            if (m_tempMemento == null)
                 throw new InvalidOperationException("Ending a non-existing complex memento");
 
-            _Do(tempMemento);
-            tempMemento = null;
+            _Do(m_tempMemento);
+            m_tempMemento = null;
         }
 
         /// <summary>
-        /// Pushes an memento into the undo stack, any time the state of <see cref="subject"/> changes. 
+        /// Pushes an memento into the undo stack, any time the state of <see cref="Subject"/> changes. 
         /// </summary>
         /// <param name="m"></param>
         /// <remarks>
         /// This method MUST be properly involked by programmers right before (preferably) or right after 
-        /// the state of <see cref="subject"/> is changed. 
+        /// the state of <see cref="Subject"/> is changed. 
         /// Whenever <see cref="Do(IMemento&lt;T&gt;)"/> is called, the status of <see cref="InUndoRedo"/> 
         /// should aways be checked first. See details at <see cref="InUndoRedo"/>. 
         /// This method causes redo stack to be cleared.
@@ -195,17 +192,15 @@ redoStack = new RoundStack<IMemento<T>>(capacity);
         /// <seealso cref="Redo()"/>
         public void Do(IMemento<T> m)
         {
-            if (inUndoRedo)
+            if (InUndoRedo)
                 throw new InvalidOperationException("Involking do within an undo/redo action.");
 
-            if (tempMemento == null)
+            if (m_tempMemento != null)
             {
-                _Do(m);
+                m_tempMemento.Add(m);
+                return;
             }
-            else
-            {
-                tempMemento.Add(m);
-            }
+            _Do(m);
         }
 
         /// <summary>
@@ -214,8 +209,8 @@ redoStack = new RoundStack<IMemento<T>>(capacity);
         /// <param name="m"></param>
         private void _Do(IMemento<T> m)
         {
-            redoStack.Clear();
-            undoStack.Push(m);
+            RedoStack.Clear();
+            UndoStack.Push(m);
         }
 
         /// <summary>
@@ -225,13 +220,13 @@ redoStack = new RoundStack<IMemento<T>>(capacity);
         /// <seealso cref="Redo()"/>
         public void Undo()
         {
-            if (tempMemento != null)
+            if (m_tempMemento != null)
                 throw new InvalidOperationException("The complex memento wasn't commited.");
 
-            inUndoRedo = true;
-            var top = undoStack.Pop();
-            redoStack.Push(top.Restore(subject));
-            inUndoRedo = false;
+            InUndoRedo = true;
+            var top = UndoStack.Pop();
+            RedoStack.Push(top.Restore(Subject));
+            InUndoRedo = false;
         }
 
         /// <summary>
@@ -241,56 +236,56 @@ redoStack = new RoundStack<IMemento<T>>(capacity);
         /// <seealso cref="Undo()"/>
         public void Redo()
         {
-            if (tempMemento != null)
+            if (m_tempMemento != null)
                 throw new InvalidOperationException("The complex memento wasn't commited.");
 
-            inUndoRedo = true;
-            var top = redoStack.Pop();
-            undoStack.Push(top.Restore(subject));
-            inUndoRedo = false;
+            InUndoRedo = true;
+            var top = RedoStack.Pop();
+            UndoStack.Push(top.Restore(Subject));
+            InUndoRedo = false;
         }
 
         /// <summary>
         /// Checks if there are any stored state available on the undo stack.
         /// </summary>
-        public bool CanUndo => (undoStack.Count != 0);
+        public bool CanUndo => (UndoStack.Count != 0);
 
         /// <summary>
         /// Checks if there are any stored state available on the redo stack.
         /// </summary>
-        public bool CanRedo => (redoStack.Count != 0);
+        public bool CanRedo => (RedoStack.Count != 0);
 
-        /// <summary>
-        /// Clear the entire undo and redo stacks.
-        /// </summary>
-        public void Clear()
-        {
-            undoStack.Clear();
-            redoStack.Clear();
-        }
+        ///// <summary>
+        ///// Clear the entire undo and redo stacks.
+        ///// </summary>
+        //public void Clear()
+        //{
+        //    UndoStack.Clear();
+        //    RedoStack.Clear();
+        //}
 
-        /// <summary>
-        /// Gets, without removing, the top memento on the undo stack.
-        /// </summary>
-        /// <returns></returns>
-        public IMemento<T> PeekUndo()
-        {
-            if (undoStack.Count > 0)
-                return undoStack.Peek();
-            else
-                return null;
-        }
+        ///// <summary>
+        ///// Gets, without removing, the top memento on the undo stack.
+        ///// </summary>
+        ///// <returns></returns>
+        //public IMemento<T> PeekUndo()
+        //{
+        //    if (UndoStack.Count > 0)
+        //        return UndoStack.Peek();
+        //    else
+        //        return null;
+        //}
 
-        /// <summary>
-        /// Gets, without removing, the top memento on the redo stack.
-        /// </summary>
-        /// <returns></returns>
-        public IMemento<T> PeekRedo()
-        {
-            if (redoStack.Count > 0)
-                return redoStack.Peek();
-            else
-                return null;
-        }
+        ///// <summary>
+        ///// Gets, without removing, the top memento on the redo stack.
+        ///// </summary>
+        ///// <returns></returns>
+        //public IMemento<T> PeekRedo()
+        //{
+        //    if (RedoStack.Count > 0)
+        //        return RedoStack.Peek();
+        //    else
+        //        return null;
+        //}
     }
 }
