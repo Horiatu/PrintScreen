@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.ComponentModel;
 using System.Reflection;
+using System.Runtime.Remoting.Channels;
 using FlexScreen.Properties;
 
 namespace FlexScreen
@@ -17,17 +18,30 @@ namespace FlexScreen
 
         internal MyApplicationContext()
         {
-            // Handle the ApplicationExit event to know when the application is exiting.
-            Application.ApplicationExit += OnApplicationExit;
+            //Application.ApplicationExit += (sender, e) => Settings.Default.Save();
 
             SplashScreenForm = new SplashScreen
-                                   {VersionText = Assembly.GetExecutingAssembly().GetName().Version.ToString()};
-            SplashScreenForm.FormClosed += SplashScreenForm_FormClosed;
+            {
+                VersionText = Assembly.GetExecutingAssembly().GetName().Version.ToString()
+            };
+            SplashScreenForm.FormClosed += (sender, e) => Application.ExitThread();
+
 
             OptionsDialogForm = new OptionsDialog();
-            OptionsDialogForm.Closing += OptionsDialogForm_Closing;
+            OptionsDialogForm.Closing += (sender, e) =>
+            {
+                Settings.Default.OptionFormLocation = ((Form) sender).Location;
+                Settings.Default.Save();
+            };
+            OptionsDialogForm.Activated += (sender, e) =>
+                ((Form)sender).Location = Settings.Default.OptionFormLocation;
 
-            OpenImageDialog = new OpenFileDialog {DefaultExt = "PNG", Title = Resources.Load_Image};
+            OpenImageDialog = new OpenFileDialog
+            {
+                DefaultExt = "PNG",
+                Title = Resources.Load_Image
+            };
+
             if (string.IsNullOrEmpty(OpenImageDialog.InitialDirectory))
             {
                 OpenImageDialog.InitialDirectory = "Resources";
@@ -49,19 +63,5 @@ namespace FlexScreen
             }
         }
 
-        void SplashScreenForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.ExitThread();
-        }
-
-        void OptionsDialogForm_Closing(object sender, CancelEventArgs e)
-        {
-            Settings.Default.OptionFormLocation = ((Form) sender).Location;
-        }
-
-        private void OnApplicationExit(object sender, EventArgs e)
-        {
-            Settings.Default.Save();
-        }
     }
 }

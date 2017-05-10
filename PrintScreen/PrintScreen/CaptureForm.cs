@@ -86,14 +86,9 @@ namespace FlexScreen
             }
         }
 
-        public void SetCaption(bool isSaved, string fileName)
+        public void SetCaption(string fileName, bool isSaved)
         {
             FileName = fileName;
-            SetCaption(isSaved);
-        }
-
-        public void SetCaption(bool isSaved)
-        {
             IsSaved = isSaved;
         }
 
@@ -170,7 +165,6 @@ namespace FlexScreen
             TopMost = true;
             menuStrip1.Height = 3;
             menuStrip1.Renderer = new MyRenderer();
-
         }
 
         private class MyRenderer : ToolStripProfessionalRenderer
@@ -198,37 +192,25 @@ namespace FlexScreen
                 //e.Graphics.DrawRectangle(new Pen(c2, 2), 1, 1, rc.Width - 1, rc.Height - 2);
             }
 
-            protected override void OnRenderImageMargin(ToolStripRenderEventArgs e)
-            {
-            }
+            //protected override void OnRenderImageMargin(ToolStripRenderEventArgs e)
+            //{
+            //}
         }
 
-
-
-        public CaptureForm(Image image)
-            : this()
+        public CaptureForm(Image image) : this()
         {
             SetBounds(0, 0, image.Width, image.Height);
             BackgroundImage = image;
             MouseDown += FormMouseDown;
             MouseUp += FormMouseUp;
             MouseMove += FormMouseMove;
-            MouseEnter += (sender, e) =>
-            {
-                Opacity = 1.0;
-            };
+            MouseEnter += (sender, e) => Opacity = 1.0;
             MouseLeave += (sender, e) => MakeTransparent();
 
             ActiveTool = new DefaultTool(this);
 
-            //ShowStartUpHelp = !Settings.Default.SuppressStartUpHelp;
-            //if (ShowStartUpHelp)
-            //{
-            //    Help.ShowHelp(this, SplashScreen.HelpFile, 0);
-            //}
-
             IsSaved = true;
-            SetCaption(false, null);
+            SetCaption(null, false);
         }
 
         DrawingTool m_activeTool;
@@ -239,9 +221,12 @@ namespace FlexScreen
             set
             {
                 if (m_activeTool == value) return;
+
                 m_activeTool = value;
                 if (ActiveTool is DefaultTool) return;
+
                 if (Settings.Default.NoToolTips || string.IsNullOrEmpty(ActiveTool.Name)) return;
+
                 var tip = $@"{ActiveTool.Tip ?? ""}
 Press [F1] for more help.".Trim();
                 Program.MyContext.SplashScreenForm.NotifyIcon1.ShowBalloonTip(tip.Length * 100, ActiveTool.Name, tip, ToolTipIcon.None);
@@ -563,7 +548,7 @@ Press [F1] for more help.".Trim();
                 if (FileName != null)
                 {
                     Save();
-                    SetCaption(true, FileName);
+                    SetCaption(FileName, true);
                 }
                 else
                 {
@@ -581,7 +566,7 @@ Press [F1] for more help.".Trim();
             if (Program.MainForm.SaveFileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 Save();
-                SetCaption(true, Program.MainForm.SaveFileDialog.FileName);
+                SetCaption(Program.MainForm.SaveFileDialog.FileName, true);
             }
             RestoreInFormCursorPossition();
         }

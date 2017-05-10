@@ -16,7 +16,6 @@ namespace FlexScreen
         {
             ConfigureFont(this);
         }
-
         public static bool ConfigureFont(Form parent)
         {
             Program.MyContext.FontDialog.Apply += FontDialog_Apply;
@@ -37,7 +36,6 @@ namespace FlexScreen
                 Program.MyContext.FontDialog.Apply -= FontDialog_Apply;
             }
         }
-
         private static void FontDialog_Apply(object sender, EventArgs e)
         {
             var fontDialog = sender as FontDialog;
@@ -45,7 +43,6 @@ namespace FlexScreen
 
             SetFontSample(fontDialog.Font, fontDialog.Color);
         }
-
         private static void SetFontSample(Font font, Color color)
         {
             Program.MyContext.OptionsDialogForm.FontSample.ForeColor = Settings.Default.FontColor = color;
@@ -54,7 +51,6 @@ namespace FlexScreen
 
             Program.MyContext.OptionsDialogForm.FontSample.Invalidate();
         }
-
         private void FontSamplePaint(object sender, PaintEventArgs e)
         {
             var fontSample = sender as Button;
@@ -82,50 +78,12 @@ namespace FlexScreen
         }
 
         #endregion
-
-        //public void GetSetingsFromOptionsForm()
-        //{
-        //    //Settings.Default.SuppressStartUpHelp = cbSuppresStartUpHelp.Checked;
-        //    //Settings.Default.PasteImagesWithBorder = cbImageBorder.Checked;
-        //    //Settings.Default.TextWithBorder = cbTextWhiteBorder.Checked;
-        //    //Settings.Default.AfterCaptureStayOnTop = cbOnTop.Checked;
-        //    //Settings.Default.TransparentWhenNotFocused = cbTransparent.Checked;
-        //    //Settings.Default.FormTransparencyFactor = (int)nudTransparency.Value;
-        //    //Settings.Default.FillTransparency = (int)nudFillTransparency.Value;
-        //    //Settings.Default.CursorOpacity = (int)nudCursorOpacity.Value;
-        //    //Settings.Default.SelectionOpacity = (int)nudSelectionOpacity.Value;
-        //    //Settings.Default.StartImageEditorOnSave = cbStartSysEditor.Checked;
-        //    //Settings.Default.AutoHideMenu = !cbKeepMenuOn.Checked;
-        //    //Settings.Default.CaptureFromTryIcon = cbCaptureFromTryIcon.Checked;
-        //    //Settings.Default.AutomaticallyCrop = cbAutomaticallyCrop.Checked;
-        //    //Settings.Default.NoToolTips = !cbTurnOnTips.Checked;
-        //    //Settings.Default.ApplyToAll = cbApplyToAll.Checked;
-        //    //Settings.Default.AutoSave = cbAutoSave.Checked;
-        //    //Settings.Default.AutoSaveAsk = cbAutoSaveAsk.Checked;
-        //    //Settings.Default.CursorColor = btnCursorColor.BackColor;
-        //    //Settings.Default.LineColor = btnLinesColor.BackColor;
-        //    //Settings.Default.LineWidth = (int)numLineWidth.Value;
-        //    //Settings.Default.FillColor = btnFillColor.BackColor;
-        //    //Settings.Default.SelectionColor = btnSelectionColor.BackColor;
-        //    //Settings.Default.TextFont = FontSample.Font;
-        //    //Settings.Default.FontColor = FontSample.ForeColor;
-
-        //    if (Settings.Default.ApplyToAll)
-        //    {
-        //        foreach (var captureForm in Program.CaptureForms)
-        //        {
-        //            captureForm.IsTransparent = cbTransparent.Checked;
-        //        }
-        //    }
-        //}
-
         private void OptionsDialogHelpRequested(object sender, HelpEventArgs hlpevent)
         {
             SplashScreen.ShowHelp(this, 46);
         }
 
         #region mouse events
-
         private void FormMouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -135,23 +93,19 @@ namespace FlexScreen
                 Utils.SendMessage(Handle, Utils.WM_NCLBUTTONDOWN, Utils.HT_CAPTION, 0);
             }
         }
-
         private void FormMouseLeave(object sender, EventArgs e)
         {
             ((Control)sender).Cursor = Cursors.Default;
         }
         #endregion
-
         private void GroupBox1Enter(object sender, EventArgs e)
         {
             ((GroupBox)sender).ForeColor = Color.OrangeRed;
         }
-
         private void GroupBox1Leave(object sender, EventArgs e)
         {
             ((GroupBox)sender).ForeColor = Color.RoyalBlue;
         }
-
         private void nudCursorOpacity_ValueChanged(object sender, EventArgs e)
         {
             var cursorOpacity = sender as NumericUpDown;
@@ -180,7 +134,6 @@ namespace FlexScreen
                 Settings.Default.Save();
             }
         }
-
         private void BtnSelectionColorClick(object sender, EventArgs e)
         {
             var btn = sender as Button;
@@ -193,7 +146,6 @@ namespace FlexScreen
                 Settings.Default.Save();
             }
         }
-
         public void BtnLinesColorClick(object sender, EventArgs e)
         {
             var btn = sender as Button;
@@ -206,7 +158,6 @@ namespace FlexScreen
                 Settings.Default.Save();
             }
         }
-
         public void BtnFillColorClick(object sender, EventArgs e)
         {
             var btn = sender as Button;
@@ -219,7 +170,6 @@ namespace FlexScreen
                 Settings.Default.Save();
             }
         }
-
         private void numLineWidth_ValueChanged(object sender, EventArgs e)
         {
             var lineWidth = sender as NumericUpDown;
@@ -246,7 +196,6 @@ namespace FlexScreen
 
             Program.MyContext.OptionsDialogForm.FontSample.Invalidate();
         }
-
         private void cbAutomaticallyCrop_CheckedChanged(object sender, EventArgs e)
         {
             var cb = sender as CheckBox;
@@ -255,7 +204,6 @@ namespace FlexScreen
             Settings.Default.AutomaticallyCrop = cb.Checked;
             Settings.Default.Save();
         }
-
         private void cbOnTop_CheckedChanged(object sender, EventArgs e)
         {
             var cb = sender as CheckBox;
@@ -264,7 +212,6 @@ namespace FlexScreen
             Settings.Default.AfterCaptureStayOnTop = cb.Checked;
             Settings.Default.Save();
         }
-
         private void cbTransparent_CheckedChanged(object sender, EventArgs e)
         {
             var cb = sender as CheckBox;
@@ -273,7 +220,6 @@ namespace FlexScreen
             Settings.Default.TransparentWhenNotFocused = cb.Checked;
             Settings.Default.Save();
         }
-
         private void cbKeepMenuOn_CheckedChanged(object sender, EventArgs e)
         {
             var cb = sender as CheckBox;
@@ -283,7 +229,6 @@ namespace FlexScreen
             Settings.Default.Save();
 
         }
-
         private void cbImageBorder_CheckedChanged(object sender, EventArgs e)
         {
             var cb = sender as CheckBox;
@@ -371,5 +316,19 @@ namespace FlexScreen
 
             SetFontSample(Settings.Default.TextFont, Settings.Default.FontColor);
         }
+
+        private void OptionsDialog_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Home)
+            {
+                var optionDialog = sender as Form;
+                if (optionDialog == null) return;
+
+                Settings.Default.OptionFormLocation = optionDialog.Location = new Point(10, 10);
+                Settings.Default.Save();
+            }
+        }
+
+        
     }
 }

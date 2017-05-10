@@ -40,15 +40,18 @@ namespace FlexScreen
             if (e.Button == MouseButtons.Left)
             {
                 Utils.ReleaseCapture();
-                ((Control)sender).Cursor = Cursors.SizeAll;
+                var control = sender as Control;
+                if (control != null) control.Cursor = Cursors.SizeAll;
                 Utils.SendMessage(Handle, Utils.WM_NCLBUTTONDOWN, Utils.HT_CAPTION, 0);
             }
         }
 
         public void form_MouseLeave(object sender, EventArgs e)
         {
-            ((Control)sender).Cursor = Cursors.Default;
+            var control = sender as Control;
+            if (control != null) control.Cursor = Cursors.Default;
         }
+
         #endregion
     }
 }

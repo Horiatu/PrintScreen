@@ -100,46 +100,43 @@ namespace FlexScreen
                 Cursor = Cursors.SizeNWSE;
                 return ResizeDirection.TopLeft;
             }
-            else if (e.Location.X < delta && e.Location.Y > Height - delta)
+            if (e.Location.X < delta && e.Location.Y > Height - delta)
             {
                 Cursor = Cursors.SizeNESW;
                 return ResizeDirection.BottomLeft;
             }
-            else if (e.Location.X > (Width - delta) && e.Location.Y > (Height - delta))
+            if (e.Location.X > (Width - delta) && e.Location.Y > (Height - delta))
             {
                 Cursor = Cursors.SizeNWSE;
                 return ResizeDirection.BottomRight;
             }
-            else if (e.Location.X > Width - delta && e.Location.Y < delta)
+            if (e.Location.X > Width - delta && e.Location.Y < delta)
             {
                 Cursor = Cursors.SizeNESW;
                 return ResizeDirection.TopRight;
             }
-            else if (e.Location.X < delta)
+            if (e.Location.X < delta)
             {
                 Cursor = Cursors.SizeWE;
                 return ResizeDirection.Left;
             }
-            else if (e.Location.X > Width - delta)
+            if (e.Location.X > Width - delta)
             {
                 Cursor = Cursors.SizeWE;
                 return ResizeDirection.Right;
             }
-            else if (e.Location.Y < delta)
+            if (e.Location.Y < delta)
             {
                 Cursor = Cursors.SizeNS;
                 return ResizeDirection.Top;
             }
-            else if (e.Location.Y > Height - delta)
+            if (e.Location.Y > Height - delta)
             {
                 Cursor = Cursors.SizeNS;
                 return ResizeDirection.Bottom;
             }
-            else
-            {
-                Cursor = Cursors.Default;
-                return ResizeDirection.None;
-            }
+            Cursor = Cursors.Default;
+            return ResizeDirection.None;
         }
 
     }
