@@ -439,9 +439,9 @@
             this.cbApplyToAll.Location = new System.Drawing.Point(12, 137);
             this.cbApplyToAll.Margin = new System.Windows.Forms.Padding(4);
             this.cbApplyToAll.Name = "cbApplyToAll";
-            this.cbApplyToAll.Size = new System.Drawing.Size(100, 21);
+            this.cbApplyToAll.Size = new System.Drawing.Size(306, 21);
             this.cbApplyToAll.TabIndex = 18;
-            this.cbApplyToAll.Text = "Apply to All";
+            this.cbApplyToAll.Text = "Apply to All (Transparency and StayOnTop)";
             this.cbApplyToAll.UseVisualStyleBackColor = false;
             this.cbApplyToAll.CheckedChanged += new System.EventHandler(this.cbApplyToAll_CheckedChanged);
             // 
@@ -713,7 +713,7 @@
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.ForeColor = System.Drawing.Color.Brown;
-            this.btnCancel.Location = new System.Drawing.Point(391, 411);
+            this.btnCancel.Location = new System.Drawing.Point(403, 415);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.RoundCorners = FlexScreen.Corners.BottomRight;
@@ -746,7 +746,7 @@
             this.Opacity = 0.98D;
             this.ShowInTaskbar = false;
             this.TopMost = true;
-            this.Activated += new System.EventHandler(this.OptionsDialog_Activated);
+            this.Load += new System.EventHandler(this.OptionsDialog_Load);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.OptionsDialogHelpRequested);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMouseDown);
             this.MouseLeave += new System.EventHandler(this.FormMouseLeave);

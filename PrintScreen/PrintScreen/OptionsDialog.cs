@@ -345,8 +345,30 @@ namespace FlexScreen
             Settings.Default.Save();
         }
 
-        private void OptionsDialog_Activated(object sender, EventArgs e)
+        private void OptionsDialog_Load(object sender, EventArgs e)
         {
+            btnCursorColor.BackColor = Settings.Default.CursorColor;
+            btnSelectionColor.BackColor = Settings.Default.SelectionColor;
+            nudCursorOpacity.Value = Settings.Default.CursorOpacity;
+            nudSelectionOpacity.Value = Settings.Default.SelectionOpacity;
+            btnLinesColor.BackColor = Settings.Default.LineColor;
+            btnFillColor.BackColor = Settings.Default.FillColor;
+            numLineWidth.Value = Settings.Default.LineWidth;
+            nudFillTransparency.Value = Settings.Default.FillTransparency;
+            cbTextWhiteBorder.Checked = Settings.Default.TextWithBorder;
+            cbAutomaticallyCrop.Checked = Settings.Default.AutomaticallyCrop;
+            cbOnTop.Checked = Settings.Default.AfterCaptureStayOnTop;
+            cbTransparent.Checked = Settings.Default.TransparentWhenNotFocused;
+            cbKeepMenuOn.Checked = Settings.Default.KeepMenuOn;
+            cbImageBorder.Checked = Settings.Default.PasteImagesWithBorder;
+            cbTurnOnTips.Checked = !Settings.Default.NoToolTips;
+            cbStartSysEditor.Checked = Settings.Default.StartImageEditorOnSave;
+            cbCaptureFromTryIcon.Checked = Settings.Default.StartCaptureOnClickOnTrayIcon;
+            cbSuppresStartUpHelp.Checked = Settings.Default.SuppressStartUpHelp;
+            cbApplyToAll.Checked = Settings.Default.ApplyToAll;
+            cbAutoSave.Checked = Settings.Default.AutoSave;
+            cbAutoSaveAsk.Checked = Settings.Default.AutoSaveAsk;
+
             SetFontSample(Settings.Default.TextFont, Settings.Default.FontColor);
         }
     }

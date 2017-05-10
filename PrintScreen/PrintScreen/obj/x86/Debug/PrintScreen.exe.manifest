@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PrintScreen.exe" size="951296">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PrintScreen.exe" size="952320">
       <assemblyIdentity name="PrintScreen" version="2.0.1.2" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>GSj0SD4AO3yHRQ9EKCbci/YnHag=</dsig:DigestValue>
+        <dsig:DigestValue>2o+xq+AEuCWH7vFG6RUfjkDt8iA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
