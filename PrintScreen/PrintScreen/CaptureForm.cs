@@ -6,6 +6,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using FlexScreen.Properties;
@@ -996,6 +997,13 @@ Press [F1] for more help.".Trim();
         {
             ToolStripMenuItem_Click(sender, e);
             TopMost = !TopMost;
+            if (Settings.Default.ApplyToAll)
+            {
+                foreach (var captureForm in Program.CaptureForms)
+                {
+                    captureForm.TopMost = TopMost;
+                }
+            }
             RestoreInFormCursorPossition();
         }
 
@@ -1026,6 +1034,13 @@ Press [F1] for more help.".Trim();
         private void MakeTransparent()
         {
             Opacity = (IsTransparent) ? TransparencyToOpacity(Settings.Default.FormTransparencyFactor) : 1.0;
+
+            if (!Settings.Default.ApplyToAll) return;
+
+            foreach (var captureForm in Program.CaptureForms)
+            {
+                captureForm.Opacity = Opacity;
+            }
         }
 
         private void TransparentClick(object sender, EventArgs e)

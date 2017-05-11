@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace FlexScreen
+﻿namespace FlexScreen
 {
     sealed partial class CaptureForm
     {

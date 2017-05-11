@@ -468,5 +468,10 @@ namespace FlexScreen
                     (assembly.GetCustomAttributes(typeof (AssemblyCopyrightAttribute), false)))[0].Copyright;
 
         }
+
+        private void SplashScreen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.ExitThread();
+        }
     }
 }

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using System.IO;
-using System.ComponentModel;
-using System.Reflection;
-using System.Runtime.Remoting.Channels;
 using FlexScreen.Properties;
 
 namespace FlexScreen
@@ -20,27 +16,20 @@ namespace FlexScreen
         {
             //Application.ApplicationExit += (sender, e) => Settings.Default.Save();
 
-            SplashScreenForm = new SplashScreen
-            {
-                //VersionText = Assembly.GetExecutingAssembly().GetName().Version.ToString()
-            };
-            SplashScreenForm.FormClosed += (sender, e) => Application.ExitThread();
-
-
+            SplashScreenForm = new SplashScreen();
             OptionsDialogForm = new OptionsDialog();
-
             OpenImageDialog = new OpenFileDialog
             {
                 DefaultExt = "PNG",
                 Title = Resources.Load_Image
             };
-
             if (string.IsNullOrEmpty(OpenImageDialog.InitialDirectory))
             {
                 OpenImageDialog.InitialDirectory = "Resources";
             }
 
-            SplashScreenForm.Show();
+            SplashScreenForm.Show(); // ?
+
             FontDialog = new FontDialog
             {
                 FontMustExist = true,
@@ -55,6 +44,5 @@ namespace FlexScreen
                 Utils.UnZipAll(Settings.Default.AutoSaveProjectFile);
             }
         }
-
     }
 }

@@ -346,7 +346,7 @@ namespace FlexScreen
             this.btnLoad.Image = global::FlexScreen.Properties.Resources.CD_32x32;
             this.btnLoad.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLoad.Location = new System.Drawing.Point(496, 18);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(100, 65);
             this.btnLoad.TabIndex = 13;
@@ -364,7 +364,7 @@ namespace FlexScreen
             this.btnCapture.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnCapture.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCapture.Location = new System.Drawing.Point(388, 213);
-            this.btnCapture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCapture.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapture.Name = "btnCapture";
             this.btnCapture.RoundCorners = FlexScreen.Corners.BottomLeft;
             this.btnCapture.Size = new System.Drawing.Size(100, 41);
@@ -384,7 +384,7 @@ namespace FlexScreen
             this.btnClose.Image = global::FlexScreen.Properties.Resources.exclamation_16x16;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnClose.Location = new System.Drawing.Point(604, 213);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.RoundCorners = FlexScreen.Corners.BottomRight;
             this.btnClose.Size = new System.Drawing.Size(100, 41);
@@ -402,7 +402,7 @@ namespace FlexScreen
             this.btnMinimize.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnMinimize.Image = global::FlexScreen.Properties.Resources.Minimize;
             this.btnMinimize.Location = new System.Drawing.Point(723, 4);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.RoundCorners = FlexScreen.Corners.TopRight;
             this.btnMinimize.Size = new System.Drawing.Size(21, 22);
@@ -421,7 +421,7 @@ namespace FlexScreen
             this.btnHelp.Image = global::FlexScreen.Properties.Resources.Directions_32x32;
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnHelp.Location = new System.Drawing.Point(604, 18);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(4);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.RoundCorners = FlexScreen.Corners.TopRight;
             this.btnHelp.Size = new System.Drawing.Size(100, 65);
@@ -442,7 +442,7 @@ namespace FlexScreen
             this.btnOptions.Image = global::FlexScreen.Properties.Resources.Options1_32x32;
             this.btnOptions.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnOptions.Location = new System.Drawing.Point(388, 18);
-            this.btnOptions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOptions.Margin = new System.Windows.Forms.Padding(4);
             this.btnOptions.Name = "btnOptions";
             this.btnOptions.RoundCorners = FlexScreen.Corners.TopLeft;
             this.btnOptions.Size = new System.Drawing.Size(100, 65);
@@ -458,7 +458,7 @@ namespace FlexScreen
             this.btnSaveAll.BorderColor = System.Drawing.Color.DarkTurquoise;
             this.btnSaveAll.ForeColor = System.Drawing.Color.Navy;
             this.btnSaveAll.Location = new System.Drawing.Point(496, 213);
-            this.btnSaveAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveAll.Name = "btnSaveAll";
             this.btnSaveAll.Size = new System.Drawing.Size(100, 41);
             this.btnSaveAll.TabIndex = 14;
@@ -470,7 +470,7 @@ namespace FlexScreen
             this.progressBar1.BackColor = System.Drawing.Color.MintCream;
             this.progressBar1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.progressBar1.Location = new System.Drawing.Point(47, 230);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(4);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(332, 21);
             this.progressBar1.TabIndex = 15;
@@ -518,7 +518,7 @@ namespace FlexScreen
             this.Controls.Add(this.btnOptions);
             this.Controls.Add(this.labelCopyright);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SplashScreen";
@@ -528,6 +528,7 @@ namespace FlexScreen
             this.Text = "PrintScreen";
             this.Activated += new System.EventHandler(this.SplashScreenActivated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SplashScreenFormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SplashScreen_FormClosed);
             this.Load += new System.EventHandler(this.SplashScreen_Load);
             this.LocationChanged += new System.EventHandler(this.SplashScreenLocationChanged);
             this.SizeChanged += new System.EventHandler(this.SplashScreenLocationChanged);
