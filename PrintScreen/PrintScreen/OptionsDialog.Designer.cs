@@ -49,6 +49,7 @@
             this.cbTransparent = new System.Windows.Forms.CheckBox();
             this.cbOnTop = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.cbAutoSaveAsk = new System.Windows.Forms.CheckBox();
             this.cbAutoSave = new System.Windows.Forms.CheckBox();
             this.cbApplyToAll = new System.Windows.Forms.CheckBox();
@@ -260,7 +261,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(347, 185);
+            this.groupBox1.Size = new System.Drawing.Size(347, 169);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Capture Window";
@@ -367,6 +368,7 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.linkLabel1);
             this.groupBox3.Controls.Add(this.cbAutoSaveAsk);
             this.groupBox3.Controls.Add(this.cbAutoSave);
             this.groupBox3.Controls.Add(this.cbApplyToAll);
@@ -375,16 +377,34 @@
             this.groupBox3.Controls.Add(this.cbStartSysEditor);
             this.groupBox3.Controls.Add(this.cbSuppresStartUpHelp);
             this.groupBox3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.groupBox3.Location = new System.Drawing.Point(391, 207);
+            this.groupBox3.Location = new System.Drawing.Point(391, 192);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(347, 197);
+            this.groupBox3.Size = new System.Drawing.Size(347, 196);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Others";
             this.groupBox3.Enter += new System.EventHandler(this.GroupBox1Enter);
             this.groupBox3.Leave += new System.EventHandler(this.GroupBox1Leave);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightGray;
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.linkLabel1.ForeColor = System.Drawing.Color.LightGray;
+            this.linkLabel1.Image = global::FlexScreen.Properties.Resources.help;
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel1.LinkColor = System.Drawing.Color.LightGray;
+            this.linkLabel1.Location = new System.Drawing.Point(319, 22);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(17, 17);
+            this.linkLabel1.TabIndex = 21;
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip1.SetToolTip(this.linkLabel1, "Why is not working?");
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.LightGray;
+            this.linkLabel1.Click += new System.EventHandler(this.linkLabel1_Click);
             // 
             // cbAutoSaveAsk
             // 
@@ -441,9 +461,9 @@
             this.cbTurnOnTips.Location = new System.Drawing.Point(12, 21);
             this.cbTurnOnTips.Margin = new System.Windows.Forms.Padding(4);
             this.cbTurnOnTips.Name = "cbTurnOnTips";
-            this.cbTurnOnTips.Size = new System.Drawing.Size(201, 21);
+            this.cbTurnOnTips.Size = new System.Drawing.Size(252, 21);
             this.cbTurnOnTips.TabIndex = 17;
-            this.cbTurnOnTips.Text = "Turn On Drawing Tool Tips";
+            this.cbTurnOnTips.Text = "Turn On Drawing Tool Tip Balloons";
             this.cbTurnOnTips.UseVisualStyleBackColor = false;
             this.cbTurnOnTips.CheckedChanged += new System.EventHandler(this.cbTurnOnTips_CheckedChanged);
             // 
@@ -457,9 +477,9 @@
             this.cbCaptureFromTryIcon.Location = new System.Drawing.Point(12, 80);
             this.cbCaptureFromTryIcon.Margin = new System.Windows.Forms.Padding(4);
             this.cbCaptureFromTryIcon.Name = "cbCaptureFromTryIcon";
-            this.cbCaptureFromTryIcon.Size = new System.Drawing.Size(256, 21);
+            this.cbCaptureFromTryIcon.Size = new System.Drawing.Size(274, 21);
             this.cbCaptureFromTryIcon.TabIndex = 16;
-            this.cbCaptureFromTryIcon.Text = "Start Capture On Click On Trey Icon";
+            this.cbCaptureFromTryIcon.Text = "Start Capture on Click on the Trey Icon";
             this.cbCaptureFromTryIcon.UseVisualStyleBackColor = false;
             // 
             // cbStartSysEditor
@@ -469,9 +489,9 @@
             this.cbStartSysEditor.Location = new System.Drawing.Point(12, 52);
             this.cbStartSysEditor.Margin = new System.Windows.Forms.Padding(4);
             this.cbStartSysEditor.Name = "cbStartSysEditor";
-            this.cbStartSysEditor.Size = new System.Drawing.Size(254, 21);
+            this.cbStartSysEditor.Size = new System.Drawing.Size(247, 21);
             this.cbStartSysEditor.TabIndex = 15;
-            this.cbStartSysEditor.Text = "After Save, Start The System Editor";
+            this.cbStartSysEditor.Text = "After Save, start the System Editor";
             this.cbStartSysEditor.UseVisualStyleBackColor = true;
             this.cbStartSysEditor.CheckedChanged += new System.EventHandler(this.cbStartSysEditor_CheckedChanged);
             // 
@@ -483,9 +503,9 @@
             this.cbSuppresStartUpHelp.Location = new System.Drawing.Point(12, 108);
             this.cbSuppresStartUpHelp.Margin = new System.Windows.Forms.Padding(4);
             this.cbSuppresStartUpHelp.Name = "cbSuppresStartUpHelp";
-            this.cbSuppresStartUpHelp.Size = new System.Drawing.Size(175, 21);
+            this.cbSuppresStartUpHelp.Size = new System.Drawing.Size(179, 21);
             this.cbSuppresStartUpHelp.TabIndex = 14;
-            this.cbSuppresStartUpHelp.Text = "Suppress StartUp Help";
+            this.cbSuppresStartUpHelp.Text = "Suppress Start Up Help";
             this.cbSuppresStartUpHelp.UseVisualStyleBackColor = false;
             this.cbSuppresStartUpHelp.CheckedChanged += new System.EventHandler(this.cbSuppresStartUpHelp_CheckedChanged);
             // 
@@ -509,7 +529,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(356, 295);
+            this.groupBox2.Size = new System.Drawing.Size(356, 233);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Default Tool Styles";
@@ -547,7 +567,7 @@
             this.FontSample.Location = new System.Drawing.Point(13, 108);
             this.FontSample.Margin = new System.Windows.Forms.Padding(4);
             this.FontSample.Name = "FontSample";
-            this.FontSample.Size = new System.Drawing.Size(329, 175);
+            this.FontSample.Size = new System.Drawing.Size(329, 113);
             this.FontSample.TabIndex = 18;
             this.FontSample.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FontSample.UseVisualStyleBackColor = false;
@@ -700,19 +720,19 @@
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnCancel.Location = new System.Drawing.Point(391, 412);
+            this.btnCancel.Location = new System.Drawing.Point(295, 27);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.RoundCorners = FlexScreen.Corners.BottomRight;
-            this.btnCancel.Size = new System.Drawing.Size(347, 38);
+            this.btnCancel.Size = new System.Drawing.Size(72, 28);
             this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Close (Is Saved!)";
+            this.btnCancel.Text = "Close";
+            this.toolTip1.SetToolTip(this.btnCancel, "Or hit Escape.\r\n\r\nCurrent settings were \r\nautomatically saved.");
             // 
             // toolTip1
             // 
             this.toolTip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.toolTip1.IsBalloon = true;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // OptionsDialog
             // 
@@ -720,7 +740,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FlexScreen.Properties.Resources.BackgroundGray1;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(765, 466);
+            this.ClientSize = new System.Drawing.Size(765, 403);
             this.ControlBox = false;
             this.Controls.Add(this.label8);
             this.Controls.Add(this.CursorArea);
@@ -739,7 +759,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.TopMost = true;
             this.Activated += new System.EventHandler(this.OptionsDialog_Activated);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OptionsDialog_FormClosing);
             this.Load += new System.EventHandler(this.OptionsDialog_Load);
             this.LocationChanged += new System.EventHandler(this.OptionsDialog_LocationChanged);
             this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.OptionsDialogHelpRequested);
@@ -805,5 +824,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown nudCursorOpacity;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

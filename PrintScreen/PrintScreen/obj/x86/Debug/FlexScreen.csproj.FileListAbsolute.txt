@@ -180,3 +180,4 @@ D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe.ma
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.application
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
+D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csprojResolveAssemblyReference.cache

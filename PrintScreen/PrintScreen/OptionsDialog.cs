@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using FlexScreen.Properties;
@@ -319,15 +320,20 @@ namespace FlexScreen
 
         private void OptionsDialog_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Home)
+            switch (e.KeyCode)
             {
-                var optionDialog = sender as Form;
-                if (optionDialog == null) return;
+                case Keys.Home:
+                    var optionDialog = sender as Form;
+                    if (optionDialog == null) return;
 
-                Settings.Default.OptionFormLocation = optionDialog.Location = new Point(10, 10);
-                Settings.Default.Save();
-                e.Handled = true;
-                e.SuppressKeyPress = true;
+                    Settings.Default.OptionFormLocation = optionDialog.Location = new Point(10, 10);
+                    Settings.Default.Save();
+                    e.Handled = true;
+                    e.SuppressKeyPress = true;
+                    break;
+                case Keys.Escape:
+                    btnCancel.PerformClick();
+                    break;
             }
         }
 
@@ -336,16 +342,21 @@ namespace FlexScreen
             ((Form)sender).Location = Settings.Default.OptionFormLocation;
         }
 
-        private void OptionsDialog_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Settings.Default.OptionFormLocation = ((Form)sender).Location;
-            Settings.Default.Save();
-        }
+        //private void OptionsDialog_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    Settings.Default.OptionFormLocation = ((Form)sender).Location;
+        //    Settings.Default.Save();
+        //}
 
         private void OptionsDialog_LocationChanged(object sender, EventArgs e)
         {
             Settings.Default.OptionFormLocation = ((Form)sender).Location;
             Settings.Default.Save();
+        }
+
+        private void linkLabel1_Click(object sender, EventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://support.microsoft.com/en-us/help/307729/how-do-i-disable-balloon-tips-in-the-notification-area-in-windows-xp-or-vista"));
         }
     }
 }
