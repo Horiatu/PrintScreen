@@ -157,15 +157,12 @@ C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintSc
 C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.application
 C:\Users\htudosie.ESRI\Documents\Visual Studio 2010\Projects\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.PasswordDialog.resources
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.config
-D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\Interop.SHDocVw.dll
-D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csproj.ResolveComReference.cache
-D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
-D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe.manifest
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\bin\Debug\PrintScreen.application
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\bin\Debug\PrintScreen.pdb
-D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csprojResolveAssemblyReference.cache
+D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\Interop.SHDocVw.dll
+D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csproj.ResolveComReference.cache
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.BordlessForm.resources
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.BordlessResizableForm.resources
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.CaptureForm.resources
@@ -181,3 +178,5 @@ D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\FlexScreen.csproj.
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.TrustInfo.xml
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe.manifest
 D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.application
+D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.exe
+D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\obj\x86\Debug\PrintScreen.pdb

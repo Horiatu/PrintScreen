@@ -15,8 +15,7 @@ namespace FlexScreen
         public abstract string Name { get; }
         public virtual string Tip => @"Click and hold to start drawing,
 whille holding the mouse left-button:
-- Hold [Alt] key down to see coordinates.
-";
+- Hold [Alt] key down to see coordinates.";
 
         public virtual void Execute(Graphics g)
         {

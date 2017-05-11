@@ -13,8 +13,8 @@ namespace FlexScreen
 
         public override string Name => "Pick Color";
 
-        public override string Tip => base.Tip +
-                                      @"- [Space] - change format,
+        public override string Tip => $@"{base.Tip}
+- [Space] - change format,
 - [C] - copy color code to clipboard,
 ";
 

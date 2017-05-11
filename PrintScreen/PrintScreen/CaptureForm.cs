@@ -226,11 +226,16 @@ namespace FlexScreen
                 m_activeTool = value;
                 if (ActiveTool is DefaultTool) return;
 
-                if (Settings.Default.NoToolTips || string.IsNullOrEmpty(ActiveTool.Name)) return;
+                if (!Settings.Default.DrawingTips || string.IsNullOrEmpty(ActiveTool.Name)) return;
 
                 var tip = $@"{ActiveTool.Tip ?? ""}
 Press [F1] for more help.".Trim();
-                Program.MyContext.SplashScreenForm.NotifyIcon1.ShowBalloonTip(tip.Length * 100, ActiveTool.Name, tip, ToolTipIcon.None);
+                // https://support.microsoft.com/en-us/help/307729/how-do-i-disable-balloon-tips-in-the-notification-area-in-windows-xp-or-vista
+                Program.MyContext.SplashScreenForm.NotifyIcon1.ShowBalloonTip(
+                    tip.Length * 100, 
+                    ActiveTool.Name, 
+                    tip, 
+                    ToolTipIcon.None);
             }
         }
 
