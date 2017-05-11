@@ -356,7 +356,19 @@ namespace FlexScreen
 
         private void linkLabel1_Click(object sender, EventArgs e)
         {
-            Process.Start(new ProcessStartInfo("https://support.microsoft.com/en-us/help/307729/how-do-i-disable-balloon-tips-in-the-notification-area-in-windows-xp-or-vista"));
+            try
+            {
+                Cursor = Cursors.AppStarting;
+                Process.Start(new ProcessStartInfo("https://support.microsoft.com/en-us/help/307729/how-do-i-disable-balloon-tips-in-the-notification-area-in-windows-xp-or-vista"));
+            }
+            catch (Exception)
+            {
+                // ignored
+            }
+            finally
+            {
+                Cursor = Cursors.Default;
+            }
         }
     }
 }

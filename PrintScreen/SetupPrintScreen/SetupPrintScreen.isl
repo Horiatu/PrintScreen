@@ -52,7 +52,7 @@
 	<summary>
 		<codepage>1252</codepage>
 		<title>Installation Database</title>
-		<subject></subject>
+		<subject>PrintScreenSetup</subject>
 		<author>##ID_STRING3##</author>
 		<keywords>Installer,MSI,Database</keywords>
 		<comments>Contact:  Your local administrator</comments>
@@ -342,9 +342,7 @@
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{A3924775-BBAF-4A1A-ADD8-2666ABFCA0C5}</td><td>HTCC</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{CEB4EBF3-F07F-47E6-B01B-4E85A0297ACD}</td><td>RESOURCES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Ionic.Zip.dll</td><td>{D74F471E-EAB1-4A0F-983A-1D24AA9AB79B}</td><td>HTCC</td><td>2</td><td/><td>ionic.zip.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>PrintScreen.chm</td><td>{7B7CA88E-549A-4D70-BC5C-9D0B8286F4A9}</td><td>HTCC</td><td>2</td><td/><td>printscreen.chm</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>PrintScreen.exe</td><td>{2E6E9B6E-D29F-4DAC-8BC0-4663F3E886B7}</td><td>HTCC</td><td>2</td><td/><td>printscreen.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>PrintScreen.exe</td><td>{B64FEE95-6E12-4660-BB3B-F4AF5F2306D5}</td><td>INSTALLDIR</td><td>2</td><td/><td>printscreen.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1055,13 +1053,8 @@
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>HTCC</td><td>ISX_DEFAULTCOMPONENT</td></row>
-		<row><td>HTCC</td><td>Ionic.Zip.dll</td></row>
-		<row><td>HTCC</td><td>PrintScreen.chm</td></row>
-		<row><td>HTCC</td><td>PrintScreen.exe</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
-		<row><td>INSTALLDIR</td><td>Ionic.Zip.dll</td></row>
-		<row><td>INSTALLDIR</td><td>PrintScreen.chm</td></row>
 		<row><td>INSTALLDIR</td><td>PrintScreen.exe</td></row>
 		<row><td>RESOURCES</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 	</table>
@@ -1185,6 +1178,7 @@
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
 		<row><td>htcc</td><td>ProgramMenuFolder</td><td>HTCC</td><td/><td>1</td><td/></row>
+		<row><td>prints_1_printscreensetup</td><td>htcc</td><td>PRINTS~1|PrintScreenSetup</td><td/><td>1</td><td/></row>
 		<row><td>setupp_1_setupprintscreen</td><td>htcc</td><td>SETUPP~1|SetupPrintScreen</td><td/><td>1</td><td/></row>
 	</table>
 
@@ -1879,8 +1873,6 @@
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
-		<row><td>AlwaysInstall</td><td>Ionic.Zip.dll</td></row>
-		<row><td>AlwaysInstall</td><td>PrintScreen.chm</td></row>
 		<row><td>AlwaysInstall</td><td>PrintScreen.exe</td></row>
 	</table>
 
@@ -1896,17 +1888,17 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>crop_icon.ico</td><td>ISX_DEFAULTCOMPONENT</td><td>CROPIC~1.ICO|Crop Icon.ico</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\Crop Icon.ico</td><td>1</td><td/></row>
+		<row><td>cherryswash.ttf</td><td>ISX_DEFAULTCOMPONENT1</td><td>CHERRY~1.TTF|CherrySwash.ttf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\htudosie\Desktop\CherrySwash.ttf</td><td>1</td><td/></row>
+		<row><td>cherryswash_bold.ttf</td><td>ISX_DEFAULTCOMPONENT1</td><td>CHERRY~1.TTF|CherrySwash-bold.ttf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\htudosie\Desktop\CherrySwash-bold.ttf</td><td>1</td><td/></row>
 		<row><td>crop_icon.ico1</td><td>ISX_DEFAULTCOMPONENT1</td><td>CROPIC~1.ICO|Crop Icon.ico</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\Resources\Crop Icon.ico</td><td>1</td><td/></row>
 		<row><td>crop_icon_notsaved.ico</td><td>ISX_DEFAULTCOMPONENT1</td><td>CROPIC~1.ICO|Crop Icon NotSaved.ico</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\Resources\Crop Icon NotSaved.ico</td><td>1</td><td/></row>
-		<row><td>ionic.zip.dll</td><td>Ionic.Zip.dll</td><td>IONICZ~1.DLL|Ionic.Zip.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\Ionic.Zip.dll</td><td>1</td><td/></row>
+		<row><td>pacifico.ttf</td><td>ISX_DEFAULTCOMPONENT1</td><td>Pacifico.ttf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\htudosie\Desktop\Pacifico.ttf</td><td>1</td><td/></row>
 		<row><td>pinned_note.png</td><td>ISX_DEFAULTCOMPONENT1</td><td>PINNED~1.PNG|Pinned_Note.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\Resources\Pinned_Note.png</td><td>1</td><td/></row>
 		<row><td>pointercursor_big.png</td><td>ISX_DEFAULTCOMPONENT1</td><td>POINTE~1.PNG|PointerCursor_Big.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\Resources\PointerCursor_Big.png</td><td>1</td><td/></row>
 		<row><td>ponter_big.png</td><td>ISX_DEFAULTCOMPONENT1</td><td>PONTER~1.PNG|Ponter_Big.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\Resources\Ponter_Big.png</td><td>1</td><td/></row>
-		<row><td>printscreen.chm</td><td>PrintScreen.chm</td><td>PRINTS~1.CHM|PrintScreen.chm</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\PrintScreen.chm</td><td>1</td><td/></row>
-		<row><td>printscreen.exe</td><td>PrintScreen.exe</td><td>PRINTS~1.EXE|PrintScreen.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\PrintScreen.exe</td><td>1</td><td/></row>
-		<row><td>printscreen.exe.config</td><td>ISX_DEFAULTCOMPONENT</td><td>PRINTS~1.CON|PrintScreen.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\PrintScreen.exe.config</td><td>1</td><td/></row>
-		<row><td>printscreen.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>PRINTS~1.PDB|PrintScreen.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\PrintScreen.pdb</td><td>1</td><td/></row>
+		<row><td>printscreen.exe</td><td>PrintScreen.exe</td><td>PRINTS~1.EXE|PrintScreen.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe</td><td>1</td><td/></row>
+		<row><td>raviprakash.ttf</td><td>ISX_DEFAULTCOMPONENT1</td><td>RAVIPR~1.TTF|RaviPrakash.ttf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\htudosie\Desktop\RaviPrakash.ttf</td><td>1</td><td/></row>
+		<row><td>sniglet.ttf</td><td>ISX_DEFAULTCOMPONENT1</td><td>Sniglet.ttf</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\htudosie\Desktop\Sniglet.ttf</td><td>1</td><td/></row>
 		<row><td>tag_blue.png</td><td>ISX_DEFAULTCOMPONENT1</td><td>tag_blue.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\Resources\tag_blue.png</td><td>1</td><td/></row>
 		<row><td>tag_green.png</td><td>ISX_DEFAULTCOMPONENT1</td><td>TAG_GR~1.PNG|tag_green.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\Resources\tag_green.png</td><td>1</td><td/></row>
 		<row><td>tag_orange.png</td><td>ISX_DEFAULTCOMPONENT1</td><td>TAG_OR~1.PNG|tag_orange.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Program Files (x86)\HTCC\PrintScreen\Resources\tag_orange.png</td><td>1</td><td/></row>
@@ -1924,6 +1916,11 @@
 	<table name="Font">
 		<col key="yes" def="s72">File_</col>
 		<col def="S128">FontTitle</col>
+		<row><td>cherryswash.ttf</td><td/></row>
+		<row><td>cherryswash_bold.ttf</td><td/></row>
+		<row><td>pacifico.ttf</td><td/></row>
+		<row><td>raviprakash.ttf</td><td/></row>
+		<row><td>sniglet.ttf</td><td/></row>
 	</table>
 
 	<table name="ISAssistantTag">
@@ -2057,9 +2054,7 @@
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_4D55EC69_C57A_4C33_B08A_411F8AFB8360_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_4A880C93_4C6D_4E00_9F26_CF237198DBDF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Ionic.Zip.dll</td><td/><td/><td>_3C4339DF_F5EE_4AF4_B2FC_76D9D5982B04_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>PrintScreen.chm</td><td/><td/><td>_D6AE5E29_E00E_453A_9F97_0BAF84933CD4_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>PrintScreen.exe</td><td/><td/><td>_37A280A1_1622_4549_A740_A477E4EE3500_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>PrintScreen.exe</td><td/><td/><td>_5C6E685C_44A5_491D_B5C1_235D8FB115CE_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -3460,6 +3455,7 @@
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1033</td><td>This setup works until %s. The setup will now exit.</td><td>0</td><td/><td>1386565006</td></row>
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>1386565006</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>PrintScreen</td><td>0</td><td/><td>1386604982</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>PrintScreen</td><td>0</td><td/><td>1520815307</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>1386565006</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>1386565006</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>1386565006</td></row>
@@ -3752,6 +3748,7 @@
 		<row><td>ID_STRING2</td><td>1033</td><td>www.Google.com</td><td>0</td><td/><td>1386578358</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>HTCC</td><td>0</td><td/><td>1386558894</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>PrintScreen.exe</td><td>0</td><td/><td>1386603215</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>PrintScreen</td><td>0</td><td/><td>1520815307</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>1386565006</td></row>
 	</table>
 
@@ -3867,7 +3864,9 @@
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ProgramFilesFolder&gt;\HTCC\PrintScreen\Crop Icon.ico</td><td>0</td></row>
 		<row><td>PrintScreen.exe1_52D520CB2A4E44F48DD84EBBFF00FCAE.exe</td><td/><td>C:\Program Files (x86)\HTCC\PrintScreen\PrintScreen.exe</td><td>0</td></row>
+		<row><td>PrintScreen.exe1_6163BBF418CC4EDCB7550B4D39FBC440.exe</td><td/><td>D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe</td><td>0</td></row>
 		<row><td>PrintScreen.exe_7E449320EF944AB9B61B53A0CC4B2049.exe</td><td/><td>C:\Program Files (x86)\HTCC\PrintScreen\PrintScreen.exe</td><td>0</td></row>
+		<row><td>PrintScreen.exe_CE8AFEE9EFE348898179300990E1E2F4.exe</td><td/><td>D:\F\GitHub\PrintScreen\PrintScreen\PrintScreen\bin\Debug\PrintScreen.exe</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -4376,8 +4375,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[ProgramFilesFolder]HTCC\PrintScreen.exe</td><td/></row>
 		<row><td>ProductCode</td><td>{06D2D0BE-B04C-4BFF-BF07-1A51E40BD636}</td><td/></row>
-		<row><td>ProductName</td><td>SetupPrintScreen</td><td/></row>
-		<row><td>ProductVersion</td><td>3.0.1.3</td><td/></row>
+		<row><td>ProductName</td><td>PrintScreenSetup</td><td/></row>
+		<row><td>ProductVersion</td><td>3.0.1.4</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4453,9 +4452,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>FileKey1</td><td>PrintScreen.exe</td><td/><td>htcc</td><td>2</td></row>
-		<row><td>FileKey2</td><td>PrintScreen.exe</td><td/><td>setupp_1_setupprintscreen</td><td>2</td></row>
-		<row><td>PrintScreen.exe</td><td>PrintScreen.exe</td><td/><td>setupp_1_setupprintscreen</td><td>2</td></row>
+		<row><td>FileKey1</td><td>PrintScreen.exe</td><td/><td>prints_1_printscreensetup</td><td>2</td></row>
+		<row><td>PrintScreen.exe</td><td>PrintScreen.exe</td><td/><td>prints_1_printscreensetup</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4541,8 +4539,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>PrintScreen.exe</td><td>setupp_1_setupprintscreen</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>PrintScreen.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PrintScreen.exe_7E449320EF944AB9B61B53A0CC4B2049.exe</td><td>1</td><td>1</td><td>HTCC</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>PrintScreen.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>PrintScreen.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PrintScreen.exe1_52D520CB2A4E44F48DD84EBBFF00FCAE.exe</td><td>1</td><td>1</td><td>HTCC</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>PrintScreen.exe</td><td>prints_1_printscreensetup</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>PrintScreen.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PrintScreen.exe_CE8AFEE9EFE348898179300990E1E2F4.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>PrintScreen.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>PrintScreen.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>PrintScreen.exe1_6163BBF418CC4EDCB7550B4D39FBC440.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
