@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Kbqm78g9vruB92gHtf/TQREyUdc=</dsig:DigestValue>
+        <dsig:DigestValue>2xR1OSeKY7S0pNxAnFHO4xY+koc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,13 +75,13 @@
       <dsig:DigestValue>5cn0ZA6/Ezjh38wVU/ikWZf3yls=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="PrintScreen.exe.config" size="4861">
+  <file name="PrintScreen.exe.config" size="5016">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>zG1YtQSY0reFE5wYI1nONvLeUZU=</dsig:DigestValue>
+      <dsig:DigestValue>xGJiLcFZQa3A5CLcjAlm4OFnTiw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\Crop Icon NotSaved.ico" size="3262">

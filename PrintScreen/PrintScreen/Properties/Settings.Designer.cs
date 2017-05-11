@@ -145,6 +145,7 @@ namespace FlexScreen.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Microsoft Sans Serif, 12pt, style=Bold")]
         public global::System.Drawing.Font TextFont {
             get {
                 return ((global::System.Drawing.Font)(this["TextFont"]));
