@@ -644,14 +644,14 @@ Press [F1] for more help.".Trim();
         private void BorderToolStripMenuItemClick(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            Program.MyContext.OptionsDialogForm.BtnLinesColorClick(sender, e);
+            Program.MyContext.OptionsDialogForm.BtnLinesColorClick(Program.MyContext.OptionsDialogForm.btnLinesColor, e);
             RestoreInFormCursorPossition();
         }
 
         private void FillToolStripMenuItemClick(object sender, EventArgs e)
         {
             ToolStripMenuItem_Click(sender, e);
-            Program.MyContext.OptionsDialogForm.BtnFillColorClick(sender, e);
+            Program.MyContext.OptionsDialogForm.BtnFillColorClick(Program.MyContext.OptionsDialogForm.btnFillColor, e);
             RestoreInFormCursorPossition();
         }
 

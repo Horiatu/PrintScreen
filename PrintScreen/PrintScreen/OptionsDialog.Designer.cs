@@ -777,8 +777,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown nudFillTransparency;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnFillColor;
-        private System.Windows.Forms.Button btnLinesColor;
+        internal System.Windows.Forms.Button btnFillColor;
+        internal System.Windows.Forms.Button btnLinesColor;
         private System.Windows.Forms.NumericUpDown numLineWidth;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button FontSample;
